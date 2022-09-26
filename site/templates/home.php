@@ -1,22 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>PresentOnline</title>
+<?php snippet("general/header") ?>
 
-        <!-- STYLESHEETS -->
-        <?= css('build/css/style.css') ?>
 
-        <!-- GOOGLE FONTS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <h1>Home</h1>
 
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum elit sapien, aliquet eu ullamcorper quis, congue fringilla tortor. Integer eu justo at magna vulputate ornare. Nulla condimentum enim venenatis leo iaculis dignissim. Ut quis libero ante. Ut faucibus felis in enim aliquam efficitur. Aenean non sapien vel lacus sollicitudin dignissim non lacinia dolor. Sed at ligula vulputate, elementum dui et, sagittis nisi. Sed venenatis lacus in gravida pharetra. Nulla facilisi. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam dui nisl, gravida placerat aliquet vel, efficitur eu velit. Curabitur eu metus malesuada, euismod purus in, dictum sem. Aliquam laoreet congue neque non eleifend. Proin dapibus eget odio quis tincidunt. Vestibulum vulputate varius bibendum. In id velit blandit, luctus dolor a, tempus nunc.</p>
-    </body>
-</html>
+<!-- HOME CONTAINER -->
+<div id="container" class="container container-home">
+
+    <!-- HEADER -->
+    <header class="header header-home">
+
+        <!-- NAV -->
+        <?php snippet("general/nav") ?>
+
+        <!-- HEADER HOME - CONTENT -->
+        <div class="header-home__content">
+            <!-- <h1>Uw partner voor websites|</h1> -->
+            <h1><?= $site->introParagraph() ?></h1>
+            <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo. Suspendisse justo orci, egestas eget facilisis id, semper a nibh.</p>
+
+            <div class="buttons">
+                <a class="button button-primary" href="#">What we do <i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
+                <a class="button button-secondary" href="#">Starter Kit <i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="language">
+                <i class="fa fa-globe" aria-hidden="true"></i> Switch language
+            </div>
+        </div>
+    </header>
+
+    <nav class="languages">
+        <ul>
+            <?php foreach ($kirby->languages() as $language) : ?>
+                <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+                    <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                        <?= html($language->name()) ?>
+                    </a>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </nav>
+</div>
+
+
+
+<?php snippet("general/footer") ?>

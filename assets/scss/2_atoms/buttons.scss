@@ -1,20 +1,18 @@
 .button {
-    /*display: inline-block;
+    display: inline-block;
     margin: 0;
-    padding: 10px 20px;
+    padding: 12px 24px;
 
-    border-radius: $border-radius-medium;
+    border-radius: $border-radius-small;
     border: none;
-
-    color: $neutrals-100;
-    background-color: $primary-500;
 
     font-family: $title-font;
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 16px;
     text-decoration: none;
+    letter-spacing: -0.01em;
 
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -24,10 +22,23 @@
 
     &:hover {
         cursor: pointer;
-        background-color: $primary-600;
     }
 
-    &:focus {
-        background: $primary-500;
-    }*/
+    &-primary {
+        background-color: $primary-600;
+        color: $neutrals-100;
+
+        &:hover {
+            background-color: $primary-700;
+        }
+    }
+
+    &-secondary {
+        background-color: $primary-100;
+        color: $primary-600;
+
+        &:hover {
+            background-color: $primary-200;
+        }
+    }
 }
