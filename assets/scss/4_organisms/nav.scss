@@ -156,10 +156,16 @@
                 background-color: $neutrals-100;
                 color: $primary-600;
 
-                img {
+                /*img {
                     width: 24px;
                     height: 24px;
                     object-fit: contain;
+                }*/
+
+                i {
+                    font-size: 32px;
+                    line-height: 32px;
+                    transform: rotate(-45deg);
                 }
             }
         }

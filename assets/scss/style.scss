@@ -23,7 +23,19 @@
 /* MOLECULES */
 @import './3_molecules/burger';
 
+//Home
+@import './3_molecules/home/client';
+@import './3_molecules/home/service';
+
 
 
 /* ORGANISMS */
 @import './4_organisms/nav';
+@import './4_organisms/header';
+@import './4_organisms/sections';
+@import './4_organisms/cta';
+
+//Home
+@import './4_organisms/home/clients';
+@import './4_organisms/home/services';
+@import './4_organisms/home/testimonials';

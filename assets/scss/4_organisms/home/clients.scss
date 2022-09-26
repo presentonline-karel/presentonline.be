@@ -1,0 +1,20 @@
+.clients {
+    padding: 56px 16px;
+    background-color: $neutrals-200;
+
+    h3 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        margin-bottom: 32px;
+    }
+
+    .button-tertiary {
+        color: $primary-600;
+    }
+}

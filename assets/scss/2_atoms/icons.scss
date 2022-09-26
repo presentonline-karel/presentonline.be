@@ -1,8 +1,17 @@
+.anchor-first {
+    margin-left: $icon-margin-button;
+}
+
+.icon-first {
+    margin-right: $icon-margin-button;
+}
+
 /* ICONS IN BUTTONS */
 .button {
     i {
         font-size: 12px;
         transition: all $transition-time-short;
+        font-weight: 900;
     }
 
     /*.icon-big {
@@ -11,16 +20,16 @@
         margin-right: 2px !important;
     }*/
 
-    .anchor-first {
-        margin-left: $icon-margin-button;
-        position: relative;
-        bottom: 1px;
-    }
-
-    .icon-first {
-        margin-right: $icon-margin-button;
-        position: relative;
-        bottom: 1px;
+    &-primary, &-secondary {
+        .anchor-first {
+            position: relative;
+            bottom: 1px;
+        }
+    
+        .icon-first {
+            position: relative;
+            bottom: 1px;
+        }
     }
 
     &:hover {
@@ -38,6 +47,13 @@
             &.no-hover {
                 margin-right: $icon-margin-button;
             }
+        }
+    }
+
+    &-tertiary {
+        i {
+            font-size: 16px;
+            line-height: 16px;
         }
     }
 }

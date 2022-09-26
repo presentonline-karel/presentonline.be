@@ -30,7 +30,7 @@
 
                 <!-- starter kit CTA -->
                 <li class="nav__link">
-                    <a class="button button-primary" href="#">Starter Kit <img class="mobile" src="<?= $site->url() ?>/assets/img/icons/arrow-right-top.svg" alt="Arrow right top" /><img class="desktop" src="<?= $site->url() ?>/assets/img/icons/arrow-right-top-white.svg" alt="Arrow right top" /></a>
+                    <a class="button button-primary" href="#">Starter Kit <i class="anchor-first fa-solid fa-arrow-right"></i></a>
                 </li>
             </ul>
         <?php endif; ?>
@@ -42,9 +42,9 @@
             <?php snippet("general/socials") ?>
 
             <!-- language -->
-            <div class="language">
-                <i class="fa fa-globe" aria-hidden="true"></i> ENG
-            </div>
+            <p class="language">
+                <i class="icon-first fa fa-globe" aria-hidden="true"></i>ENG
+            </p>
         </div>
     </div>
 
