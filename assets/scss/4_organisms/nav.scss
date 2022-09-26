@@ -93,19 +93,8 @@
             width: calc(100% - 32px);
 
             .socials {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 16px;
-
                 .social {
-                    width: 28px;
-                    height: 28px;
-                    object-fit: contain;
-
                     i {
-                        font-size: 28px;
-                        line-height: 28px;
                         color: $neutrals-100;
                     }
                 }

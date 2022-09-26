@@ -1,0 +1,89 @@
+.footer {
+    position: relative;
+    background-color: $primary-600;
+    padding: 48px 16px 24px 16px;
+    box-shadow: $footer-inner-shadow;
+
+    .top {
+        position: absolute;
+        top: 56px;
+        right: 16px;
+
+        i {
+            color: $neutrals-100;
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+
+    &__section {
+        &.services {
+            background-color: $primary-600;
+            padding-top: 0;
+        }
+
+        h3 {
+            font-weight: 700;
+            color: $neutrals-100;
+            margin-bottom: 16px;
+        }
+
+        &__p, &__a {
+            color: $neutrals-100;
+            display: block;
+            margin-bottom: 8px;
+            line-height: 16px;
+        }
+
+        &__a {
+            font-family: $paragraph-font;
+        }
+    }
+
+    .intro {
+        margin-bottom: 40px;
+
+        .logo {
+            margin-bottom: 24px;
+        }
+
+        p {
+            color: $neutrals-100;
+            margin-bottom: 16px;
+        }
+
+        .socials {
+            .social {
+                i {
+                    color: $neutrals-100;
+                }
+            }
+        }
+    }
+
+    .contact {
+        margin-bottom: 40px;
+    }
+
+    .flex {
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 8px;
+        margin-bottom: 32px;
+
+        .footer__section {
+            flex-grow: 1;
+            width: 100%;
+        }
+    }
+
+    .line {
+        background-color: $primary-300;
+        margin-bottom: 16px;
+    }
+
+    .copyright {
+        text-align: center;
+        color: $neutrals-100;
+    }
+}

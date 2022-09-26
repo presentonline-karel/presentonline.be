@@ -1,5 +1,10 @@
         <footer class="footer">
 
+            <!-- ARROW TOP -->
+            <a class="top" href="#container">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+
             <!-- INTRO -->
             <div class="intro footer__section">
 
@@ -20,15 +25,15 @@
             <div class="contact footer__section">
                 <h3>Contact</h3>
 
-                <p class="footer__section__p"><i class="fa fa-phone" aria-hidden="true"></i> 0476 28 09 02</p>
-                <p class="footer__section__p"><i class="fa fa-envelope" aria-hidden="true"></i> info@presentonline.be</p>
+                <p class="footer__section__p"><i class="icon-first fa fa-phone" aria-hidden="true"></i>0476 28 09 02</p>
+                <p class="footer__section__p"><i class="icon-first fa fa-envelope" aria-hidden="true"></i>info@presentonline.be</p>
             </div>
 
             <div class="flex">
-                    
+
                 <!-- SERVICES -->
                 <div class="services footer__section">
-                    <h3>DIENSTEN</h3>
+                    <h3>Diensten</h3>
 
                     <a class="footer__section__a" href="#">Websites &-apps</a>
                     <a class="footer__section__a" href="#">SEO</a>
@@ -38,8 +43,8 @@
                 </div>
 
                 <!-- SITEMAP -->
-                <div class="services footer__section">
-                    <h3>SITEMAP</h3>
+                <div class="sitemap footer__section">
+                    <h3>Sitemap</h3>
 
                     <a class="footer__section__a" href="#">Home</a>
                     <a class="footer__section__a" href="#">Diensten</a>
@@ -50,7 +55,7 @@
                 </div>
             </div>
 
-            <br>
+            <hr class="line footer-line">
 
             <p class="copyright">©PresentOnline. All rights reserved.<br> BTW BE 0772.635.880</p>
         </footer>
@@ -59,5 +64,6 @@
 
         <!-- MOBILE NAV SCRIPT -->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
-    </body>
-</html>
+        </body>
+
+        </html>
