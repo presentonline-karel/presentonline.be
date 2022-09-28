@@ -13,7 +13,7 @@
 
         <!-- HEADER STARTER KIT - CONTENT -->
         <div class="header__content header-starter-kit__content">
-            <h1>Proffesionele website nodig voor klein budget?</h1>
+            <h1>Proffesionele website nodig voor een klein budget?</h1>
             <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
 
             <div class="buttons">
@@ -32,8 +32,8 @@
 
 
     <!-- INTRO -->
-    <section class="intro">
-        <h2>Present Online Starter Kit, gedaan met dat geknoei.</h2>
+    <section class="intro section">
+        <h2>Present Online Starter Kit, gedaan met dat geknoei</h2>
         <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.<br><br> Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
         <a class="button button-tertiary large">Ontdek de Starter Kit<i class="anchor-first fa-solid fa-arrow-down"></i></a>
@@ -42,7 +42,7 @@
 
 
     <!-- FEATURES -->
-    <section class="features">
+    <section class="features-section section">
         <h2>What is the PO Starter Kit?</h2>
         <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
@@ -54,13 +54,13 @@
             <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
         </div>
 
-        <a class="button button-primary" href="#">Preview<i class="fa-solid fa-arrow-right"></i></a>
+        <a class="button button-primary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
     </section>
 
 
 
     <!-- INCLUDES -->
-    <section class="includes">
+    <section class="includes section">
 
         <!-- Included box - text -->
         <div class="includes__text includes__box">
@@ -130,13 +130,13 @@
         </div>
 
         <!-- Included box - price -->
-        <div class="includes__text includes__box">
-            <h2>Vanaf</h2>
+        <div class="includes__price includes__box">
+            <h3>Vanaf</h3>
 
-            <h1>€499</h1>
+            <h2>€499</h2>
 
             <div class="buttons">
-                <a class="button button-primary" href="#">Get it now<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
+                <a class="button button-primary" href="#">Get it now</a>
                 <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
@@ -178,7 +178,7 @@
 
         <!-- FORMSECTION -->
         <div class="contact__form-section">
-            <h2>Geïnterreseerd?<br> Geef ons een seintje!</h2>
+            <h3>Geïnterreseerd?<br> Geef ons een seintje!</h3>
 
             <!-- Contactform -->
             <?php snippet('contact/form') ?>

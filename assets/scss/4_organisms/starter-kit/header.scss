@@ -6,6 +6,8 @@
 
         &__img {
             border-radius: $border-radius-small;
+            border: 1px solid $primary-100;
+            box-shadow: $card-shadow;
         }
     }
 }
