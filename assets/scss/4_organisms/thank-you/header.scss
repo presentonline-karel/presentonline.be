@@ -1,0 +1,22 @@
+.header-thank-you {
+    &__content {
+        &__text {
+            .button-tertiary {
+                margin-bottom: 8px;
+                color: $primary-600;
+            }
+
+            h2 {
+                margin-bottom: 12px;
+            }
+
+            p {
+                margin-bottom: 32px;
+            }
+
+            h3 {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
