@@ -30,7 +30,7 @@
 
                 <!-- starter kit CTA -->
                 <li class="nav__link">
-                    <a class="button button-primary" href="#">Starter Kit <i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <a class="button button-primary" href="<?= $site->url() ?>/starter-kit">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
                 </li>
             </ul>
         <?php endif; ?>

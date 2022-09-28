@@ -1,0 +1,45 @@
+.case {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: $border-radius-small;
+    border: 1px solid $primary-100;
+    margin-bottom: 24px;
+    position: relative;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .button {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        color: $neutrals-1000;
+
+        i {
+            color: $primary-600;
+        }
+    }
+
+    &__id {
+        position: absolute;
+        bottom: 24px;
+        left: 24px;
+
+        &__title {
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 4px;
+        }
+    }
+}

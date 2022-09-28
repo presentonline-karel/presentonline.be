@@ -1,0 +1,11 @@
+.contact {
+    &__form-section {
+        background-color: $neutrals-200;
+        padding: 56px 16px;
+
+        h3 {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    }
+}

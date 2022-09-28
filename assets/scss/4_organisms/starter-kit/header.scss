@@ -1,0 +1,11 @@
+.header-starter-kit {
+    &__content {
+        .language {
+            margin-bottom: 48px;
+        }
+
+        &__img {
+            border-radius: $border-radius-small;
+        }
+    }
+}

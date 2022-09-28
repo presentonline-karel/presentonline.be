@@ -1,0 +1,17 @@
+.challenges {
+    background-color: $neutrals-200;
+
+    &__text {
+        h2 {
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 16px;
+        }
+
+        .features {
+            margin-bottom: 24px;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.header-case {
+    &__content {
+        &__text {
+            .breadcrumbs {
+                margin-bottom: 16px;
+            }
+
+            .tags {
+                margin-bottom: 8px;
+            }
+
+            h1 {
+                margin-bottom: 12px;
+            }
+
+            p {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__images {
+            &__carousel {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 8px;
+                margin-bottom: 16px;
+                overflow-x: scroll;
+
+                img {
+                    width: 256px;
+                    height: auto;
+                    aspect-ratio: 1/1;
+                    object-fit: cover;
+                    border-radius: $border-radius-small;
+                }
+            }
+        }
+    }
+}

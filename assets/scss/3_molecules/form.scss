@@ -1,0 +1,38 @@
+.form {
+    .input-group {
+        margin-bottom: 20px;
+
+        &__label {
+            font-family: $title-font;
+            font-size: 14px;
+            line-height: 14px;
+            font-weight: 500;
+            color: $neutrals-1000;
+            letter-spacing: -0.01em;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .input {
+            font-family: $paragraph-font;
+            font-size: 16px;
+            line-height: 16px;
+            font-weight: 400;
+            letter-spacing: -0.01em;
+
+            padding: 16px;
+            border-radius: $border-radius-small;
+            border: 1px solid $neutrals-600;
+            width: 100%;
+
+            &::placeholder {
+                color: $neutrals-800;
+            }
+
+            &.textarea {
+                height: 200px;
+                resize: none;
+            }
+        }
+    }
+}

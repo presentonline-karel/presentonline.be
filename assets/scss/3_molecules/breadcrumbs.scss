@@ -1,0 +1,20 @@
+.breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+
+    .breadcrumb {
+        font-family: $title-font;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 500;
+        color: $neutrals-1000;
+    }
+
+    i {
+        font-size: 14px;
+        line-height: 14px;
+        color: $primary-600;
+    }
+}

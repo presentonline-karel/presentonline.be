@@ -1,17 +1,12 @@
-.container-suggestions, .container-contact {
+//scroll issue
+.container-contact {
+    overflow-x: initial;
     min-height: initial;
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .container-suggestions {
-        min-height: calc(100% - 373px);
-    }
 }
 
 /* DESKTOP - QHD */
 @media only screen and (min-width: $desktop-qhd) {
-    .container-assortment, .container-contact {
+    .container-contact {
         min-height: calc(100% - 373px);
     }
 }

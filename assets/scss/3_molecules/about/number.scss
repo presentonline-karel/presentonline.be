@@ -1,0 +1,18 @@
+.number-container {
+    .number {
+        font-family: $title-font;
+        font-size: 40px;
+        line-height: 44px;
+        font-weight: 700;
+        margin-bottom: 8px;
+        color: $primary-600;
+    }
+
+    .label {
+        font-family: $title-font;
+        font-size: 14px;
+        line-height: 14px;
+        font-weight: 600;
+        color: $neutrals-800;
+    }
+}
