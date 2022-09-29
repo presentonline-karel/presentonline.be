@@ -28,10 +28,13 @@
 @import './3_molecules/arrows';
 @import './3_molecules/form';
 @import './3_molecules/form-feedback';
+@import './3_molecules/card';
+@import './3_molecules/bullets';
 
 //Home
 @import './3_molecules/home/client';
 @import './3_molecules/home/service';
+@import './3_molecules/home/testimonial';
 
 //About
 @import './3_molecules/about/number';
@@ -48,6 +51,7 @@
 @import './4_organisms/cta';
 @import './4_organisms/footer';
 @import './4_organisms/socials';
+@import './4_organisms/carousel';
 
 //Home
 @import './4_organisms/home/clients';
@@ -80,10 +84,16 @@
 @import './4_organisms/thank-you/header';
 
 //Websites &-apps
-@import './4_organisms/websites-apps/header';
 @import './4_organisms/websites-apps/kits';
+
+//Seo
+@import './4_organisms/seo/steps';
+
+//Photography
+@import './4_organisms/photography/header';
 
 
 
 /* PAGES */
 @import './5_pages/error';
+@import './5_pages/starter-kit';

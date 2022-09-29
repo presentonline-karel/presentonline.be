@@ -4,9 +4,23 @@
     background-repeat: no-repeat;
     background-size: cover;
 
-    h3 {
+    &__title {
         margin-bottom: 24px;
         color: $neutrals-100;
         font-weight: 700;
+    }
+
+    &:has(.features) {
+        .cta__title {
+            margin-bottom: 16px;
+        }
+
+        .features {
+            margin-bottom: 24px;
+
+            .feature, .feature i {
+                color: $neutrals-100;
+            }
+        }
     }
 }

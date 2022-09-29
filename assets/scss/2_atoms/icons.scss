@@ -14,12 +14,6 @@
         font-weight: 900;
     }
 
-    /*.icon-big {
-        font-size: 16px;
-        bottom: 0 !important;
-        margin-right: 2px !important;
-    }*/
-
     &-primary, &-secondary {
         .anchor-first {
             position: relative;
@@ -29,6 +23,11 @@
         .icon-first {
             position: relative;
             bottom: 1px;
+        }
+
+        //Arrow right/top
+        .fa-arrow-right {
+            transform: rotate(-45deg);
         }
     }
 

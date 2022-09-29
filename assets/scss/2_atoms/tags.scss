@@ -1,16 +1,23 @@
-.tag {
-    display: inline-block;
-    padding: 5px 8px;
-    margin: 0;
+.tags {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
 
-    color: $neutrals-100;
-    background-color: $primary-600;
+    .tag {
+        display: inline-block;
+        padding: 5px 8px;
+        margin: 0;
 
-    font-family: $title-font;
-    font-size: 16px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: -0.01em;
+        color: $neutrals-100;
+        background-color: $primary-600;
 
-    border-radius: $border-radius-small;
+        font-family: $title-font;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 16px;
+        letter-spacing: -0.01em;
+
+        border-radius: $border-radius-small;
+    }
 }

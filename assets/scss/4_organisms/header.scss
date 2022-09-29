@@ -1,9 +1,19 @@
 .header {
+
+    //Default headers
     &__content {
         background-color: $neutrals-100;
         padding: 31px 16px 56px 16px;
 
-        h1 {
+        .breadcrumbs {
+            margin-bottom: 16px;
+        }
+
+        .tags {
+            margin-bottom: 8px;
+        }
+
+        &__title {
             margin-bottom: 12px;
 
             span {
@@ -27,12 +37,10 @@
                 padding: 12px;
                 text-align: center;
             }
+        }
 
-            .button-secondary {
-                i {
-                    transform: rotate(-45deg);
-                }
-            }
+        .button-tertiary {
+            color: $primary-600;
         }
 
         .language {
@@ -41,6 +49,32 @@
             color: $neutrals-1000;
             text-align: center;
             margin-bottom: 0;
+        }
+    }
+
+    //Service headers
+    &-service {
+        &__content {
+            padding: 31px 0px 0px 0px;
+
+            &__text {
+                padding: 0px 16px;
+    
+                .button-tertiary {
+                    display: none;
+                }
+    
+                p {
+                    margin-bottom: 48px;
+                }
+            }
+
+            &__img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 3/2;
+                object-fit: cover;
+            }
         }
     }
 }

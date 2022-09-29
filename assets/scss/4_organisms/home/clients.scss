@@ -1,4 +1,4 @@
-.clients {
+.clients-section {
     padding: 56px 16px;
     background-color: $neutrals-200;
 
@@ -7,7 +7,7 @@
         margin-bottom: 24px;
     }
 
-    &__items {
+    .clients {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 8px;

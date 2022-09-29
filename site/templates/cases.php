@@ -24,7 +24,7 @@
 
 
     <!-- CASES -->
-    <div class="cases">
+    <main class="cases">
 
         <!-- Case -->
         <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 </div>
 
 

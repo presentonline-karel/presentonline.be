@@ -1,0 +1,78 @@
+//to make testimonial slider work
+.slide-container {
+    display: none;
+    opacity: 0;
+    transition: all $transition-time-short;
+
+    &.active {
+        display: block;
+        opacity: 1;
+    }
+}
+
+.testimonial {
+    width: 100%;
+    position: relative;
+
+    &__p {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 16px;
+        padding: 0px 50px;
+    }
+
+    &__id {
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 24px;
+        padding: 0px 50px;
+
+        &__picture {
+            width: 48px;
+            height: 48px;
+            object-fit: cover;
+            border-radius: $border-radius-small;
+        }
+
+        &__name {
+            color: $neutrals-1000;
+            margin-bottom: 2px;
+        }
+
+        &__function {
+            line-height: 16px;
+        }
+    }
+
+    .prev, .next {
+        font-size: 16px;
+        line-height: 32px;
+        position: absolute;
+        transform: translate(0%, -50%);
+        top: 30%;
+        z-index: 2;
+    }
+
+    .prev {
+        left: 0;
+    }
+
+    .next {
+        right: 0;
+    }
+}
+
+/* TABLET 768PX
+@media only screen and (min-width: $tablet-portrait) {
+    .testimonial {
+        padding: 48px;
+    }
+}
+
+/* DESKTOP 1440PX
+@media screen and (min-width: $desktop-3) {
+    .testimonial {
+        padding: 72px 212px 72px 212px;
+    }
+} */

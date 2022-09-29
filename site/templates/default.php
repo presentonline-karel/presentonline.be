@@ -8,7 +8,7 @@
     <!-- NAV -->
     <?php snippet('general/nav') ?>
 
-    
+
 
     <!-- Error content -->
     <section class="error-content">

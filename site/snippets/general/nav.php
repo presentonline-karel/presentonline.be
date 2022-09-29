@@ -39,7 +39,7 @@
         <div class="bottom">
 
             <!-- socials -->
-            <?php snippet("general/socials") ?>
+            <?php snippet("general/socials", ['color' => 'neutrals-100']) ?>
 
             <!-- language -->
             <p class="language">

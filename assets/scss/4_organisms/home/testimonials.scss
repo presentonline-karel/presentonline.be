@@ -1,3 +1,67 @@
-.testimonials {
+.testimonials-section {
     background-color: $neutrals-200;
+    padding: 72px 16px;
+
+    //NOT SELECTABLE TEXT WHEN DOUBLE CLICKING
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+
+/* TABLET LANDSCAPE - 1024PX
+@media only screen and (min-width: $tablet-landscape) {
+    .testimonials {
+        padding: 96px 178px;
+
+        h2 {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+/* DESKTOP - 1280px
+@media only screen and (min-width: $desktop-1) {
+    .testimonials {
+        padding: 128px 308px;
+
+        h2 {
+            margin-bottom: 72px;
+        }
+    }
+}
+
+/* DESKTOP - 1600px
+@media only screen and (min-width: $desktop-5) {
+    .testimonials {
+        padding: 128px 388px !important;
+    }
+}
+
+/* DESKTOP - HD
+@media only screen and (min-width: $desktop-hd) {
+    .testimonials {
+        padding: 128px 548px !important;
+    }
+}
+
+/* DESKTOP - QHD
+@media only screen and (min-width: $desktop-qhd) {
+    .testimonials {
+        padding: 128px 868px !important;
+    }
+}
+
+/* DESKTOP - WQHD
+@media only screen and (min-width: $desktop-wqhd) {
+    .testimonials {
+        padding: 128px 1308px !important;
+    }
+}
+
+/* DESKTOP - 4K
+@media only screen and (min-width: $desktop-4k) {
+    .testimonials {
+        padding: 128px 1508px !important;
+    }
+} */

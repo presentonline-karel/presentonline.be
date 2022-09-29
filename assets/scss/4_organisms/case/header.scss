@@ -1,24 +1,14 @@
 .header-case {
     &__content {
         &__text {
-            .breadcrumbs {
-                margin-bottom: 16px;
-            }
-
-            .tags {
-                margin-bottom: 8px;
-            }
-
-            h1 {
-                margin-bottom: 12px;
-            }
-
             p {
                 margin-bottom: 32px;
             }
         }
 
         &__images {
+
+            //change by general carousel code
             &__carousel {
                 display: flex;
                 justify-content: flex-start;

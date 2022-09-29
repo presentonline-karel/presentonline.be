@@ -23,17 +23,17 @@
 
         <!-- HEADER CONTACT - MOBILE -->
         <div class="header__content header-contact__content mobile">
-            <h1>Contacteer ons voor meer info</h1>
+            <h1 class="header__content__title">Contacteer ons voor meer info</h1>
             <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
             <!-- Contact links -->
             <div class="header-contact__content__links">
-                <a class="link p"><i class="icon-first fa-solid fa-phone"></i>0476280902</a>
-                <a class="link p"><i class="icon-first fa-solid fa-envelope"></i>info@presentonline.be</a>
+                <a class="link p block"><i class="icon-first primary-color-600 fa-solid fa-phone"></i>0476280902</a>
+                <a class="link p block"><i class="icon-first primary-color-600 fa-solid fa-envelope"></i>info@presentonline.be</a>
             </div>
 
             <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials') ?>
+            <?php snippet('general/socials', ['color' => 'primary-color-600']) ?>
         </div>
     </header>
 

@@ -18,7 +18,7 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
 
                 <!-- Socials -->
-                <?php snippet("general/socials") ?>
+                <?php snippet("general/socials", ['color' => 'neutrals-100']) ?>
             </div>
 
             <!-- CONTACT -->

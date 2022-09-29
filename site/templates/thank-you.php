@@ -16,7 +16,7 @@
             <div class="header-thank-you__content__text">
                 <p class="button button-tertiary large">Thank you!</p>
 
-                <h2>We've received your message</h2>
+                <h1 class="header__content__title">We've received your message</h1>
 
                 <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
