@@ -1,6 +1,6 @@
-const carousel = () => {
-  const slider = document.querySelector(".carousel"),
-    slides = Array.from(document.querySelectorAll(".carousel__slide"));
+const carousel3 = () => {
+  const carousel = document.querySelector(".carousel-3"),
+    slides = Array.from(carousel.children);
 
   let isDragging = false,
     startPos = 0,
@@ -9,10 +9,8 @@ const carousel = () => {
     animationID,
     currentIndex = 0;
 
-
-
   slides.forEach((slide, index) => {
-    const slideImage = slide.querySelector("img");
+    const slideImage = slide.querySelector(".carousel__slide__img");
 
     // disable default image drag
     slideImage.addEventListener("dragstart", (e) => e.preventDefault());
@@ -29,8 +27,6 @@ const carousel = () => {
     slide.addEventListener("mouseleave", touchEnd);
   });
 
-
-
   // make responsive to viewport changes
   window.addEventListener("resize", setPositionByIndex);
 
@@ -40,8 +36,6 @@ const carousel = () => {
     event.stopPropagation();
     return false;
   };
-
-
 
   function getPositionX(event) {
     return event.type.includes("mouse")
@@ -55,7 +49,7 @@ const carousel = () => {
       startPos = getPositionX(event);
       isDragging = true;
       animationID = requestAnimationFrame(animation);
-      slider.classList.add("grabbing");
+      carousel.classList.add("grabbing");
     };
   }
 
@@ -72,17 +66,15 @@ const carousel = () => {
     const movedBy = currentTranslate - prevTranslate;
 
     // if moved enough negative then snap to next slide if there is one
-    if (movedBy < -100 && currentIndex < slides.length - 1) currentIndex += 1;
+    if (movedBy < -160 && currentIndex < slides.length - 1) currentIndex += 1;
 
     // if moved enough positive then snap to previous slide if there is one
-    if (movedBy > 100 && currentIndex > 0) currentIndex -= 1;
+    if (movedBy > 160 && currentIndex > 0) currentIndex -= 1;
 
     setPositionByIndex();
 
-    slider.classList.remove("grabbing");
+    carousel.classList.remove("grabbing");
   }
-
-
 
   function animation() {
     setSliderPosition();
@@ -90,15 +82,14 @@ const carousel = () => {
   }
 
   function setPositionByIndex() {
-    //currentTranslate = currentIndex * -window.innerWidth;
     currentTranslate = currentIndex * -244;
     prevTranslate = currentTranslate;
     setSliderPosition();
   }
 
   function setSliderPosition() {
-    slider.style.transform = `translateX(${currentTranslate}px)`;
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
   }
 };
 
-carousel();
+carousel3();

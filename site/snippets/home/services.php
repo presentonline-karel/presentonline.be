@@ -1,5 +1,5 @@
 <!-- SERVICES -->
-<section class="services-section section">
+<section id="services" class="services-section section">
     <h2>Wat we doen?</h2>
 
     <!-- Services items -->
@@ -62,5 +62,5 @@
         </div>
     </div>
 
-    <img class="services__img" src="<?= $site->url() ?>/../assets/img/services.png" alt="Services img" />
+    <img class="services-section__img" src="<?= $site->url() ?>/../assets/img/services.png" alt="Services img" />
 </section>

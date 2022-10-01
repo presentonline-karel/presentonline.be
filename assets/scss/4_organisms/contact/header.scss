@@ -5,3 +5,14 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header-contact {
+        &__content {
+            &__links {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

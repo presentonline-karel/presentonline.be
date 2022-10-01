@@ -36,3 +36,12 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .form {
+        .input-group {
+            margin-bottom: 24px;
+        }
+    }
+}

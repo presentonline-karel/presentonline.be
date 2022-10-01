@@ -9,3 +9,12 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .contact {
+        &__form-section {
+            padding: 72px 48px;
+        }
+    }
+}

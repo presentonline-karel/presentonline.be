@@ -1,0 +1,13 @@
+.container-photography {
+    .photography-section {
+        padding: 56px 16px;
+
+        &:nth-child(odd) {
+            background-color: $neutrals-200;
+        }
+
+        &__title {
+            margin-bottom: 24px;
+        }
+    }
+}

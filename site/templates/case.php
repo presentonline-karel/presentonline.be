@@ -38,7 +38,7 @@
 
 
             <!-- Header images -->
-            <div class="header-case__content__images slider-container carousel">
+            <div class="header-case__content__images slider-container carousel carousel-1">
                 <div class="carousel__slide">
                     <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
                 </div>
@@ -55,19 +55,13 @@
                     <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
                 </div>
             </div>
-
-            <!-- Arrows carousel
-            <div class="arrows">
-                <i class="fa-solid fa-arrow-left"></i>
-                <i class="fa-solid fa-arrow-right"></i>
-            </div>
-            -->
         </div>
     </header>
 
 
 
     <main>
+        
         <!-- CHALLENGES -->
         <section class="challenges section">
             <img class="challenges__img desktop" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
@@ -121,7 +115,7 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/general/carousel.js', ['defer' => true]) ?>
+<?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
 
 
 

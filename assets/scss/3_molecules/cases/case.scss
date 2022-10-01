@@ -36,3 +36,10 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .case {
+        max-height: 337px;
+    }
+}

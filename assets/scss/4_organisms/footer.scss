@@ -29,6 +29,7 @@
         }
 
         &__p, &__a {
+            font-size: 16px;
             color: $neutrals-100;
             display: block;
             margin-bottom: 8px;
@@ -37,6 +38,12 @@
 
         &__a {
             font-family: $paragraph-font;
+
+            i {
+                transform: rotate(-45deg);
+                font-size: 14px;
+                line-height: 14px;
+            }
         }
     }
 
@@ -77,5 +84,30 @@
     .copyright {
         text-align: center;
         color: $neutrals-100;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .footer {
+        padding: 64px 48px 24px 48px;
+
+        .top {
+            top: 64px;
+            right: 48px;
+    
+            i {
+                font-size: 20px;
+                line-height: 32px;
+            }
+        }
+
+        .intro {
+            width: 50%;
+
+            p {
+                margin-bottom: 24px;
+            }
+        }
     }
 }

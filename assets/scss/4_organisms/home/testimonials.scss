@@ -9,6 +9,14 @@
     user-select: none;
 }
 
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .testimonials-section {
+        background-color: $neutrals-200;
+        padding: 72px 48px;
+    }
+}
+
 /* TABLET LANDSCAPE - 1024PX
 @media only screen and (min-width: $tablet-landscape) {
     .testimonials {

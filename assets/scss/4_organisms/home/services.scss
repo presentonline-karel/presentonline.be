@@ -1,6 +1,6 @@
 .services-section {
     background-color: $neutrals-100;
-    padding: 56px 0px 0px 0px;
+    padding: 72px 0px 0px 0px;
 
     h2 {
         margin-bottom: 32px;
@@ -17,5 +17,18 @@
         height: auto;
         aspect-ratio: 3/2;
         object-fit: cover;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .services-section {
+        h2 {
+            padding: 0px 48px;
+        }
+
+        .services {
+            padding: 0px 48px;
+        }
     }
 }

@@ -28,3 +28,16 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header-case {
+        &__content {
+            &__text {
+                p {
+                    margin-bottom: 48px;
+                }
+            }
+        }
+    }
+}

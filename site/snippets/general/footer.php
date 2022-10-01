@@ -51,7 +51,7 @@
                     <a class="footer__section__a" href="#">Over ons</a>
                     <a class="footer__section__a" href="#">Projecten</a>
                     <a class="footer__section__a" href="#">Contact</a>
-                    <a class="footer__section__a" href="#">Starter Kit <i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    <a class="footer__section__a" href="#">Starter Kit<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
 

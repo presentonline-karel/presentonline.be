@@ -38,3 +38,12 @@
 .grabbing .carousel__slide__img {
     transform: scale(0.9);
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .carousel {
+        &__slide {
+            width: 400px;
+        }
+    }
+}

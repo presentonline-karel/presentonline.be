@@ -45,7 +45,8 @@
         }
     }
 
-    .prev, .next {
+    .prev,
+    .next {
         font-size: 16px;
         line-height: 32px;
         position: absolute;
@@ -63,10 +64,21 @@
     }
 }
 
-/* TABLET 768PX
+/* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .testimonial {
-        padding: 48px;
+        &__p {
+            padding: 0px 128px;
+        }
+
+        &__id {
+            padding: 0px 128px;
+        }
+
+        .prev,
+        .next {
+            font-size: 20px;
+        }
     }
 }
 

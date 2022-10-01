@@ -66,13 +66,38 @@
                 opacity: 1;
             }
 
-            .nav__link__item {
+            .nav__link {
                 display: inline-block;
-                color: $neutrals-100;
 
-                /*&.active {
-                    border-bottom: 4px solid $neutrals-100;
-                }*/
+                &__item {
+                    display: inline-block;
+                    color: $neutrals-100;
+
+                    &__notification {
+                        display: inline;
+                        width: 16px;
+                        height: 16px;
+                        background-color: $primary-300;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 0;
+                        right: 8px;
+    
+                        span {
+                            font-size: 12px;
+                            line-height: 12px;
+                            letter-spacing: -0.01em;
+                            font-weight: 600;
+                            font-family: $title-font;
+                            color: $neutrals-100;
+    
+                            position: absolute;
+                            transform: translate(-50%, -50%);
+                            top: 50%;
+                            left: 50%;
+                        }
+                    }
+                }
             }
         }
 
@@ -182,6 +207,18 @@
             .logo {
                 top: 32px;
                 left: 48px;
+            }
+
+            &.nav-active {
+                .nav__link {
+                    display: block;
+
+                    &__item {
+                        &__notification {
+                            right: 112px;
+                        }
+                    }
+                }
             }
         }
     }

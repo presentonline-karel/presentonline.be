@@ -91,78 +91,79 @@
 
 
 
-        <?php /*
-        <!-- Header images -->
-        <div class="header-case__content__images slider-container carousel">
+        <!-- CASES CAROUSEL -->
+        <div class="carousel-section section">
+            <h2 class="carousel-section__title">Website cases</h2>
 
-            <div class="carousel__slide">
-                
-                <!-- Case -->
-                <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+            <div class="carousel carousel-1">
+                <div class="carousel__slide">
 
-                    <!-- case button -->
-                    <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <!-- Case -->
+                    <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
-                    <!-- case text -->
-                    <div class="case__id">
-                        <h2 class="case__id__title">Music2Move</h2>
+                        <!-- case button -->
+                        <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
 
-                        <div class="tags">
-                            <span class="tag">Website</span>
-                            <span class="tag">Photos</span>
+                        <!-- case text -->
+                        <div class="case__id">
+                            <h2 class="case__id__title">Music2Move</h2>
+
+                            <div class="tags">
+                                <span class="tag">Website</span>
+                                <span class="tag">Photos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="carousel__slide">
-                
-                <!-- Case -->
-                <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+                <div class="carousel__slide">
 
-                    <!-- case button -->
-                    <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <!-- Case -->
+                    <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
-                    <!-- case text -->
-                    <div class="case__id">
-                        <h2 class="case__id__title">Music2Move</h2>
+                        <!-- case button -->
+                        <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
 
-                        <div class="tags">
-                            <span class="tag">Website</span>
-                            <span class="tag">Photos</span>
+                        <!-- case text -->
+                        <div class="case__id">
+                            <h2 class="case__id__title">Music2Move</h2>
+
+                            <div class="tags">
+                                <span class="tag">Website</span>
+                                <span class="tag">Photos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="carousel__slide">
-                
-                <!-- Case -->
-                <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+                <div class="carousel__slide">
 
-                    <!-- case button -->
-                    <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <!-- Case -->
+                    <div class="case carousel__slide__img" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
-                    <!-- case text -->
-                    <div class="case__id">
-                        <h2 class="case__id__title">Music2Move</h2>
+                        <!-- case button -->
+                        <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
 
-                        <div class="tags">
-                            <span class="tag">Website</span>
-                            <span class="tag">Photos</span>
+                        <!-- case text -->
+                        <div class="case__id">
+                            <h2 class="case__id__title">Music2Move</h2>
+
+                            <div class="tags">
+                                <span class="tag">Website</span>
+                                <span class="tag">Photos</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        */ ?>
     </main>
 </div>
 
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/general/carousel.js', ['defer' => true]) ?>
+<?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
 
 
 

@@ -18,3 +18,10 @@
         color: $primary-600;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .clients-section {
+        padding: 72px 48px;
+    }
+}

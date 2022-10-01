@@ -2,3 +2,10 @@
     background-color: $neutrals-100;
     padding: 31px 16px 72px 16px;
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .cases {
+        padding: 47px 48px 72px 48px;
+    }
+}

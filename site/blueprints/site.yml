@@ -50,6 +50,14 @@ tabs:
               section:
                 label: id op pagina
                 type: text
+              notification:
+                label: Notification
+                type: toggle
+              number:
+                label: Notification number
+                type: text
+                when:
+                  notification: true
           line-a:
             type: line
 

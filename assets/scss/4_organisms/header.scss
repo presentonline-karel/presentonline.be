@@ -78,3 +78,14 @@
         }
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 47px 48px 72px 48px;
+        }
+    }
+}
