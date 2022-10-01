@@ -31,7 +31,7 @@
                 <a class="button button-tertiary large desktop">Onze aanpak<i class="anchor-first fa-solid fa-arrow-down"></i></a>
             </div>
 
-            <img class="header-websites-apps__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" />
+            <img class="header-service__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" />
         </div>
     </header>
 
@@ -39,9 +39,9 @@
 
     <main>
         <!-- STEPS -->
-        <section class="steps-section section">
-            <h2 class="steps-section__title">Wordt vriendjes met Google</h2>
-            <p class="steps-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
+        <section class="service-features-section section">
+            <h2 class="service-features-section__title">Wordt vriendjes met Google</h2>
+            <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
 
             <a class="button button-tertiary large mobile">Onze aanpak<i class="anchor-first fa-solid fa-arrow-down"></i></a>
 

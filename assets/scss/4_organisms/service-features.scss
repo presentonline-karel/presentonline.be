@@ -1,4 +1,4 @@
-.kits-section {
+.service-features-section {
     background-color: $neutrals-200;
     padding: 56px 16px;
 
@@ -13,5 +13,12 @@
     .button-tertiary.large {
         color: $primary-600;
         margin-bottom: 32px;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .service-features-section {
+        padding: 72px 48px;
     }
 }

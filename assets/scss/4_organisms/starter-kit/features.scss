@@ -18,3 +18,10 @@
         margin-bottom: 24px;
     }
 }
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .features-section {
+        padding: 72px 48px;
+    }
+}

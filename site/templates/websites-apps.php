@@ -39,9 +39,9 @@
 
     <main>
         <!-- KITS -->
-        <section class="kits-section section">
-            <h2 class="kits-section__title">De juiste oplossing voor uw project</h2>
-            <p class="kits-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
+        <section class="service-features-section section">
+            <h2 class="service-features-section__title">De juiste oplossing voor uw project</h2>
+            <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
 
             <a class="button button-tertiary large mobile">We offer 3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
 

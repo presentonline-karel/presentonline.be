@@ -1,13 +1,18 @@
-.container-photography {
+.photography-section {
+    padding: 56px 16px;
+
+    &:nth-child(odd) {
+        background-color: $neutrals-200;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
     .photography-section {
-        padding: 56px 16px;
-
-        &:nth-child(odd) {
-            background-color: $neutrals-200;
-        }
-
-        &__title {
-            margin-bottom: 24px;
-        }
+        padding: 72px 48px;
     }
 }

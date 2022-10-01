@@ -82,7 +82,7 @@
                         position: absolute;
                         top: 0;
                         right: 8px;
-    
+
                         span {
                             font-size: 12px;
                             line-height: 12px;
@@ -90,7 +90,7 @@
                             font-weight: 600;
                             font-family: $title-font;
                             color: $neutrals-100;
-    
+
                             position: absolute;
                             transform: translate(-50%, -50%);
                             top: 50%;
@@ -219,6 +219,12 @@
                         }
                     }
                 }
+            }
+
+            //BOTTOM SOCIALS + LANGUAGE SWITCH
+            .bottom {
+                left: 48px;
+                width: calc(100% - 96px);
             }
         }
     }
