@@ -46,9 +46,10 @@
             padding: 40px;
             box-shadow: $card-shadow;
 
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            flex-direction: row;
             gap: 32px 8px;
+            flex-wrap: wrap;
         }
     }
 }
@@ -57,5 +58,67 @@
 @media only screen and (min-width: $tablet-portrait) {
     .about {
         padding: 72px 48px;
+
+        &__text {
+            &__numbers {
+                width: 100%;
+                justify-content: space-between;
+                gap: 0px;
+                flex-wrap: nowrap;
+            }
+        }
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .about {
+        padding: 72px 96px;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 48px;
+
+        &__text {
+            width: 59%;
+
+            &__title {
+                margin-bottom: 24px;
+            }
+
+            &__photos {
+                display: none;
+            }
+
+            &__numbers {
+                width: auto;
+                display: inline-flex;
+                justify-content: flex-start;
+                gap: 24px 106px;
+                flex-wrap: wrap;
+
+                & > .number-container {
+                    flex: calc(50% - 53px);
+                    //max-width: 132px;
+                }
+            }
+        }
+
+        &__photos {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 24px;
+            width: 41%;
+
+            img {
+                width: 100%;
+                height: auto;
+                aspect-ratio: 3/2;
+                object-fit: cover;
+                border-radius: $border-radius-small;
+                border: 1px solid $primary-100;
+            }
+        }
     }
 }

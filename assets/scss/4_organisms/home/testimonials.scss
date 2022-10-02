@@ -17,14 +17,10 @@
     }
 }
 
-/* TABLET LANDSCAPE - 1024PX
+/* TABLET LANDSCAPE - 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .testimonials {
-        padding: 96px 178px;
-
-        h2 {
-            margin-bottom: 48px;
-        }
+    .testimonials-section {
+        padding: 72px 202px;
     }
 }
 

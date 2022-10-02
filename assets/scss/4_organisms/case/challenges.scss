@@ -15,3 +15,22 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .challenges {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 48px;
+
+        &__img {
+            display: block;
+            width: 50%;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: $border-radius-small;
+        }
+    }
+}

@@ -230,6 +230,42 @@
     }
 }
 
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .nav {
+        padding: 32px 96px 24px 96px;
+
+        .nav-links {
+            .nav__link {
+                padding: 0 96px;
+            }
+
+            .logo {
+                top: 32px;
+                left: 96px;
+            }
+
+            &.nav-active {
+                .nav__link {
+                    display: block;
+
+                    &__item {
+                        &__notification {
+                            right: 160px;
+                        }
+                    }
+                }
+            }
+
+            //BOTTOM SOCIALS + LANGUAGE SWITCH
+            .bottom {
+                left: 96px;
+                width: calc(100% - 192px);
+            }
+        }
+    }
+}
+
 /* DESKTOP 1280PX */
 @media screen and (min-width: $desktop-1) {
     .nav {

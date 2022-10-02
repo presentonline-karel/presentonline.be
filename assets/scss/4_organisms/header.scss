@@ -18,6 +18,10 @@
             span {
                 color: $primary-600;
             }
+
+            &.desktop {
+                display: none;
+            }
         }
 
         p {
@@ -93,6 +97,41 @@
 
                 &__text {
                     padding: 0px 48px;
+                }
+            }
+        }
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header {
+        //Default headers
+        &__content {
+            padding: 47px 202px 72px 202px;
+
+            &__title {
+                &.mobile {
+                    display: none;
+                }
+
+                &.desktop {
+                    display: block;
+                    text-align: center;
+                }
+            }
+
+            p {
+                padding: 0px 106px;
+                text-align: center;
+            }
+
+            .buttons {
+                justify-content: center;
+                
+                .button {
+                    width: auto;
+                    padding: 12px 24px;
                 }
             }
         }

@@ -18,3 +18,13 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .clients {
+        .client {
+            border: none;
+            background-color: $neutrals-100;
+        }
+    }
+}

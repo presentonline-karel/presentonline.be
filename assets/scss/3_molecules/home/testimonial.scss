@@ -82,9 +82,15 @@
     }
 }
 
-/* DESKTOP 1440PX
-@media screen and (min-width: $desktop-3) {
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
     .testimonial {
-        padding: 72px 212px 72px 212px;
+        &__p {
+            padding: 0px 106px;
+        }
+
+        &__id {
+            padding: 0px 106px;
+        }
     }
-} */
+}

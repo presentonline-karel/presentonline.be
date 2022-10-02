@@ -5,4 +5,38 @@
         text-align: center;
         margin-bottom: 24px;
     }
+
+    &__cases {
+        .case {
+            margin-bottom: 0;
+        }
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .next-case {
+        &__title {
+            margin-bottom: 40px;
+        }
+
+        &__cases {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 24px;
+
+            .case {
+                .button {
+                    top: 24px;
+                    right: 24px;
+                }
+
+                &__id {
+                    left: 24px;
+                    bottom: 24px;
+                }
+            }
+        }
+    }
 }

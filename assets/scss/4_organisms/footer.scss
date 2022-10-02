@@ -111,3 +111,10 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .footer {
+        padding: 64px 96px 24px 96px;
+    }
+}

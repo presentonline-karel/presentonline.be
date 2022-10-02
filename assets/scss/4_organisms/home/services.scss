@@ -32,3 +32,26 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .services-section {
+        padding: 72px 96px;
+
+        h2 {
+            padding: 0px;
+        }
+
+        .services {
+            padding: 0px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+            margin-bottom: 0;
+        }
+
+        &__img {
+            display: none;
+        }
+    }
+}

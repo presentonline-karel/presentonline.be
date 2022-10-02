@@ -1,25 +1,6 @@
-.header-contact {
-    &__content {
-        &__links {
-            margin-bottom: 24px;
-        }
-    }
-}
-
-/* TABLET 768PX */
-@media only screen and (min-width: $tablet-portrait) {
-    .header-contact {
-        &__content {
-            &__links {
-                margin-bottom: 40px;
-            }
-        }
-    }
-}
-
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .header-contact {
+    .header-about {
         &__content {
             padding: 47px 96px 72px 96px;
             display: flex;
@@ -31,6 +12,8 @@
                 display: block;
                 width: 188px;
                 color: $primary-600;
+                //text-transform: uppercase;
+                //font-weight: 700;
             }
 
             &__text {
@@ -39,19 +22,10 @@
                 h1 {
                     padding-right: 106px;
                 }
-            }
 
-            &.mobile {
-                display: none;
-            }
-
-            &.desktop {
-                display: flex;
-            }
-
-            &__text {
-                h1 {
-                    margin-bottom: 32px;
+                p {
+                    text-align: left;
+                    padding: 0;
                 }
             }
         }

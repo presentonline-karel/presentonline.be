@@ -31,3 +31,10 @@
         padding: 64px 48px;
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .cta {
+        padding: 64px 96px;
+    }
+}

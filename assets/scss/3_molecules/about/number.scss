@@ -1,4 +1,9 @@
 .number-container {
+    display: inline-block;
+    flex: calc(50% - 4px);
+    width: auto;
+    max-width: 127px;
+
     .number {
         font-family: $title-font;
         font-size: 40px;
@@ -14,5 +19,20 @@
         line-height: 14px;
         font-weight: 600;
         color: $neutrals-800;
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .number-container {
+        max-width: 96px;
+        display: inline-flex !important;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        > div {
+            display: inline-block;
+        }
     }
 }

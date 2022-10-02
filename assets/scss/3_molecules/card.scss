@@ -56,3 +56,12 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .cards {
+        .card {
+            margin-bottom: 0;
+        }
+    }
+}

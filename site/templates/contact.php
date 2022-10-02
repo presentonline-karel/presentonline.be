@@ -13,10 +13,10 @@
 
         <!-- HEADER CONTACT - DESKTOP -->
         <div class="header__content header-contact__content desktop">
-            <h4 class="header-cases__content__title desktop">Contact</h4>
+            <h4 class="header-contact__content__title">Contact</h4>
 
-            <div class="header-cases__content__text">
-                <h1>Aarzel niet om ons te contacteren</h1>
+            <div class="header-contact__content__text">
+                <h1>Aarzel niet om contact op te nemen</h1>
                 <a class="button button-primary"><i class="icon-first fa-solid fa-envelope"></i>Stuur een mailtje</a>
             </div>
         </div>
@@ -42,7 +42,6 @@
     <!-- CONTACT -->
     <main class="contact">
 
-        <?php /*
         <!-- INFO -->
         <div class="contact__info">
             <h2>Contact info</h2>
@@ -62,9 +61,8 @@
             </div>
 
             <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials') ?>
+            <?php snippet('general/socials', ['color' => 'neutrals-100']); ?>
         </div>
-        */ ?>
 
 
 

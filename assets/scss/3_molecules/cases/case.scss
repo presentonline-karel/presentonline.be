@@ -43,3 +43,18 @@
         max-height: 337px;
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .case {
+        .button {
+            top: 40px;
+            right: 40px;
+        }
+
+        &__id {
+            bottom: 40px;
+            left: 40px;
+        }
+    }
+}

@@ -28,7 +28,8 @@
 
         <!-- HEADER HOME - CONTENT -->
         <div class="header__content header-home__content">
-            <h1 class="header__content__title">Uw partner voor <span>websites|</span></h1>
+            <h1 class="header__content__title mobile">Uw partner voor <span>websites|</span></h1>
+            <h1 class="header__content__title desktop">Wij maken <span>responsive websites</span> & unieke online content.</h1>
             <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
 
             <div class="buttons">

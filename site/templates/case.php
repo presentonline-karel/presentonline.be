@@ -61,7 +61,7 @@
 
 
     <main>
-        
+
         <!-- CHALLENGES -->
         <section class="challenges section">
             <img class="challenges__img desktop" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
@@ -87,19 +87,39 @@
         <section class="next-case section">
             <h2 class="next-case__title">Next case</h2>
 
-            <!-- Case -->
-            <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+            <div class="next-case__cases">
 
-                <!-- case button -->
-                <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                <!-- Case -->
+                <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
-                <!-- case text -->
-                <div class="case__id">
-                    <h2 class="case__id__title">Music2Move</h2>
+                    <!-- case button -->
+                    <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
 
-                    <div class="tags">
-                        <span class="tag">Website</span>
-                        <span class="tag">Photos</span>
+                    <!-- case text -->
+                    <div class="case__id">
+                        <h2 class="case__id__title">Music2Move</h2>
+
+                        <div class="tags">
+                            <span class="tag">Website</span>
+                            <span class="tag">Photos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Case -->
+                <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+
+                    <!-- case button -->
+                    <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+
+                    <!-- case text -->
+                    <div class="case__id">
+                        <h2 class="case__id__title">Music2Move</h2>
+
+                        <div class="tags">
+                            <span class="tag">Website</span>
+                            <span class="tag">Photos</span>
+                        </div>
                     </div>
                 </div>
             </div>

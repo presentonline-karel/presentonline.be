@@ -69,6 +69,7 @@
     .nav {
         .burger {
             right: 48px;
+            top: 35px;
         }
     }
 }
@@ -77,10 +78,11 @@
 @media only screen and (min-width: $tablet-landscape) {
     .nav {
         .burger {
-            padding: 11px 8px;
-            background-color: $neutrals-100;
-            border-radius: $border-radius-small;
-            top: 24px;
+            //padding: 11px 8px;
+            //background-color: $neutrals-100;
+            //border-radius: $border-radius-small;
+            top: 32px;
+            right: 96px;
 
             &.toggle {
                 background-color: $primary-500;

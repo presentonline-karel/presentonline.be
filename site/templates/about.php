@@ -12,11 +12,11 @@
         <?php snippet("general/nav") ?>
 
         <!-- HEADER ABOUT - CONTENT -->
-        <div class="header__content header-about__content flex">
+        <div class="header__content header-about__content">
             <h4 class="header-about__content__title desktop">Over ons</h4>
 
             <div class="header-about__content__text">
-                <h1 class="header__content__title">We are Present Online</h1>
+                <h1 class="header__content__title">Wat meer info over ons</h1>
                 <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
 
                 <a class="button button-primary" href="#">Lees meer<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>

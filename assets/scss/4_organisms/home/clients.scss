@@ -25,3 +25,14 @@
         padding: 72px 48px;
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .clients-section {
+        padding: 72px 202px;
+
+        .clients {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
