@@ -36,3 +36,20 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .number-container {
+        max-width: 105px;
+    
+        .number {
+            font-size: 56px;
+            line-height: 60px;
+        }
+    
+        .label {
+            font-size: 16px;
+            line-height: 16px;
+        }
+    }
+}

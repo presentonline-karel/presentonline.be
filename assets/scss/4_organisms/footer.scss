@@ -203,3 +203,14 @@
         }
     }
 }
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .footer {
+        padding: 96px 176px 24px 176px;
+
+        .top {
+            right: 176px;
+        }
+    }
+}

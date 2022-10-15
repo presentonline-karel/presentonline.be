@@ -219,6 +219,8 @@
 
         //Default headers
         &__content {
+            padding: 64px 0px 112px 96px;
+
             .breadcrumbs {
                 margin-bottom: 40px;
             }
@@ -293,6 +295,52 @@
                 font-size: 20px;
                 line-height: 28px;
             }
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 308px 112px 202px;
+
+            &__title {
+                margin-top: 4px;
+            }
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 96px 112px 202px;
+                gap: 130px;
+
+                &__text {
+                    width: calc(100% - 506px - 130px);
+                }
+
+                &__img {
+                    width: 506px;
+                }
+            }
+        }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 64px 0px 112px 176px;
+        }
+
+        //Home header
+        .header-home__content {
+            padding: 64px 282px 112px 282px;
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 388px 112px 282px;
         }
     }
 }

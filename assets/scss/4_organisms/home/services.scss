@@ -77,3 +77,10 @@
         padding: 128px 96px;
     }
 }
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .services-section {
+        padding: 128px 176px;
+    }
+}

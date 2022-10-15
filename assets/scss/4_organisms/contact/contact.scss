@@ -74,3 +74,16 @@
         }
     }
 }
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .contact:not(.footer__section) {
+        .contact__info {
+            padding: 96px 130px 96px 176px;
+        }
+
+        .contact__form-section {
+            padding: 96px 176px 96px 96px;
+        }
+    }
+}

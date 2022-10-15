@@ -56,3 +56,14 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .challenges {
+        gap: 130px;
+        
+        &__text {
+            width: calc(100% - 506px - 130px);
+        }
+    }
+}

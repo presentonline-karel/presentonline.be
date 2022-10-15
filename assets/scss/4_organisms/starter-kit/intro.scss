@@ -56,6 +56,28 @@
         padding: 96px 202px 96px 96px;
         gap: 72px;
 
+        .intro__text {
+            h2 {
+                margin-bottom: 16px;
+            }
+        }
+
+        .intro__img {
+            width: 506px;
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .intro:not(.footer__section) {
+        padding: 128px 202px 128px 96px;
+        gap: 130px;
+
+        .intro__text {
+            width: calc(100% - 506px - 130px);
+        }
+
         .intro__img {
             width: 506px;
         }

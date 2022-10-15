@@ -54,7 +54,15 @@
     .header-thank-you {
         &__content {
             padding: 64px 96px 96px 202px;
-            gap: 72px;
+            gap: 130px;
+
+            &__text {
+                width: calc(100% - 506px - 130px);
+                
+                .button-tertiary {
+                    margin-bottom: 16px;
+                }
+            }
 
             &__img {
                 width: 506px;

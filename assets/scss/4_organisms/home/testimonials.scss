@@ -38,6 +38,13 @@
     }
 }
 
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .testimonials-section {
+        padding: 128px 282px;
+    }
+}
+
 /* DESKTOP - 1280px
 @media only screen and (min-width: $desktop-1) {
     .testimonials {

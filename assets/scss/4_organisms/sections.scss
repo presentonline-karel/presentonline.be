@@ -22,3 +22,17 @@
         padding: 96px;
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .section {
+        padding: 128px 202px 128px 96px;
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .section {
+        padding: 128px 282px 128px 176px;
+    }
+}

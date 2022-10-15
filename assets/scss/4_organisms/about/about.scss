@@ -136,3 +136,26 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .about {
+        padding: 128px 202px;
+        gap: 106px;
+
+        &__text {
+            width: calc(100% - 424px - 106px);
+
+            &__numbers {
+                padding: 56px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .about {
+        padding: 128px 282px;
+    }
+}

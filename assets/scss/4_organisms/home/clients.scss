@@ -87,3 +87,10 @@
         }
     }
 }
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .clients-section {
+        padding: 128px 388px;
+    }
+}

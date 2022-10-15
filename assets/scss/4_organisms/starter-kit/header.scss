@@ -58,3 +58,23 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .header-starter-kit__content {
+        gap: 130px;
+
+        &__text {
+            width: 506px;
+
+            h1 {
+                font-size: 40px;
+                line-height: 44px;
+            }
+        }
+
+        &__img {
+            width: calc(100% - 506px - 130px);
+        }
+    }
+}
