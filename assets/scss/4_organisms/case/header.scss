@@ -46,18 +46,14 @@
 @media only screen and (min-width: $tablet-landscape) {
     .header-case {
         &__content {
-            padding: 47px 96px 72px 96px;
-            display: flex;
-            justify-content: flex-start;
             align-items: flex-start;
-            gap: 48px;
+            gap: 40px;
 
             &__text {
                 width: 50%;
 
                 p {
-                    text-align: left;
-                    padding: 0px;
+                    margin-bottom: 0;
                 }
             }
 

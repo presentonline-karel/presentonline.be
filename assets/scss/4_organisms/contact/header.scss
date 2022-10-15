@@ -21,26 +21,6 @@
 @media only screen and (min-width: $tablet-landscape) {
     .header-contact {
         &__content {
-            padding: 47px 96px 72px 96px;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 24px;
-
-            &__title {
-                display: block;
-                width: 188px;
-                color: $primary-600;
-            }
-
-            &__text {
-                width: calc(100% - 188px - 24px);
-
-                h1 {
-                    padding-right: 106px;
-                }
-            }
-
             &.mobile {
                 display: none;
             }

@@ -13,11 +13,39 @@
     .button {
         color: $primary-600;
     }
+
+    &__img {
+        display: none;
+    }
 }
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .intro:not(.footer__section) {
         padding: 72px 48px;
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .intro:not(.footer__section) {
+        padding: 72px 96px;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 40px;
+
+        .intro__text {
+            width: calc(100% - 360px - 40px);
+        }
+
+        .intro__img {
+            width: 360px;
+            height: auto;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: $border-radius-small;
+        }
     }
 }

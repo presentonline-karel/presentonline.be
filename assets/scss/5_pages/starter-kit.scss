@@ -3,3 +3,18 @@
         background-color: $neutrals-100;
     }
 }
+
+/* TABLET LANDSCAPE - 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .container-starter-kit {
+        .testimonials-section {
+            background-color: $neutrals-200;
+        }
+
+        .contact:not(.footer__section) {
+            .contact__form-section {
+                background-color: $neutrals-100;
+            }
+        }
+    }
+}

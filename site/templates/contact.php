@@ -16,7 +16,9 @@
             <h4 class="header-contact__content__title">Contact</h4>
 
             <div class="header-contact__content__text">
-                <h1>Aarzel niet om contact op te nemen</h1>
+                <h1 class="header__content__title">Aarzel niet om contact op te nemen</h1>
+                <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
+
                 <a class="button button-primary"><i class="icon-first fa-solid fa-envelope"></i>Stuur een mailtje</a>
             </div>
         </div>
@@ -44,8 +46,8 @@
 
         <!-- INFO -->
         <div class="contact__info">
-            <h2>Contact info</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            <h2 class="neutrals-100">Contact info</h2>
+            <p class="neutrals-100">Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
             <div class="contact__info__items">
 

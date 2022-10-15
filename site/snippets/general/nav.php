@@ -29,8 +29,9 @@
                 <?php endforeach; ?>
 
                 <!-- starter kit CTA -->
-                <li class="nav__link">
+                <li class="nav__link buttons">
                     <a class="button button-primary" href="<?= $site->url() ?>/starter-kit">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <div class="language-button desktop"><i class="fa-solid fa-globe"></i></div>
                 </li>
             </ul>
         <?php endif; ?>

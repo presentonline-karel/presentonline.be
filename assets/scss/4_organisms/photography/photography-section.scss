@@ -16,3 +16,10 @@
         padding: 72px 48px;
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .photography-section {
+        padding: 72px 96px;
+    }
+}

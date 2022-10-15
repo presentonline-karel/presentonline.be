@@ -31,7 +31,7 @@
                 <a class="button button-tertiary large">Enkele fotoshoots<i class="anchor-first fa-solid fa-arrow-down"></i></a>
             </div>
 
-            <img class="header-service__content__img desktop" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" />
+            <img class="header-service__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" />
         </div>
     </header>
 

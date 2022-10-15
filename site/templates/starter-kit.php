@@ -13,17 +13,20 @@
 
         <!-- HEADER STARTER KIT - CONTENT -->
         <div class="header__content header-starter-kit__content">
-            <h1 class="header__content__title">Proffesionele website nodig voor een klein budget?</h1>
-            <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
 
-            <div class="buttons">
-                <a class="button button-primary" href="#">Get it now<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
-                <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+            <div class="header__content__text header-starter-kit__content__text">
+                <h1 class="header__content__title">Proffesionele website nodig voor een klein budget?</h1>
+                <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
+
+                <div class="buttons">
+                    <a class="button button-primary" href="#">Get it now<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
+                    <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <p class="language">
+                    <i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language
+                </p>
             </div>
-
-            <p class="language">
-                <i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language
-            </p>
 
             <img class="header-starter-kit__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="karrel" />
         </div>
@@ -34,10 +37,17 @@
     <main>
         <!-- INTRO -->
         <section class="intro section">
-            <h2>Present Online Starter Kit, gedaan met dat geknoei</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.<br><br> Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
-            <a class="button button-tertiary large">Ontdek de Starter Kit<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+            <!-- Intro text -->
+            <div class="intro__text">
+                <h2>Present Online Starter Kit, gedaan met dat geknoei</h2>
+                <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.<br><br> Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+
+                <a class="button button-tertiary large">Ontdek de Starter Kit<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+            </div>
+
+            <!-- Intro img -->
+            <img class="intro__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="karrel" />
         </section>
 
 
@@ -132,13 +142,15 @@
 
             <!-- Included box - price -->
             <div class="includes__price includes__box">
-                <h3>Vanaf</h3>
+                <div class="includes__price__content">
+                    <h3>Vanaf</h3>
 
-                <h2>€499</h2>
+                    <h2>€499</h2>
 
-                <div class="buttons">
-                    <a class="button button-primary" href="#">Get it now</a>
-                    <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <div class="buttons">
+                        <a class="button button-primary" href="#">Get it now</a>
+                        <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -152,6 +164,28 @@
 
         <!-- CONTACT -->
         <section class="contact">
+
+            <!-- INFO -->
+            <div class="contact__info">
+                <h2 class="neutrals-100">Contact info</h2>
+                <p class="neutrals-100">Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+
+                <div class="contact__info__items">
+
+                    <!-- Telephone -->
+                    <a class="info-item p">
+                        <i class="icon-first fa fa-phone" aria-hidden="true"></i>0476 28 09 02
+                    </a>
+
+                    <!-- Email -->
+                    <a class="info-item p">
+                        <i class="icon-first fa fa-envelope" aria-hidden="true"></i>info@presentonline.be
+                    </a>
+                </div>
+
+                <!-- SNIPPET - SOCIALS -->
+                <?php snippet('general/socials', ['color' => 'neutrals-100']); ?>
+            </div>
 
             <!-- FORMSECTION -->
             <div class="contact__form-section">

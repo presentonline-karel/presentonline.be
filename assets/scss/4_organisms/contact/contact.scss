@@ -1,4 +1,8 @@
 .contact {
+    &__info {
+        display: none;
+    }
+
     &__form-section {
         background-color: $neutrals-200;
         padding: 56px 16px;
@@ -21,9 +25,42 @@
 
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .contact {
-        &__form-section {
+    .contact:not(.footer__section) {
+        display: flex;
+        width: 100%;
+        background-color: $primary-600;
+
+        .contact__info {
+            display: block;
+            width: 40%;
+            padding: 72px 40px 72px 96px;
+            background-color: $primary-600;
+            height: 100%;
+
+            h2 {
+                margin-bottom: 16px;
+            }
+
+            p {
+                margin-bottom: 32px;
+            }
+
+            &__items {
+                margin-bottom: 40px;
+
+                .info-item {
+                    color: $neutrals-100;
+                }
+            }
+        }
+
+        .contact__form-section {
             padding: 72px 96px;
+            width: 60%;
+
+            h3 {
+                display: none;
+            }
         }
     }
 }

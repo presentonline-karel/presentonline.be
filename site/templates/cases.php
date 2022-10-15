@@ -13,7 +13,7 @@
 
         <!-- HEADER CASES - CONTENT -->
         <div class="header__content header-cases__content desktop">
-            <h4 class="header-cases__content__title">Cases</h4>
+            <h4 class="header-cases__content__title">Projecten</h4>
 
             <div class="header-cases__content__text">
                 <h1>Enkele projecten waar we trots op zijn</h1>

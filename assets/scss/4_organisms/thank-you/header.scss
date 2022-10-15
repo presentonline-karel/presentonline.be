@@ -15,3 +15,36 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header-thank-you {
+        &__content {
+            gap: 40px;
+
+            &__text {
+                .button-tertiary {
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    text-align: left;
+                    padding: 0;
+                }
+
+                h3 {
+                    display: none;
+                }
+            }
+
+            &__img {
+                display: block;
+                width: 360px;
+                height: auto;
+                aspect-ratio: 1/1;
+                object-fit: cover;
+                border-radius: $border-radius-small;
+            }
+        }
+    }
+}

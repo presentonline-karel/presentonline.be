@@ -28,7 +28,8 @@
             margin-bottom: 16px;
         }
 
-        &__p, &__a {
+        &__p,
+        &__a {
             font-size: 16px;
             color: $neutrals-100;
             display: block;
@@ -95,7 +96,7 @@
         .top {
             top: 64px;
             right: 48px;
-    
+
             i {
                 font-size: 20px;
                 line-height: 32px;
@@ -115,6 +116,44 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .footer {
-        padding: 64px 96px 24px 96px;
+        padding: 72px 96px 24px 96px;
+
+        .top {
+            top: 72px;
+            right: 96px;
+
+            i {
+                font-size: 24px;
+                line-height: 24px;
+            }
+        }
+
+        &__blocks {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 428px calc(100% - 428px);
+            grid-template-rows: 152px min-content;
+            grid-template-areas:
+                "intro contact"
+                "intro sitemapServices";
+
+            .intro {
+                grid-area: intro;
+                width: calc(100% - 130px);
+            }
+
+            .contact {
+                grid-area: contact;
+
+                .footer__section__p:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            .flex {
+                grid-area: sitemapServices;
+                width: 100%;
+            }
+        }
     }
 }

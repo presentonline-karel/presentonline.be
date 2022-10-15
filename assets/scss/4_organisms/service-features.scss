@@ -22,3 +22,19 @@
         padding: 72px 48px;
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .service-features-section {
+        padding: 72px 96px;
+    
+        &__title {
+            margin-bottom: 64px;
+            text-align: center;
+        }
+    
+        &__p, .button-tertiary.large {
+            display: none;
+        }
+    }
+}

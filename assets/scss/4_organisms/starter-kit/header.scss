@@ -11,3 +11,30 @@
         }
     }
 }
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .header-starter-kit__content {
+        width: 115%;
+        gap: 40px;
+
+        &__text {
+            width: 35%;
+
+            .buttons {
+                justify-content: flex-start;
+            }
+
+            .language {
+                margin-bottom: 0;
+            }
+        }
+
+        &__img {
+            width: 65%;
+            height: auto;
+            aspect-ratio: 3/2;
+            object-fit: cover;
+        }
+    }
+}
