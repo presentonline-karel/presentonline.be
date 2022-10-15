@@ -35,3 +35,24 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .challenges {
+        gap: 72px;
+        
+        &__text {
+            p {
+                margin-bottom: 24px;
+            }
+
+            .features {
+                margin-bottom: 32px;
+            }
+        }
+
+        &__img {
+            width: 506px;
+        }
+    }
+}

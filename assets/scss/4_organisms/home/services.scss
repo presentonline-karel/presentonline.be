@@ -55,3 +55,25 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .services-section {
+        padding: 96px 96px;
+
+        h2 {
+            margin-bottom: 64px;
+        }
+
+        .services {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .services-section {
+        padding: 128px 96px;
+    }
+}

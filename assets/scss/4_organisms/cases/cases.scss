@@ -13,6 +13,16 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .cases {
-        padding: 47px 96px 72px 96px;
+        padding: 0px 96px 72px 96px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .cases {
+        padding: 0px 202px 96px 202px;
     }
 }

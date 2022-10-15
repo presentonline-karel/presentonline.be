@@ -37,3 +37,20 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .header-contact {
+        &__content {
+            &__text {
+                h1 {
+                    margin-bottom: 16px;
+                }
+
+                p {
+                    margin-bottom: 32px;
+                }
+            }
+        }
+    }
+}

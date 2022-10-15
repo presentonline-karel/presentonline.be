@@ -64,12 +64,32 @@
             margin-bottom: 0;
         }
     }
+}
 
-    .service-features-section {
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
+/* DESKTOP 1280PX */
+@media screen and (min-width: $desktop-1) {
+    .cards {
+        .card {
+            &__title {
+                margin-bottom: 12px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .cards {
+        .card {
+            .button {
+                font-size: 20px;
+                line-height: 28px;
+
+                i {
+                    font-size: 18px;
+                    line-height: 28px;
+                }
+            }
         }
     }
 }

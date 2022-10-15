@@ -89,3 +89,11 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .includes {
+        padding: 96px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

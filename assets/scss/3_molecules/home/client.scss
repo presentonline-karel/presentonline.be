@@ -34,12 +34,12 @@
     .clients {
         .client {
             min-height: 112px;
-            //border: none;
-            //background-color: $neutrals-200;
+            border: none;
+            background-color: $neutrals-200;
 
             &__img {
-                width: calc(100% - 48px);
-                height: calc(100% - 48px);
+                width: calc(100% - 32px);
+                height: calc(100% - 32px);
             }
         }
     }

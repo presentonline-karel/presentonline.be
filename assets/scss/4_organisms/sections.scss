@@ -15,3 +15,10 @@
         padding: 72px 96px;
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .section {
+        padding: 96px;
+    }
+}

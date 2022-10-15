@@ -50,6 +50,7 @@
 
                 .info-item {
                     color: $neutrals-100;
+                    display: block;
                 }
             }
         }
@@ -61,6 +62,15 @@
             h3 {
                 display: none;
             }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .contact:not(.footer__section) {
+        .contact__info, .contact__form-section {
+            padding: 96px;
         }
     }
 }

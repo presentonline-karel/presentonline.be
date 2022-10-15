@@ -63,3 +63,12 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .header-case {
+        &__content {
+            padding: 64px 96px 96px 96px;
+        }
+    }
+}

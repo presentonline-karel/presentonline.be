@@ -38,3 +38,23 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .header-starter-kit__content {
+        gap: 72px;
+
+        &__text {
+            width: 35%;
+
+            .buttons {
+                justify-content: flex-start;
+
+                .button {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

@@ -110,6 +110,10 @@
                 margin-bottom: 24px;
             }
         }
+
+        .line {
+            margin-bottom: 24px;
+        }
     }
 }
 
@@ -154,6 +158,48 @@
                 grid-area: sitemapServices;
                 width: 100%;
             }
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .footer {
+        padding: 96px 96px 24px 96px;
+
+        .top {
+            top: 96px;
+        }
+
+        &__blocks {
+            grid-template-columns: 294px 352px 200px;
+            grid-template-rows: auto;
+            grid-template-areas: "intro sitemapServices contact";
+            gap: 96px;
+
+            .intro {
+                grid-area: intro;
+                width: auto;
+            }
+
+            .contact {
+                grid-area: contact;
+            }
+
+            .flex {
+                grid-area: sitemapServices;
+                gap: 96px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .footer__section {
+        h3 {
+            font-size: 24px;
+            line-height: 32px;
         }
     }
 }

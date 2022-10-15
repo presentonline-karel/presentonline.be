@@ -47,14 +47,16 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .case {
+        margin-bottom: 0;
+        
         .button {
-            top: 40px;
-            right: 40px;
+            top: 32px;
+            right: 32px;
         }
 
         &__id {
-            bottom: 40px;
-            left: 40px;
+            bottom: 32px;
+            left: 32px;
         }
     }
 }

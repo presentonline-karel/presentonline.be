@@ -276,7 +276,7 @@
                 flex-direction: row;
                 justify-content: space-between;
                 align-items: center;
-                gap: 40px;
+                gap: 32px;
 
                 .nav__link {
                     display: inline;
@@ -325,7 +325,7 @@
                         opacity: 1;
                         white-space: nowrap;
                         width: 100%;
-                        color: $neutrals-900;
+                        color: $neutrals-1000;
                         border-bottom: 3px solid transparent;
                         transition: all $transition-time-short ease-in-out;
 
@@ -389,21 +389,32 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .nav {
-        //padding: 40px 100px;
-        //height: 130px;
-        //gap: 115px;
-
         .logo {
             width: 230px;
             height: 40px;
         }
 
         .nav-links {
-            ul {
-                .nav {
-                    &__link {
+            .link-items {
+                gap: 40px;
+
+                .nav__link {
+                    &__item {
                         font-size: 20px;
                         line-height: 28px;
+
+                        &__notification {
+                            top: -6px;
+                        }
+                    }
+
+                    .button-primary {
+                        font-size: 20px;
+
+                        i {
+                            font-size: 20px;
+                            line-height: 20px;
+                        }
                     }
                 }
             }

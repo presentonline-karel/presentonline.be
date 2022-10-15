@@ -131,7 +131,7 @@
                 </div>
 
                 <h3 class="card__title">And much more</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
 
                 <div class="features">
                     <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>

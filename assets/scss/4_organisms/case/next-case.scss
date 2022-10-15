@@ -40,3 +40,14 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .next-case {
+        padding: 96px 202px;
+
+        &__title {
+            margin-bottom: 64px;
+        }
+    }
+}

@@ -29,12 +29,33 @@
         padding: 72px 96px;
     
         &__title {
-            margin-bottom: 64px;
+            margin-bottom: 40px;
             text-align: center;
         }
     
         &__p, .button-tertiary.large {
             display: none;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .service-features-section {
+        padding: 96px;
+
+        &__title {
+            margin-bottom: 64px;
+        }
+
+        .cards {
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }

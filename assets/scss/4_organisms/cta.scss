@@ -38,3 +38,37 @@
         padding: 64px 96px;
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .cta {
+        padding: 96px 202px;
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .cta {
+        padding: 96px 202px;
+
+        &__title {
+            max-width: 718px;
+            font-size: 56px;
+            line-height: 64px;
+            margin-bottom: 40px;
+        }
+
+        &:has(.features) {
+            .cta__title {
+                max-width: 506px;
+                margin-bottom: 24px;
+                font-size: 40px;
+                line-height: 48px;
+            }
+    
+            .features {
+                margin-bottom: 32px;
+            }
+        }
+    }
+}

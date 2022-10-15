@@ -30,7 +30,7 @@
         <div class="header__content header-home__content">
             <h1 class="header__content__title mobile">Uw partner voor <span>websites|</span></h1>
             <h1 class="header__content__title desktop">Wij maken <span>responsive websites</span> & unieke online content.</h1>
-            <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
+            <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo. Suspendisse justo orci, egestas eget facilisis id, semper a nibh.</p>
 
             <div class="buttons">
                 <a class="button button-primary" href="#">What we do<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
@@ -61,7 +61,7 @@
             </div>
 
             <!-- CTA -> To cases -->
-            <a class="button button-tertiary" href="#">What we do for them<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
+            <a class="button button-tertiary large" href="#">What we do for them<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
 
 

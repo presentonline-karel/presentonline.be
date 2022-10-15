@@ -122,3 +122,17 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .about {
+        padding: 96px 202px;
+        gap: 72px;
+
+        &__text {
+            &__p {
+                margin-bottom: 40px;
+            }
+        }
+    }
+}

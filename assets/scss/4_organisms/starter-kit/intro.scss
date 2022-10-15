@@ -49,3 +49,15 @@
         }
     }
 }
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .intro:not(.footer__section) {
+        padding: 96px 202px 96px 96px;
+        gap: 72px;
+
+        .intro__img {
+            width: 506px;
+        }
+    }
+}
