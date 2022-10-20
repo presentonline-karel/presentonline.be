@@ -19,7 +19,7 @@
                 <h1 class="header__content__title">Aarzel niet om contact op te nemen</h1>
                 <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
 
-                <a class="button button-primary"><i class="icon-first fa-solid fa-envelope"></i>Stuur een mailtje</a>
+                <a class="button button-primary">Get in touch</a>
             </div>
         </div>
 

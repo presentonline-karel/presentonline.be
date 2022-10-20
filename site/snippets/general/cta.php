@@ -1,5 +1,5 @@
 <!-- CTA -->
-<div class="cta" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/cta.png');">
+<div id="cta" class="cta section section-medium" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
     <!-- Title -->
     <h3 class="cta__title">Uw online transformatie begint vandaag.</h3>

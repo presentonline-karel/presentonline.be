@@ -86,7 +86,43 @@
 @media screen and (min-width: $desktop-5) {
     .header-case {
         &__content {
-            padding: 64px 176px 112px 176px;
+            padding: 64px 176px 128px 176px;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .header-case {
+        &__content {
+            padding: 64px 336px 128px 336px;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .header-case {
+        &__content {
+            padding: 64px 656px 128px 656px;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .header-case {
+        &__content {
+            padding: 64px 1096px 128px 1096px;
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .header-case {
+        &__content {
+            padding: 64px 1296px 128px 1296px;
         }
     }
 }

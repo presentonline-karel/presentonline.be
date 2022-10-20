@@ -60,10 +60,46 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .challenges {
+        padding: 128px 202px 128px 96px;
         gap: 130px;
         
         &__text {
             width: calc(100% - 506px - 130px);
         }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .challenges {
+        padding: 128px 282px 128px 176px;
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .challenges {
+        padding: 128px 442px 128px 336px;
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .challenges {
+        padding: 128px 762px 128px 656px;
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .challenges {
+        padding: 128px 1202px 128px 1096px;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .challenges {
+        padding: 128px 1402px 128px 1296px;
     }
 }

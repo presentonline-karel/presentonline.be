@@ -49,7 +49,7 @@
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-3) {
     .cta {
-        padding: 128px 202px;
+        //padding: 128px 202px;
 
         &__title {
             max-width: 718px;
@@ -70,12 +70,5 @@
                 margin-bottom: 32px;
             }
         }
-    }
-}
-
-/* DESKTOP 1600PX */
-@media screen and (min-width: $desktop-5) {
-    .cta {
-        padding: 128px 282px;
     }
 }

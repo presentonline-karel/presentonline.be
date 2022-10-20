@@ -38,8 +38,9 @@
 
 
     <main>
+
         <!-- STEPS -->
-        <section class="service-features-section section">
+        <section id="service-features" class="service-features-section section section-large">
             <h2 class="service-features-section__title">Wordt vriendjes met Google</h2>
             <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
 

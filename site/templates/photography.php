@@ -37,10 +37,11 @@
 
 
 
-    <main>
+    <!-- PHOTOGRAPHY SECTIONS -->
+    <main id="photography-sections">
 
         <!-- PHOTOGRAPHY CAROUSEL -->
-        <div class="photography-section section">
+        <div class="photography-section section section-medium">
             <h3 class="photography-section__title">GAGK Rupelstreek</h3>
 
             <div class="carousel carousel-1">
@@ -63,7 +64,7 @@
         </div>
 
         <!-- PHOTOGRAPHY CAROUSEL -->
-        <div class="photography-section section">
+        <div class="photography-section section section-medium">
             <h3 class="photography-section__title">KdG FabLab</h3>
 
             <div class="carousel carousel-2">
@@ -86,7 +87,7 @@
         </div>
 
         <!-- PHOTOGRAPHY CAROUSEL -->
-        <div class="photography-section section">
+        <div class="photography-section section section-medium">
             <h3 class="photography-section__title">Turnkring Energym</h3>
 
             <div class="carousel carousel-3">

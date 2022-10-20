@@ -219,7 +219,7 @@
 
         //Default headers
         &__content {
-            padding: 64px 0px 112px 96px;
+            padding: 64px 0px 128px 96px;
 
             .breadcrumbs {
                 margin-bottom: 40px;
@@ -330,17 +330,136 @@
 
         //Default headers
         &__content {
-            padding: 64px 0px 112px 176px;
+            padding: 64px 0px 128px 176px;
         }
 
         //Home header
         .header-home__content {
-            padding: 64px 282px 112px 282px;
+            padding: 64px 282px 128px 282px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 64px 388px 112px 282px;
+            padding: 64px 388px 128px 282px;
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 176px 128px 282px;
+            }
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 64px 0px 128px 336px;
+        }
+
+        //Home header
+        .header-home__content {
+            padding: 64px 442px 128px 442px;
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 548px 128px 442px;
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 336px 128px 442px;
+            }
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 64px 0px 128px 656px;
+        }
+
+        //Home header
+        .header-home__content {
+            padding: 64px 762px 128px 762px;
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 868px 128px 762px;
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 656px 128px 762px;
+            }
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 64px 0px 128px 1096px;
+        }
+
+        //Home header
+        .header-home__content {
+            padding: 64px 1202px 128px 1202px;
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 1308px 128px 1202px;
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 1096px 128px 1202px;
+            }
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .header {
+
+        //Default headers
+        &__content {
+            padding: 64px 0px 128px 1296px;
+        }
+
+        //Home header
+        .header-home__content {
+            padding: 64px 1402px 128px 1402px;
+        }
+
+        //Cases, About & Contact headers
+        .header-about__content, .header-cases__content, .header-contact__content {
+            padding: 64px 1508px 128px 1402px;
+        }
+
+        //Service headers
+        &-service {
+            &__content {
+                padding: 64px 1296px 128px 1402px;
+            }
         }
     }
 }

@@ -53,7 +53,7 @@
 @media only screen and (min-width: $desktop-1) {
     .header-thank-you {
         &__content {
-            padding: 64px 96px 96px 202px;
+            padding: 64px 96px 128px 202px;
             gap: 130px;
 
             &__text {
@@ -67,6 +67,51 @@
             &__img {
                 width: 506px;
             }
+        }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .header-thank-you {
+        &__content {
+            padding: 64px 176px 128px 282px;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .header-thank-you {
+        &__content {
+            padding: 64px 336px 128px 442px;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .header-thank-you {
+        &__content {
+            padding: 64px 656px 128px 762px;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .header-thank-you {
+        &__content {
+            padding: 64px 1096px 128px 1202px;
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .header-thank-you {
+        &__content {
+            padding: 64px 1296px 128px 1402px;
         }
     }
 }

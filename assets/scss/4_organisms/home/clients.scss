@@ -74,7 +74,7 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .clients-section {
-        padding: 128px 308px;
+        //padding: 128px 308px;
 
         .button-tertiary {
             font-size: 24px;
@@ -85,12 +85,5 @@
                 line-height: 32px;
             }
         }
-    }
-}
-
-/* DESKTOP 1600PX */
-@media screen and (min-width: $desktop-5) {
-    .clients-section {
-        padding: 128px 388px;
     }
 }

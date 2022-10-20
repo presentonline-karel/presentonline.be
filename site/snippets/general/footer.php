@@ -1,4 +1,4 @@
-        <footer class="footer">
+        <footer class="footer section section-large">
 
             <!-- ARROW TOP -->
             <a class="top" href="#container">

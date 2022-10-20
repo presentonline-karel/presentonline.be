@@ -1,5 +1,5 @@
 <!-- SERVICES -->
-<section id="services" class="services-section section">
+<section id="services" class="services-section section section-large">
     <h2>Wat we doen?</h2>
 
     <!-- Services items -->

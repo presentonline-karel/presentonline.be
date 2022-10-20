@@ -1,0 +1,126 @@
+.section {
+    padding: 72px 16px;
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .section {
+        padding: 72px 48px;
+    }
+}
+
+/* TABLET 1024PX */
+@media only screen and (min-width: $tablet-landscape) {
+    .section {
+        padding: 72px 96px;
+    }
+}
+
+/* DESKTOP 1280PX */
+@media only screen and (min-width: $desktop-1) {
+    .section {
+        padding: 96px;
+    }
+}
+
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .section {
+        &-small {
+            padding: 128px 308px !important;
+        }
+
+        &-medium {
+            padding: 128px 202px !important;
+        }
+
+        &-large {
+            padding: 128px 96px !important;
+        }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media screen and (min-width: $desktop-5) {
+    .section {
+        &-small {
+            padding: 128px 388px !important;
+        }
+
+        &-medium {
+            padding: 128px 282px !important;
+        }
+
+        &-large {
+            padding: 128px 176px !important;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .section {
+        &-small {
+            padding: 128px 548px !important;
+        }
+
+        &-medium {
+            padding: 128px 442px !important;
+        }
+
+        &-large {
+            padding: 128px 336px !important;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .section {
+        &-small {
+            padding: 128px 868px !important;
+        }
+
+        &-medium {
+            padding: 128px 762px !important;
+        }
+
+        &-large {
+            padding: 128px 656px !important;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .section {
+        &-small {
+            padding: 128px 1308px !important;
+        }
+
+        &-medium {
+            padding: 128px 1202px !important;
+        }
+
+        &-large {
+            padding: 128px 1096px !important;
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .section {
+        &-small {
+            padding: 128px 1508px !important;
+        }
+
+        &-medium {
+            padding: 128px 1402px !important;
+        }
+
+        &-large {
+            padding: 128px 1296px !important;
+        }
+    }
+}

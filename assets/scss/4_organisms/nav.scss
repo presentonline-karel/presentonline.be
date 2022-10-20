@@ -49,7 +49,7 @@
                     display: inline;
                     width: 16px;
                     height: 16px;
-                    background-color: $primary-300;
+                    background-color: $primary-500;
                     border-radius: 50%;
                     position: absolute;
                     top: 0;
@@ -326,7 +326,7 @@
                         white-space: nowrap;
                         width: 100%;
                         color: $neutrals-1000;
-                        border-bottom: 3px solid transparent;
+                        //border-bottom: 3px solid transparent;
                         transition: all $transition-time-short ease-in-out;
 
                         &__notification {
@@ -334,12 +334,30 @@
                             right: -12px;
                         }
 
+                        .active-bullet {
+                            position: absolute;
+                            transform: translate(-50%, 0%);
+                            left: 50%;
+                            bottom: -8px;
+                            opacity: 0;
+                            width: 8px;
+                            height: 8px;
+                            border-radius: $border-radius-small;
+                            background-color: $primary-600;
+                            transition: all $transition-time-short;
+                        }
+
                         &:hover {
-                            border-bottom: 3px solid $primary-600;
+                            .active-bullet {
+                                opacity: 1;
+
+                            }
                         }
 
                         &.active {
-                            //border-bottom: 3px solid $primary-500;
+                            .active-bullet {
+                                opacity: 1;
+                            }
                         }
                     }
 
@@ -365,24 +383,11 @@
                 opacity: 0;
             }
 
-            /*.button {
-                display: block;
-                opacity: 1;
-            }*/
-
             .button-white,
             .logo {
                 display: none;
             }
         }
-
-        /*.burger {
-            display: none;
-        }*/
-
-        /*.quotation-button {
-            display: block;
-        }*/
     }
 }
 

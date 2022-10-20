@@ -38,8 +38,9 @@
 
 
     <main>
+
         <!-- KITS -->
-        <section class="service-features-section section">
+        <section id="service-features" class="service-features-section section section-large">
             <h2 class="service-features-section__title">De juiste oplossing voor uw project</h2>
             <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
 
@@ -57,6 +58,12 @@
                     <h3 class="card__title">Starter Kit</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
 
+                    <div class="features">
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                    </div>
+
                     <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
 
@@ -68,6 +75,12 @@
 
                     <h3 class="card__title">Advanced kit</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+
+                    <div class="features">
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                    </div>
                 </div>
 
                 <!-- Custom Kit -->
@@ -78,6 +91,12 @@
 
                     <h3 class="card__title">Custom kit</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+
+                    <div class="features">
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                    </div>
 
                     <a class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
@@ -92,7 +111,7 @@
 
 
         <!-- CASES CAROUSEL -->
-        <div class="carousel-section section">
+        <div id="cases" class="carousel-section section section-medium">
             <h2 class="carousel-section__title">Website cases</h2>
 
             <div class="carousel carousel-1">

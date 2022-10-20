@@ -33,7 +33,7 @@
         &__img {
             width: 65%;
             height: auto;
-            aspect-ratio: 3/2;
+            aspect-ratio: 16/9;
             object-fit: cover;
         }
     }
@@ -75,6 +75,42 @@
 
         &__img {
             width: calc(100% - 506px - 130px);
+            max-width: 924px;
+            object-fit: contain;
         }
+    }
+}
+
+/* DESKTOP 1600PX */
+@media only screen and (min-width: $desktop-5) {
+    .header-starter-kit__content {
+        &__img {
+            max-width: 1084px;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .header-starter-kit__content {
+        &__img {
+            max-width: 1404px;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .header-starter-kit__content {
+        &__img {
+            max-width: 2044px;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .header-starter-kit__content {
+        justify-content: flex-start;
     }
 }

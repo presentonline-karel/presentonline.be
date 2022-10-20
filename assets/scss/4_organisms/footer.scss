@@ -196,10 +196,15 @@
 
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
-    .footer__section {
-        h3 {
-            font-size: 24px;
-            line-height: 32px;
+    .footer {
+        padding-top: 96px !important;
+        padding-bottom: 24px !important;
+
+        &__section {
+            h3 {
+                font-size: 24px;
+                line-height: 32px;
+            }
         }
     }
 }
@@ -207,10 +212,44 @@
 /* DESKTOP 1600PX */
 @media screen and (min-width: $desktop-5) {
     .footer {
-        padding: 96px 176px 24px 176px;
-
         .top {
             right: 176px;
+        }
+    }
+}
+
+/* DESKTOP - HD */
+@media only screen and (min-width: $desktop-hd) {
+    .footer {
+        .top {
+            right: 336px;
+        }
+    }
+}
+
+/* DESKTOP - QHD */
+@media only screen and (min-width: $desktop-qhd) {
+    .footer {
+        .top {
+            right: 656px;
+        }
+    }
+}
+
+/* DESKTOP - WQHD */
+@media only screen and (min-width: $desktop-wqhd) {
+    .footer {
+        .top {
+            right: 1096px;
+        }
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .footer {
+        .top {
+            right: 1296px;
         }
     }
 }

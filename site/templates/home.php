@@ -46,8 +46,9 @@
 
 
     <main>
+
         <!-- CLIENTS -->
-        <div class="clients-section section">
+        <div id="clients" class="clients-section section section-small">
             <h3>Onze klanten</h3>
 
             <!-- Client items -->

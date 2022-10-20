@@ -24,7 +24,7 @@
             <ul class="link-items">
                 <?php foreach ($site->navigationLinks()->toStructure() as $link) : ?>
                     <li class="nav__link">
-                        <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?> <?php if($link->notification() == "true") { ?> <div class="nav__link__item__notification"><span><?= $link->number() ?></span></div> <?php } ?></a>
+                        <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?> <?php if($link->notification() == "true") { ?> <div class="nav__link__item__notification"><span><?= $link->number() ?></span></div> <?php } ?> <div class="active-bullet"></div></a>
                     </li>
                 <?php endforeach; ?>
 

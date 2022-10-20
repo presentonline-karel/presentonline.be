@@ -27,8 +27,9 @@
 
 
     <main>
+
         <!-- ABOUT -->
-        <section class="about section flex">
+        <section id="about" class="about section section-medium flex">
 
             <!-- ABOUT TEXT -->
             <div class="about__text">
