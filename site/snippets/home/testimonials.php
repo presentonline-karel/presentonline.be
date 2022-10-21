@@ -7,69 +7,86 @@
         <!-- testimonial -->
         <div class="slide-container testimonial">
 
-            <!-- testimonial -->
-            <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
+            <!-- arrow left -->
+            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
 
-            <!-- person -->
-            <div class="testimonial__id flex">
+            <div>
+                <!-- testimonial -->
+                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
 
-                <!-- image -->
-                <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+                <!-- person -->
+                <div class="testimonial__id flex">
 
-                <div>
-                    <h5 class="testimonial__id__name">Karel Decoene</h5>
-                    <p class="testimonial__id__function">CEO, Present Online</p>
+                    <!-- image -->
+                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+
+                    <div>
+                        <h5 class="testimonial__id__name">Karel Decoene</h5>
+                        <p class="testimonial__id__function">CEO, Present Online</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- arrows -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
+            <!-- arrow right -->
             <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
         </div>
+
+
 
         <!-- testimonial -->
         <div class="slide-container testimonial">
 
-            <!-- testimonial -->
-            <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
+            <!-- arrow left -->
+            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
 
-            <!-- person -->
-            <div class="testimonial__id flex">
+            <div>
+                <!-- testimonial -->
+                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
 
-                <!-- image -->
-                <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+                <!-- person -->
+                <div class="testimonial__id flex">
 
-                <div>
-                    <h5 class="testimonial__id__name">Robbe de Smet</h5>
-                    <p class="testimonial__id__function">LO Leerkracht</p>
+                    <!-- image -->
+                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+
+                    <div>
+                        <h5 class="testimonial__id__name">Robbe de Smet</h5>
+                        <p class="testimonial__id__function">LO Leerkracht</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- arrows -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
+            <!-- arrow right -->
             <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
         </div>
+
+
 
         <!-- testimonial -->
         <div class="slide-container testimonial">
 
-            <!-- testimonial -->
-            <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
+            <!-- arrow left -->
+            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
 
-            <!-- person -->
-            <div class="testimonial__id flex">
+            <div>
 
-                <!-- image -->
-                <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+                <!-- testimonial -->
+                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
 
-                <div>
-                    <h5 class="testimonial__id__name">Driss Merckx</h5>
-                    <p class="testimonial__id__function">Architect</p>
+                <!-- person -->
+                <div class="testimonial__id flex">
+
+                    <!-- image -->
+                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+
+                    <div>
+                        <h5 class="testimonial__id__name">Driss Merckx</h5>
+                        <p class="testimonial__id__function">Architect</p>
+                    </div>
                 </div>
             </div>
 
-            <!-- arrows -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
+            <!-- arrow right -->
             <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
         </div>
     </div>

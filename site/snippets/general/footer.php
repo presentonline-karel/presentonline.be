@@ -75,6 +75,7 @@
 
         <!-- MOBILE NAV SCRIPT -->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
+        <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
         </body>
 
         </html>

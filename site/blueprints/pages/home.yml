@@ -1,0 +1,21 @@
+title: Home
+icon: home
+
+options:
+  changeSlug: false
+
+columns:
+
+  #HOME TEXT CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Hero
+      heroHeadline:
+        label: Hero
+        type: headline
+      heroTitle:
+        label: Hero titel
+        type: writer
+        inline: true

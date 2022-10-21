@@ -1,24 +1,23 @@
 <?php snippet("general/header") ?>
 
 
+<!-- SWITCH LANGUAGES -> In modal steken -->
+<?php /* <nav class="languages">
+            <ul>
+                <?php foreach ($kirby->languages() as $language) : ?>
+                    <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+                        <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                            <?= html($language->name()) ?>
+                        </a>
+                        </li>
+                    <?php endforeach ?>
+            </ul>
+        </nav> */ ?>
+
+
 
 <!-- HOME CONTAINER -->
 <div id="container" class="container container-home">
-
-    <!-- SWITCH LANGUAGES -> In modal steken -->
-    <?php /* <nav class="languages">
-        <ul>
-            <?php foreach ($kirby->languages() as $language) : ?>
-                <li<?php e($kirby->language() == $language, ' class="active"') ?>>
-                    <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
-                        <?= html($language->name()) ?>
-                    </a>
-                    </li>
-                <?php endforeach ?>
-        </ul>
-    </nav> */ ?>
-
-
 
     <!-- HEADER -->
     <header class="header header-home">
@@ -29,7 +28,7 @@
         <!-- HEADER HOME - CONTENT -->
         <div class="header__content header-home__content">
             <h1 class="header__content__title mobile">Uw partner voor <span>websites|</span></h1>
-            <h1 class="header__content__title desktop">Wij maken <span>responsive websites</span> & unieke online content.</h1>
+            <h1 class="header__content__title desktop"><?= $page->heroTitle() ?></h1>
             <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo. Suspendisse justo orci, egestas eget facilisis id, semper a nibh.</p>
 
             <div class="buttons">

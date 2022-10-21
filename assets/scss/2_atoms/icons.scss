@@ -16,18 +16,16 @@
 
     &-primary, &-secondary {
         .anchor-first {
-            position: relative;
-            bottom: 1px;
+            margin-bottom: 1px;
         }
     
         .icon-first {
-            position: relative;
-            bottom: 1px;
+            margin-bottom: 1px;
         }
 
         //Arrow right/top
         .fa-arrow-right {
-            transform: rotate(-45deg);
+            //transform: rotate(-45deg);
         }
     }
 

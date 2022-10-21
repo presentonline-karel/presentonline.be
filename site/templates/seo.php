@@ -51,36 +51,38 @@
 
                 <!-- Starter Kit -->
                 <div class="step card">
-                    <div class="card__icon-container">
-                        <span>01</span>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>01</span>
+                        </div>
+
+                        <h3 class="card__title">Analyse van huidige website</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
                     </div>
-
-                    <h3 class="card__title">Analyse van huidige website</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-
-                    <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
 
                 <!-- Advanced Kit -->
                 <div class="step card">
-                    <div class="card__icon-container">
-                        <span>02</span>
-                    </div>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>02</span>
+                        </div>
 
-                    <h3 class="card__title">Voorstel van veranderingen</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                        <h3 class="card__title">Voorstel van veranderingen</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                    </div>
                 </div>
 
                 <!-- Custom Kit -->
                 <div class="step card">
-                    <div class="card__icon-container">
-                        <span>03</span>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>03</span>
+                        </div>
+
+                        <h3 class="card__title">Voorstel uitvoeren</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
                     </div>
-
-                    <h3 class="card__title">Voorstel uitvoeren</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-
-                    <a class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>

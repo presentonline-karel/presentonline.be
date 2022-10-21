@@ -51,7 +51,7 @@
 
             <!-- case text -->
             <div class="case__id">
-                <h2 class="case__id__title">GAGK Rupelstreek</h2>
+                <h2 class="case__id__title">GAGK</h2>
 
                 <div class="tags">
                     <span class="tag">Website</span>

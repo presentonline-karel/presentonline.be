@@ -1,10 +1,27 @@
 .nav {
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 80px;
     padding: 23px 16px;
+    background: $neutrals-100;
+    transition: all $transition-time-short;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    //hidden nav after scrolling
+    &-hidden {
+        transform: translateY(calc(-80px));
+        box-shadow: none;
+    }
+
+    //nav active after scrolling upwards
+    &-scrolled {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    }
 
     .logo {
         width: 200px;
@@ -96,12 +113,19 @@
             }
 
             .nav__link {
-                //display: inline-block;
                 display: block;
 
                 &__item {
                     display: inline-block;
                     color: $neutrals-100;
+
+                    &__notification {
+                        background-color: $neutrals-100;
+
+                        span {
+                            color: $primary-600;
+                        }
+                    }
                 }
             }
         }
@@ -192,7 +216,7 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .nav {
-        padding: 32px 48px 24px 48px;
+        padding: 24px 48px 24px 48px;
 
         .nav-links {
             .nav__link {
@@ -243,6 +267,11 @@
         height: 124px;
         padding: 40px 96px;
         align-items: center;
+
+        &-hidden {
+            transform: translateY(calc(-124px));
+            box-shadow: none;
+        }
 
         .nav-links {
             justify-content: center;
@@ -350,7 +379,6 @@
                         &:hover {
                             .active-bullet {
                                 opacity: 1;
-
                             }
                         }
 

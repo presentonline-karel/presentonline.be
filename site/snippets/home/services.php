@@ -7,36 +7,42 @@
 
         <!-- service -->
         <div class="service card">
-            <div class="card__icon-container">
-                <i class="fa-solid fa-keyboard"></i>
-            </div>
+            <div>
+                <div class="card__icon-container">
+                    <i class="fa-solid fa-keyboard"></i>
+                </div>
 
-            <h3 class="card__title">Websites & webapps</h3>
-            <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                <h3 class="card__title">Websites & webapps</h3>
+                <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+            </div>
 
             <a class="button button-tertiary" href="#">Meer info<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
 
         <!-- service -->
         <div class="service card">
-            <div class="card__icon-container">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </div>
+            <div>
+                <div class="card__icon-container">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                </div>
 
-            <h3 class="card__title">SEO</h3>
-            <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                <h3 class="card__title">SEO</h3>
+                <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci. lectus efficitur fringilla imperdiet, sapien arcu feugiat orci</p>
+            </div>
 
             <a class="button button-tertiary" href="#">Meer info<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>
 
         <!-- service -->
         <div class="service card">
-            <div class="card__icon-container">
-                <i class="fa fa-camera" aria-hidden="true"></i>
-            </div>
+            <div>
+                <div class="card__icon-container">
+                    <i class="fa fa-camera" aria-hidden="true"></i>
+                </div>
 
-            <h3 class="card__title">Photography</h3>
-            <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                <h3 class="card__title">Photography</h3>
+                <p class="card__p">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+            </div>
 
             <a class="button button-tertiary" href="#">Meer info<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
         </div>

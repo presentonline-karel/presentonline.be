@@ -28,7 +28,6 @@
 @import './3_molecules/features';
 @import './3_molecules/arrows';
 @import './3_molecules/form';
-@import './3_molecules/form-feedback';
 @import './3_molecules/card';
 @import './3_molecules/bullets';
 
@@ -42,6 +41,9 @@
 
 //Cases
 @import './3_molecules/cases/case';
+
+//Contact
+@import './3_molecules/contact/form-feedback';
 
 
 

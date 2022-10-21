@@ -51,17 +51,19 @@
 
                 <!-- Starter Kit -->
                 <div class="kit card">
-                    <div class="card__icon-container">
-                        <span>01</span>
-                    </div>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>01</span>
+                        </div>
 
-                    <h3 class="card__title">Starter Kit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                        <h3 class="card__title">Starter Kit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
 
-                    <div class="features">
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <div class="features">
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        </div>
                     </div>
 
                     <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
@@ -69,33 +71,37 @@
 
                 <!-- Advanced Kit -->
                 <div class="kit card">
-                    <div class="card__icon-container">
-                        <span>02</span>
-                    </div>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>02</span>
+                        </div>
 
-                    <h3 class="card__title">Advanced kit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                        <h3 class="card__title">Advanced kit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
 
-                    <div class="features">
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <div class="features">
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Custom Kit -->
                 <div class="kit card">
-                    <div class="card__icon-container">
-                        <span>03</span>
-                    </div>
+                    <div>
+                        <div class="card__icon-container">
+                            <span>03</span>
+                        </div>
 
-                    <h3 class="card__title">Custom kit</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                        <h3 class="card__title">Custom kit</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
 
-                    <div class="features">
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <div class="features">
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        </div>
                     </div>
 
                     <a class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>

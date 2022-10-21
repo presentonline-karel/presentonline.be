@@ -8,6 +8,23 @@
     <!-- HEADER -->
     <header class="header header-starter-kit">
 
+        <!-- ERROR/SUCCESS MESSAGE - CONTACT FORM -->
+        <?php if ($success) : ?>
+            <div class="alert success">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <p><?= $success ?></p>
+            </div>
+        <?php else : ?>
+            <?php if (isset($alert['error'])) : ?>
+                <div class="alert error">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <p><?= $alert['error'] ?></p>
+                </div>
+            <?php endif ?>
+        <?php endif; ?>
+
+
+
         <!-- NAV -->
         <?php snippet("general/nav") ?>
 
@@ -93,51 +110,59 @@
 
             <!-- Included box - feature -->
             <div class="includes__feature includes__box card">
-                <div class="card__icon-container">
-                    <i class="fa-solid fa-keyboard"></i>
-                </div>
+                <div>
+                    <div class="card__icon-container">
+                        <i class="fa-solid fa-keyboard"></i>
+                    </div>
 
-                <h3 class="card__title">Professionele website</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                    <h3 class="card__title">Professionele website</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                </div>
 
                 <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
 
             <!-- Included box - feature -->
             <div class="includes__feature includes__box card">
-                <div class="card__icon-container">
-                    <i class="fa-solid fa-pencil"></i>
-                </div>
+                <div>
+                    <div class="card__icon-container">
+                        <i class="fa-solid fa-pencil"></i>
+                    </div>
 
-                <h3 class="card__title">CMS panel</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                    <h3 class="card__title">CMS panel</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                </div>
 
                 <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
             </div>
 
             <!-- Included box - feature -->
             <div class="includes__feature includes__box card">
-                <div class="card__icon-container">
-                    <i class="fa-solid fa-thumbs-up"></i>
-                </div>
+                <div>
+                    <div class="card__icon-container">
+                        <i class="fa-solid fa-thumbs-up"></i>
+                    </div>
 
-                <h3 class="card__title">Support</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                    <h3 class="card__title">Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
+                </div>
             </div>
 
             <!-- Included box - feature -->
             <div class="includes__feature includes__box card">
-                <div class="card__icon-container">
-                    <i class="fa-solid fa-check"></i>
-                </div>
+                <div>
+                    <div class="card__icon-container">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
 
-                <h3 class="card__title">And much more</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
+                    <h3 class="card__title">And much more</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
 
-                <div class="features">
-                    <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                    <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                    <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                    <div class="features">
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
+                    </div>
                 </div>
             </div>
 
@@ -203,6 +228,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
 
 
 

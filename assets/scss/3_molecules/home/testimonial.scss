@@ -1,25 +1,27 @@
-//to make testimonial slider work
-.slide-container {
+.testimonial {
     display: none;
     opacity: 0;
     transition: all $transition-time-short;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 36px;
+
+    //position: relative;
+    //display: flex;
 
     &.active {
-        display: block;
+        display: flex;
         opacity: 1;
     }
-}
-
-.testimonial {
-    width: 100%;
-    position: relative;
 
     &__p {
-        position: relative;
-        z-index: 1;
         margin-bottom: 16px;
-        padding: 0px 50px;
         color: $neutrals-1000;
+
+        /*position: relative;
+        z-index: 1;*/
+        //padding: 0px 50px;
     }
 
     &__id {
@@ -27,7 +29,8 @@
         align-items: center;
         gap: 8px;
         margin-bottom: 24px;
-        padding: 0px 50px;
+
+        //padding: 0px 50px;
 
         &__picture {
             width: 48px;
@@ -49,11 +52,13 @@
     .prev,
     .next {
         font-size: 16px;
+        width: 16px;
         line-height: 32px;
-        position: absolute;
+        
+        /*position: absolute;
         transform: translate(0%, -50%);
         top: 30%;
-        z-index: 2;
+        z-index: 0;*/
 
         &:hover {
             cursor: pointer;
@@ -72,16 +77,19 @@
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .testimonial {
+        gap: 108px;
+
         &__p {
-            padding: 0px 128px;
+            //padding: 0px 128px;
         }
 
         &__id {
-            padding: 0px 128px;
+            //padding: 0px 128px;
         }
 
         .prev,
         .next {
+            width: 20px;
             font-size: 20px;
         }
     }
@@ -91,11 +99,11 @@
 @media only screen and (min-width: $tablet-landscape) {
     .testimonial {
         &__p {
-            padding: 0px 106px;
+            //padding: 0px 106px;
         }
 
         &__id {
-            padding: 0px 106px;
+            //padding: 0px 106px;
         }
     }
 }

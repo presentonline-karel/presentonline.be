@@ -8,6 +8,23 @@
     <!-- HEADER -->
     <header class="header header-contact">
 
+        <!-- ERROR/SUCCESS MESSAGE - CONTACT FORM -->
+        <?php if ($success) : ?>
+            <div class="alert success">
+                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                <p><?= $success ?></p>
+            </div>
+        <?php else : ?>
+            <?php if (isset($alert['error'])) : ?>
+                <div class="alert error">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <p><?= $alert['error'] ?></p>
+                </div>
+            <?php endif ?>
+        <?php endif; ?>
+
+
+
         <!-- NAV -->
         <?php snippet("general/nav") ?>
 
@@ -83,9 +100,14 @@
     <section class="maps">
 
         <!-- Maps widget -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.8731508933265!2d4.354607916301425!3d51.16612794341786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3b4343150f5%3A0xf2313832a756271!2sPresent%20Online!5e0!3m2!1snl!2sbe!4v1664348117917!5m2!1snl!2sbe" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="maps__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.8731508933265!2d4.354607916301425!3d51.16612794341786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3b4343150f5%3A0xf2313832a756271!2sPresent%20Online!5e0!3m2!1snl!2sbe!4v1664348117917!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 </div>
+
+
+
+<!-- JS SCRIPTS -->
+<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
 
 
 

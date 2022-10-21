@@ -1,13 +1,19 @@
+body:has(.container-error) {
+    height: 100%;
+}
+
 .container-error {
-    position: relative;
+    //position: relative;
+    text-align: center;
 
     .error-content {
-        width: calc(100% - 32px);
+        /*width: calc(100% - 32px);
         position: absolute;
         transform: translate(-50%, -50%);
         top: 50%;
         left: 50%;
-        text-align: center;
+        text-align: center;*/
+        margin-top: 325px;
 
         h1 {
             margin-bottom: 8px;
