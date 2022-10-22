@@ -1,5 +1,7 @@
 .header-starter-kit {
     &__content {
+        padding: 31px 16px 56px 16px;
+
         .language {
             margin-bottom: 48px;
         }
@@ -12,9 +14,19 @@
     }
 }
 
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .header-starter-kit {
+        &__content {
+            padding: 47px 48px 72px 48px;
+        }
+    }
+}
+
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .header-starter-kit__content {
+        padding: 47px 96px 72px 96px;
         width: 115%;
         gap: 40px;
 
@@ -33,7 +45,8 @@
         &__img {
             width: 65%;
             height: auto;
-            aspect-ratio: 16/9;
+            //aspect-ratio: 16/9;
+            aspect-ratio: 3/2;
             object-fit: cover;
         }
     }
@@ -56,12 +69,17 @@
                 }
             }
         }
+
+        &__img {
+            aspect-ratio: 16/9;
+        }
     }
 }
 
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-3) {
     .header-starter-kit__content {
+        padding: 64px 0px 112px 96px;
         gap: 130px;
 
         &__text {
@@ -84,6 +102,8 @@
 /* DESKTOP 1600PX */
 @media only screen and (min-width: $desktop-5) {
     .header-starter-kit__content {
+        padding: 64px 0px 128px 176px;
+
         &__img {
             max-width: 1084px;
         }
@@ -93,6 +113,8 @@
 /* DESKTOP - HD */
 @media only screen and (min-width: $desktop-hd) {
     .header-starter-kit__content {
+        padding: 64px 0px 128px 336px;
+
         &__img {
             max-width: 1404px;
         }
@@ -102,6 +124,8 @@
 /* DESKTOP - QHD */
 @media only screen and (min-width: $desktop-qhd) {
     .header-starter-kit__content {
+        padding: 64px 0px 128px 656px;
+
         &__img {
             max-width: 2044px;
         }
@@ -111,6 +135,14 @@
 /* DESKTOP - WQHD */
 @media only screen and (min-width: $desktop-wqhd) {
     .header-starter-kit__content {
+        padding: 64px 0px 128px 1096px;
         justify-content: flex-start;
+    }
+}
+
+/* DESKTOP - 4K */
+@media only screen and (min-width: $desktop-4k) {
+    .header-starter-kit__content {
+        padding: 64px 0px 128px 1296px;
     }
 }

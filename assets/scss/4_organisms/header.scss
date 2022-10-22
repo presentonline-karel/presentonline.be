@@ -153,8 +153,11 @@
         }
 
         //Cases, About & Contact headers
-        .header-about__content, .header-cases__content, .header-contact__content {
+        .header-about__content, .header-cases__content {
             padding: 127px 202px 72px 96px;
+        }
+
+        .header-about__content, .header-cases__content, .header-contact__content {
             align-items: flex-start;
             
             &__title {
@@ -249,9 +252,11 @@
         }
 
         //Cases, About & Contact headers
-        .header-about__content, .header-cases__content, .header-contact__content {
+        .header-about__content, .header-cases__content {
             padding: 188px 308px 96px 202px;
+        }
 
+        .header-about__content, .header-cases__content, .header-contact__content {
             &__text {
                 width: calc(100% - 188px - 24px);
 
@@ -290,6 +295,11 @@
         //Home header
         .header-home__content {
             padding: 188px 202px 112px 202px;
+
+            p {
+                font-size: 20px;
+                line-height: 32px;
+            }
 
             .language {
                 font-size: 20px;

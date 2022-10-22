@@ -1,6 +1,8 @@
 const navFade = () => {
     let lastScrollY = window.scrollY;
-    const navbar = document.getElementById("navbar");
+    const nav = document.querySelector("nav");
+
+    nav.classList.add("nav-dynamic");
 
 
 
@@ -8,18 +10,18 @@ const navFade = () => {
 
         /* show/hide nav */
         if (lastScrollY < window.scrollY) {
-            navbar.classList.add("nav-hidden");
+            nav.classList.add("nav-hidden");
         } else {
-            navbar.classList.remove("nav-hidden");
+            nav.classList.remove("nav-hidden");
         }
         
         lastScrollY = window.scrollY;
 
         /* add/remove box-shadow */
         if(window.pageYOffset > 0) {
-            navbar.classList.add("nav-scrolled");
+            nav.classList.add("nav-scrolled");
         } else {
-            navbar.classList.remove("nav-scrolled");
+            nav.classList.remove("nav-scrolled");
         }
     });
 };

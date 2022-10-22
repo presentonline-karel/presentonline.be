@@ -109,7 +109,7 @@
             </div>
 
             <!-- Included box - feature -->
-            <div class="includes__feature includes__box card">
+            <a class="includes__feature includes__box card">
                 <div>
                     <div class="card__icon-container">
                         <i class="fa-solid fa-keyboard"></i>
@@ -119,11 +119,11 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
                 </div>
 
-                <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
+                <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
+            </a>
 
             <!-- Included box - feature -->
-            <div class="includes__feature includes__box card">
+            <a class="includes__feature includes__box card">
                 <div>
                     <div class="card__icon-container">
                         <i class="fa-solid fa-pencil"></i>
@@ -133,8 +133,8 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
                 </div>
 
-                <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
+                <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
+            </a>
 
             <!-- Included box - feature -->
             <div class="includes__feature includes__box card">

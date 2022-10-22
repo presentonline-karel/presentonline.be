@@ -8,7 +8,7 @@
     background-size: cover;
     border-radius: $border-radius-small;
     border: 1px solid $primary-100;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     //position: relative;
 
     &:last-of-type {
@@ -28,6 +28,8 @@
 
         i {
             color: $primary-600;
+            font-size: 16px;
+            line-height: 16px;
         }
     }
 
@@ -78,13 +80,15 @@
 /* DESKTOP 1280PX */
 @media screen and (min-width: $desktop-1) {
     .case {
+        height: 284px;
+
         .button {
             margin-top: 32px;
             margin-right: 32px;
         }
 
         &__id {
-            margin-top: 188px;
+            margin-top: 135px;
             margin-left: 32px;
         }
     }
@@ -93,8 +97,10 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .case {
+        height: 337px;
+
         &__id {
-            margin-top: 160px;
+            margin-top: 176px;
         }
     }
 }

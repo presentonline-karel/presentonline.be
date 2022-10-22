@@ -136,6 +136,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
+<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 
 
 

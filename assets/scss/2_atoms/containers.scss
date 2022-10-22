@@ -13,6 +13,10 @@
 @media screen and (min-width: $desktop-3) {
     .container {
         min-height: calc(100% - 404px);
+
+        &-error {
+            min-height: 100%;
+        }
     }
 }
 

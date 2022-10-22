@@ -96,4 +96,9 @@
 
 
 
+<!-- JS SCRIPTS -->
+<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+
+
+
 <?php snippet("general/footer") ?>

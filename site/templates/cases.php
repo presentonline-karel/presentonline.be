@@ -27,10 +27,10 @@
     <main id="cases" class="cases section section-medium">
 
         <!-- Case -->
-        <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+        <a class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
             <!-- case button -->
-            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+            <button class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
             <!-- case text -->
             <div class="case__id">
@@ -41,60 +41,65 @@
                     <span class="tag">Photos</span>
                 </div>
             </div>
-        </div>
+        </a>
 
         <!-- Case -->
-        <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+        <a class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
             <!-- case button -->
-            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+            <button class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
             <!-- case text -->
             <div class="case__id">
-                <h2 class="case__id__title">GAGK</h2>
+                <h2 class="case__id__title">Music2Move</h2>
 
                 <div class="tags">
                     <span class="tag">Website</span>
                     <span class="tag">Photos</span>
                 </div>
             </div>
-        </div>
+        </a>
 
         <!-- Case -->
-        <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+        <a class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
             <!-- case button -->
-            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+            <button class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
             <!-- case text -->
             <div class="case__id">
-                <h2 class="case__id__title">Karrel portfolio</h2>
+                <h2 class="case__id__title">Music2Move</h2>
 
                 <div class="tags">
                     <span class="tag">Website</span>
                     <span class="tag">Photos</span>
                 </div>
             </div>
-        </div>
+        </a>
 
         <!-- Case -->
-        <div class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+        <a class="case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
 
             <!-- case button -->
-            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+            <button class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
             <!-- case text -->
             <div class="case__id">
-                <h2 class="case__id__title">Bakery</h2>
+                <h2 class="case__id__title">Music2Move</h2>
 
                 <div class="tags">
                     <span class="tag">Website</span>
                     <span class="tag">Photos</span>
                 </div>
             </div>
-        </div>
+        </a>
     </main>
 </div>
+
+
+
+<!-- JS SCRIPTS -->
+<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 
 
 

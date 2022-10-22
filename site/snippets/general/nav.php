@@ -1,4 +1,4 @@
-<nav id="navbar" class="nav flex">
+<nav id="nav" class="nav flex">
 
     <!-- NAV LOGO -->
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">

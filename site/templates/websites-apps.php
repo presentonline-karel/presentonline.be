@@ -50,7 +50,7 @@
             <div class="kits cards">
 
                 <!-- Starter Kit -->
-                <div class="kit card">
+                <a class="kit card">
                     <div>
                         <div class="card__icon-container">
                             <span>01</span>
@@ -66,8 +66,8 @@
                         </div>
                     </div>
 
-                    <a class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
+                    <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
+                </a>
 
                 <!-- Advanced Kit -->
                 <div class="kit card">
@@ -88,7 +88,7 @@
                 </div>
 
                 <!-- Custom Kit -->
-                <div class="kit card">
+                <a class="kit card">
                     <div>
                         <div class="card__icon-container">
                             <span>03</span>
@@ -104,8 +104,8 @@
                         </div>
                     </div>
 
-                    <a class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-                </div>
+                    <button class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
+                </a>
             </div>
         </section>
 
@@ -189,6 +189,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
+<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 
 
 

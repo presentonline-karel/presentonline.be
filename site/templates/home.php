@@ -85,6 +85,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 
 
 
