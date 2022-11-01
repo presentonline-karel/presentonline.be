@@ -14,16 +14,19 @@ tabs:
             type: pages
             status: listed
             image: icon
+              back: black
           unlisted:
             headline: Unlisted pages
             type: pages
             status: unlisted
             image: icon
+              back: black
           drafts:
             headline: Pages in draft
             type: pages
             status: draft
             image: icon
+              back: black
       
       #text content
       - width: 2/3
@@ -268,5 +271,3 @@ tabs:
           btwNr:
             label: BTW number
             type: text
-          
-          

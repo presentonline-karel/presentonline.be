@@ -1,0 +1,113 @@
+title: Thank You
+icon: heart
+
+options:
+  changeSlug: false
+
+columns:
+
+  #STARTERKIT TEXT CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Header
+      headerHeadline:
+        label: Header thank you
+        type: headline
+        numbered: true
+      headerSubtitle:
+        label: Header subtitle
+        type: text
+      headerTitle:
+        label: Header title
+        type: text
+      headerParagraph:
+        label: Header paragraph
+        type: writer
+        inline: true
+      
+      #buttons  
+      headerButtons:
+        label: Button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-a:
+        type: line
+
+
+      
+      #THANKYOU IMG CONTENT
+  - width: 1/2
+    sections:
+    fields:
+      thankYouImgHeadline:
+        label: Thank you header image
+        type: headline
+        numbered: false
+      headerImgWebp:
+        label: Header img .webp
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      headerImgPng:
+        label: Header img .png
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2

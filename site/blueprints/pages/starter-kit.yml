@@ -114,3 +114,357 @@ columns:
               destination: external
       line-b:
         type: line
+      
+      #Intro
+      introHeadline:
+        label: Starter kit intro
+        type: headline
+        numbered: true
+      introTitle:
+        label: Intro title
+        type: text
+      introParagraph:
+        label: Intro paragraph
+        type: writer
+        inline: true
+      line-c:
+        type: line
+
+      #buttons  
+      introButton:
+        label: Button
+        type: structure
+        max: 1
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+              button-tertiary: Tertiary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-d:
+        type: line
+      
+      #Features
+      featuresHeadline:
+        label: Starter kit feature section
+        type: headline
+        numbered: true
+      featuresTitle:
+        label: Features title
+        type: text
+      featuresParagraph:
+        label: Intro paragraph
+        type: writer
+        inline: true
+      featuresSubtitle:
+        label: Features subtitle
+        type: text
+      features:
+        label: Features
+        type: structure
+        fields:
+          feature:
+            label: Feature
+            type: text
+      line-e:
+        type: line
+      
+      includesHeadline:
+        label: Starter kit includes
+        type: headline
+        numbered: false
+      includes:
+        label: Includes
+        type: structure
+        fields:
+          icon:
+            label: Icon
+            type: select
+            required: true
+            options:
+              keyboard: Keyboard
+              magnifyingGlass: Magnifying Glass
+              camera: Camera
+              pencilRuler: Pencil & Ruler
+              lightbulb: Lightbulb
+              checkMark: Check mark
+              thumbsUp: Thumbs up
+              pencil: Pencil
+          title:
+            label: Title
+            type: text
+            required: true
+          explanation:
+            label: Explanation
+            type: writer
+            inline: true
+
+          #buttons  
+          includeButton:
+            label: Button
+            type: structure
+            max: 1
+            columns:
+              typeOfButton:
+                width: 2/8
+              anchor:
+                width: 4/8
+              destination:
+                width: 2/8
+            fields:
+              anchor:
+                label: Anchor
+                type: text
+                required: true
+              icon:
+                label: Icon
+                type: checkboxes
+                max: 1
+                required: true
+                options:
+                  noIcon: None
+                  chevronRight: Chevron right
+                  chevronBottom: Chevron down
+              typeOfButton:
+                label: Type
+                type: checkboxes
+                max: 1
+                options:
+                  button-primary: Primary
+                  button-secondary: Secondary
+                  button-tertiary: Tertiary
+              destination:
+                type: select
+                label: Destination
+                max: 1
+                required: true
+                options:
+                  internal: Internal webpage
+                  external: External webpage
+              internalPage:
+                label: Internal webpage
+                type: pages
+                max: 1
+                required: true
+                when:
+                  destination: internal
+              idPage:
+                label: Specific id
+                type: text
+                when:
+                  destination: internal
+              externalUrl:
+                label: External webpage
+                type: url
+                required: true
+                when:
+                  destination: external
+      line-f:
+        type: line
+      
+      #Price
+      priceHeadline:
+        label: Starter kit price
+        type: headline
+        numbered: false
+      priceFrom:
+        label: Price from
+        type: text
+      price:
+        label: Price
+        type: text
+
+      #buttons
+      priceButtons:
+        label: Price button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+              button-tertiary: Tertiary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-g:
+        type: line
+      
+      #Testimonials
+      testimonialsHeadline:
+        label: Testimonials section
+        type: headline
+        numbered: true
+      testimonials:
+        label: Testimonials
+        type: structure
+        fields:
+          testimonialText:
+            label: Testimonial
+            type: writer
+            inline: true
+          reviewerPictureWebp:
+            label: Photo / logo company .png
+            type: files
+            max: 1
+          reviewerPicturePng:
+            label: Photo / logo company .png
+            type: files
+            max: 1
+            required: true
+          reviewerName:
+            label: Name
+            type: text
+          reviewerFunction:
+            label: Function
+            type: text
+      line-h:
+        type: line
+      
+      #Intrest section
+      intrestSectionHeadline:
+        label: Intrest section
+        type: headline
+        numbered: true
+      intrestSectionTitle:
+        label: Intrest section title
+        type: text
+      intrestSectionParagraph:
+        label: Intrest section paragraaf
+        type: writer
+        inline: true
+      
+
+
+  #STARTERKIT IMG CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Header
+      headerImgHeadline:
+        label: Starter kit images
+        type: headline
+        numbered: false
+      headerImgWebp:
+        label: Header image .webp
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      headerImgPng:
+        label: Header image .png
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      line-i:
+        type: line
+      introImgWebp:
+        label: Intro image .webp
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      introImgPng:
+        label: Intro image .png
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2

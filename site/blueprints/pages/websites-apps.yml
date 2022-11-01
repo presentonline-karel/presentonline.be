@@ -1,45 +1,47 @@
-title: Home
-icon: home
+title: Service
+icon: globe
 
 options:
   changeSlug: false
 
 columns:
 
-  #HOME TEXT CONTENT
-  - width: 1/2
+  - width: 1/4
+    sections:
+    fields:
+      service:
+        label: Service selector
+        type: radio
+        options:
+          websiteApps: Website & -apps
+          seo: SEO
+          photography: Photography
+          graphicDesign: Graphic design
+          conceptAdvice: Concept & advice
+
+  #STARTERKIT TEXT CONTENT
+  - width: 2/4
     sections:
     fields:
 
-      #Hero
-      heroHeadline:
-        label: Hero section
+      #Header
+      headerHeadline:
+        label: Header service
         type: headline
         numbered: true
-      heroTitleMobile:
-        label: Hero titel mobile
+      headerTitle:
+        label: Header title
         type: text
-      typedWords:
-        label: Hero typed words
-        type: structure
-        fields:
-          word:
-            label: Word
-            type: text
-      heroTitleDesktop:
-        label: Hero title desktop
+      headerParagraph:
+        label: Header paragraph
         type: writer
         inline: true
-      heroParagraph:
-        label: Hero paragraph
-        type: writer
-        inline: true
-
-      #buttons  
-      heroButtons:
-        label: Button(s)
+      
+      #button 
+      headerButton:
+        label: Button
         type: structure
-        max: 2
+        max: 1
         columns:
           typeOfButton:
             width: 2/8
@@ -68,6 +70,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -97,110 +100,133 @@ columns:
       line-a:
         type: line
       
-
-
-      #Clients
-      clientsHeadline:
-        label: Clients section
+      #Steps
+      stepsHeadline:
+        label: Steps section
         type: headline
         numbered: true
-      clientsTitle:
-        label: Clients title
+      stepsInfo:
+        label:
+        type: info
+        text: Leave empty on **photography** detail page
+        theme: negative
+        when:
+          service: photography
+      stepsTitle:
+        label: Steps title
         type: text
-      clients:
-        label: Clients
-        type: structure
-        columns:
-          logoPng:
-            label: Client logo
-            width: 1/3
-          url:
-            width: 2/3
-        fields:
-          logoWebp:
-            label: Client logo .webp
-            type: files
-            max: 1
-          logoPng:
-            label: Client logo .png
-            type: files
-            max: 1
-            required: true
-          url:
-            label: Client website
-            type: url
-      line-b:
-        type: line
-      
-
-
-      #Services
-      servicesHeadline:
-        label: Services section
-        type: headline
-        numbered: true
-      servicesTitle:
-        label: Services title
-        type: text
-      services:
-        label: Services
+      steps:
+        label: Steps
         type: structure
         fields:
-          icon:
-            label: Icon
-            type: select
-            required: true
-            options:
-              keyboard: Keyboard
-              magnifyingGlass: Magnifying Glass
-              camera: Camera
-              pencilRuler: Pencil & Ruler
-              lightbulb: Lightbulb
+          number:
+            label: Number
+            type: text
           title:
             label: Title
             type: text
-            required: true
           explanation:
             label: Explanation
             type: writer
             inline: true
-          destinationPage:
-            label: Detailpage
-            type: pages
-            image: icon
-      line-c:
+          features:
+            label: Features
+            type: structure
+            fields:
+              feature:
+                label: Feature
+                type: text
+          stepButton:
+            label: Button
+            type: structure
+            max: 1
+            columns:
+              typeOfButton:
+                width: 2/8
+              anchor:
+                width: 4/8
+              destination:
+                width: 2/8
+            fields:
+              anchor:
+                label: Anchor
+                type: text
+                required: true
+              icon:
+                label: Icon
+                type: checkboxes
+                max: 1
+                required: true
+                options:
+                  noIcon: None
+                  chevronRight: Chevron right
+                  chevronBottom: Chevron down
+              typeOfButton:
+                label: Type
+                type: checkboxes
+                max: 1
+                options:
+                  button-primary: Primary
+                  button-secondary: Secondary
+                  button-tertiary: Tertiary
+              destination:
+                type: select
+                label: Destination
+                max: 1
+                required: true
+                options:
+                  internal: Internal webpage
+                  external: External webpage
+              internalPage:
+                label: Internal webpage
+                type: pages
+                max: 1
+                required: true
+                when:
+                  destination: internal
+              idPage:
+                label: Specific id
+                type: text
+                when:
+                  destination: internal
+              externalUrl:
+                label: External webpage
+                type: url
+                required: true
+                when:
+                  destination: external
+      line-b:
         type: line
-
-      #Testimonials
-      testimonialsHeadline:
-        label: Testimonials section
+      
+      #Carousels
+      carouselsHeadline:
+        label: Carousels section
         type: headline
         numbered: true
-      testimonials:
-        label: Testimonials
+        when:
+          service: photography
+      carousels:
+        label: Carousels
         type: structure
+        when:
+          service: photography
         fields:
-          testimonialText:
-            label: Testimonial
-            type: writer
-            inline: true
-          reviewerPictureWebp:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-          reviewerPicturePng:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-            required: true
-          reviewerName:
-            label: Name
+          carouselTitle:
+            label: Carousel title
             type: text
-          reviewerFunction:
-            label: Function
-            type: text
-      line-d:
+          carouselImagesWebp:
+            label: Carousel images .webp
+            type: files
+            layout: cards
+          carouselImagesPng:
+            label: Carousel images .png
+            type: files
+            layout: cards
+      line-c:
         type: line
+        when:
+          service: photography
+
       
       #CTA
       ctaHeadline:
@@ -271,36 +297,47 @@ columns:
             required: true
             when:
               destination: external
+      line-d:
+        type: line
+        when:
+          service: websiteApps
+      
+      #WebsiteCases
+      casesHeadline:
+        label: Website cases
+        type: headline
+        numbered: true
+        when:
+          service: websiteApps
+      cases:
+        label: Website cases
+        type: pages
+        when:
+          service: websiteApps
   
 
 
-  #HOME IMAGE CONTENT
-  - width: 1/2
+  #STARTERKIT TEXT CONTENT
+  - width: 1/4
     sections:
     fields:
-      homeImagesHeadline:
-        label: Home images
+      websiteImgHeadline:
+        label: Thank you header image
         type: headline
         numbered: false
-      serviceImgInfo:
-        label:
-        type: info
-        text: Only gets showed on mobile
-      servicesImgWebp:
-        label: Services img .webp
+      headerImgWebp:
+        label: Header img .webp
         type: files
         max: 1
         layout: cards
-        width: 1/2
-      servicesImgPng:
-        label: Services img .png
+      headerImgPng:
+        label: Header img .png
         type: files
         max: 1
         layout: cards
-        width: 1/2
       line-e:
         type: line
-
+      
       ctaImgWebp:
         label: CTA img .webp
         type: files
