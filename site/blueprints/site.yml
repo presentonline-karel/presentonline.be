@@ -1,7 +1,7 @@
 title: Present Online Website
 
 tabs:
-  content:
+  menu:
     icon: dashboard
 
     columns:
@@ -13,14 +13,17 @@ tabs:
             headline: Listed pages
             type: pages
             status: listed
+            image: icon
           unlisted:
             headline: Unlisted pages
             type: pages
             status: unlisted
+            image: icon
           drafts:
             headline: Pages in draft
             type: pages
             status: draft
+            image: icon
       
       #text content
       - width: 2/3
@@ -29,7 +32,7 @@ tabs:
           menuHeadline:
             label: Menu
             type: headline
-            numbered: false
+            numbered: true
           navigationLinks:
             label: Menu items
             type: structure
@@ -42,38 +45,99 @@ tabs:
                 width: 1/3
             fields:
               anchor:
-                label: Anker
+                label: Anchor
                 type: text
               page:
-                label: Pagina
+                label: Destination
                 type: pages
+                image: icon
               section:
-                label: id op pagina
+                label: id
                 type: text
-              notification:
-                label: Notification
-                type: toggle
-              number:
-                label: Notification number
-                type: text
-                when:
-                  notification: true
           line-a:
             type: line
 
-          footerHeadline:
-            label: Footer
+
+
+          #logos
+          logosHeadline:
+            label: Logos
             type: headline
-            numbered: false
-          introParagraph:
-            label: Korte introductie Music2Move
+            numbered: true
+          logoLight:
+            label: Licht logo
+            type: files
+            max: 1
+            layout: cards
+            width: 1/3
+          logoDark:
+            label: Donker logo
+            type: files
+            max: 1
+            layout: cards
+            width: 1/3
+
+
+  
+  metaContent:
+    icon: text
+    columns:
+
+      #meta text content
+      - width: 1/2
+        sections:
+        fields:
+          metaContentHeadline:
+            label: Meta content
+            type: headline
+            numbered: true
+          metaTitle:
+            label: Meta title
+            type: text
+          metaDescription:
+            label: Meta description
             type: writer
             inline: true
+
+          
+
+      #preview image
+      - width: 1/2
+        sections:
+        fields:
+          previewImageHeadline:
+            label: Preview image
+            type: headline
+            numbered: true
+          previewImage:
+            label: Preview image
+            type: files
+            layout: cards
+            cover: true
+            ratio: 2/1
+            max: 1
+  
+
+
+  contact:
+    icon: email
+
+    columns:
+
+      #socials
+      - width: 1/2
+        sections:
+        fields:
+          socialsHeadline:
+            label: Social media
+            type: headline
+            numbered: true
           socials:
-            label: Socials
+            label:
             type: structure
             columns:
               social:
+                label: Platform
                 width: 1/4
               url:
                 width: 3/4
@@ -84,83 +148,125 @@ tabs:
                   facebook: Facebook
                   instagram: Instagram
                   linkedin: LinkedIn
+                  twitter: Twitter
                   youtube: Youtube
                   website: Andere website
               url:
                 type: url
-          
+      
+      #socials
+      - width: 1/2
+        sections:
+        fields:
           contactHeadline:
-            label: Contactgegevens
+            label: Contact information
             type: headline
-            numbered: false
-          contactItems:
-            label: Contactmogelijkheden
-            type: structure
-            fields:
-              typeOf:
-                label: Type contactmogelijkheid
-                type: select
-                options:
-                  telephone: Telefoon
-                  mail: Email
-                required: true
-              namePerson:
-                label: Naam contactpersoon
-                type: text
-                required: true
-              numberMail:
-                label: Contactgegevens persoon
-                type: text
-                required: true
-          generalEmail:
-            label: Algemeen e-mailadres
+            numbered: true
+          telephone:
+            label: Telephone number
+            type: text
+          email:
+            label: Contact email
             type: text
 
-          copyrightHeadline:
-            label: Copyright
-            type: headline
-            numbered: false
-          copyright:
-            label: Copyright
-            type: text
-          
-          line-b:
-            type: line
-
-          metaHeadline:
-            label: Meta info
-            type: headline
-            numbered: false
-          metaDescription:
-            label: Meta description (Google)
-            type: text
-          titleWebsite:
-            label: Titel website
-            type: text
-          previewImage:
-            label: Social media preview image
-            type: files
-            max: 1
-            layout: cards
   
 
 
-  logos:
-    icon: image
+  footer:
+    icon: grid-bottom
+
     columns:
 
-      - width: 1/3
+      #socials
+      - width: 1/4
         sections:
         fields:
+          footerHeadline:
+            label: Footer sections
+            type: headline
+            numbered: false
+      
+      #socials
+      - width: 3/4
+        sections:
+        fields:
+          introHeadline:
+            label: Introduction
+            type: headline
+            numbered: true
+          introParagraph:
+            label: Short introduction
+            type: writer
+            inline: true
+          line-b:
+            type: line
+          
+          sitemapHeadline:
+            label: Sitemap
+            type: headline
+            numbered: true
+          sitemap:
+            label: Sitemap
+            type: structure
+            columns:
+              anchor:
+                width: 1/3
+              page:
+                width: 1/3
+              section:
+                width: 1/3
+            fields:
+              anchor:
+                label: Anchor
+                type: text
+              page:
+                label: Destination
+                type: pages
+                image: icon
+              section:
+                label: id
+                type: text
+          line-c:
+            type: line
 
-          #logos
-          logoLight:
-            label: Licht logo
-            type: files
-            max: 1
-            layout: cards
-          logoDark:
-            label: Donker logo
-            type: files
-            max: 1
-            layout: cards
+          servicesHeadline:
+            label: Services
+            type: headline
+            numbered: true
+          services:
+            label: Services
+            type: structure
+            columns:
+              anchor:
+                width: 1/3
+              page:
+                width: 1/3
+              section:
+                width: 1/3
+            fields:
+              anchor:
+                label: Anchor
+                type: text
+              page:
+                label: Destination
+                type: pages
+                image: icon
+              section:
+                label: id
+                type: text
+          line-d:
+            type: line
+
+
+          copyrightHeadline:
+            label: Copyright & BTW
+            type: headline
+            numbered: true
+          copyright:
+            label: Copyright
+            type: text
+          btwNr:
+            label: BTW number
+            type: text
+          
+          

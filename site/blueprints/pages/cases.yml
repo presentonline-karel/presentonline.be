@@ -1,0 +1,111 @@
+title: Cases
+icon: globe
+
+options:
+  changeSlug: false
+
+columns:
+
+  #CASES TEXT CONTENT
+  - width: 1/3
+    sections:
+    fields:
+      listed:
+        template: case
+        headline: Listed pages
+        type: pages
+        status: listed
+        image: icon
+      unlisted:
+        template: case
+        headline: Unlisted pages
+        type: pages
+        status: unlisted
+        image: icon
+      drafts:
+        template: case
+        headline: Pages in draft
+        type: pages
+        status: draft
+        image: icon
+  
+  #CASES IMG CONTENT
+  - width: 2/3
+    sections:
+    fields:
+
+      #Header
+      headerHeadline:
+        label: Header about
+        type: headline
+        numbered: true
+      headerSubtitle:
+        label: Header subtitle
+        type: text
+      headerTitle:
+        label: Header title
+        type: text
+      headerParagraph:
+        label: Header paragraph
+        type: writer
+        inline: true
+      
+      #buttons  
+      headerButtons:
+        label: Button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external

@@ -1,42 +1,34 @@
-title: Home
-icon: home
+title: About
+icon: globe
 
 options:
   changeSlug: false
 
 columns:
 
-  #HOME TEXT CONTENT
+  #ABOUT TEXT CONTENT
   - width: 1/2
     sections:
     fields:
 
-      #Hero
-      heroHeadline:
-        label: Hero section
+      #Header
+      headerHeadline:
+        label: Header about
         type: headline
         numbered: true
-      heroTitleMobile:
-        label: Hero titel mobile
+      headerSubtitle:
+        label: Header subtitle
         type: text
-      typedWords:
-        label: Hero typed words
-        type: structure
-        fields:
-          word:
-            label: Word
-            type: text
-      heroTitleDesktop:
-        label: Hero title desktop
+      headerTitle:
+        label: Header title
+        type: text
+      headerParagraph:
+        label: Header paragraph
         type: writer
         inline: true
-      heroParagraph:
-        label: Hero paragraph
-        type: writer
-        inline: true
-
+      
       #buttons  
-      heroButtons:
+      headerButtons:
         label: Button(s)
         type: structure
         max: 2
@@ -97,111 +89,33 @@ columns:
       line-a:
         type: line
       
-
-
-      #Clients
-      clientsHeadline:
-        label: Clients section
+      #About
+      aboutHeadline:
+        label: About
         type: headline
         numbered: true
-      clientsTitle:
-        label: Clients title
+      aboutTitle:
+        label: About title
         type: text
-      clients:
-        label: Clients
+      aboutParagraph:
+        label: About paragraph
+        type: writer
+        inline: true
+      aboutNumbers:
+        label: About numbers
         type: structure
-        columns:
-          logoPng:
-            label: Client logo
-            width: 1/3
-          url:
-            width: 2/3
         fields:
-          logoWebp:
-            label: Client logo .webp
-            type: files
-            max: 1
-          logoPng:
-            label: Client logo .png
-            type: files
-            max: 1
-            required: true
-          url:
-            label: Client website
-            type: url
-      line-b:
-        type: line
-      
-
-
-      #Services
-      servicesHeadline:
-        label: Services section
-        type: headline
-        numbered: true
-      servicesTitle:
-        label: Services title
-        type: text
-      services:
-        label: Services
-        type: structure
-        columns:
-          icon:
-        fields:
-          icon:
-            label: Icon
-            type: select
-            required: true
-            options:
-              keyboard: Keyboard
-              magnifyingGlass: Magnifying Glass
-              camera: Camera
-              pencilRuler: Pencil & Ruler
-              lightbulb: Lightbulb
           title:
-            label: Title
+            label: Label
             type: text
-            required: true
-          explanation:
-            label: Explanation
-            type: writer
-            inline: true
-          destinationPage:
-            label: Detailpage
-            type: pages
-            image: icon
-      line-c:
-        type: line
-
-      #Testimonials
-      testimonialsHeadline:
-        label: Testimonials section
-        type: headline
-        numbered: true
-      testimonials:
-        label: Testimonials
-        type: structure
-        fields:
-          testimonialText:
-            label: Testimonial
-            type: writer
-            inline: true
-          reviewerPictureWebp:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-          reviewerPicturePng:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-            required: true
-          reviewerName:
-            label: Name
+          number:
+            label: Number
             type: text
-          reviewerFunction:
-            label: Function
-            type: text
-      line-d:
+          withPlus:
+            label: has +
+            type: toggle
+        max: 4
+      line-b:
         type: line
       
       #CTA
@@ -273,36 +187,46 @@ columns:
             required: true
             when:
               destination: external
-  
 
 
-  #HOME IMAGE CONTENT
+      
+  #ABOUT IMG CONTENT
   - width: 1/2
     sections:
     fields:
-      homeImagesHeadline:
-        label: Home images
+
+      #About
+      aboutImagesHeadline:
+        label: About images
         type: headline
         numbered: false
-      serviceImgInfo:
-        label:
-        type: info
-        text: Only gets showed on mobile
-      servicesImgWebp:
-        label: Services img .webp
+      aboutImgFirstWebp:
+        label: 1. About img .webp
         type: files
         max: 1
         layout: cards
         width: 1/2
-      servicesImgPng:
-        label: Services img .png
+      aboutImgFirstPng:
+        label: 1. About img .png
         type: files
         max: 1
         layout: cards
         width: 1/2
-      line-e:
+      aboutImgSecondWebp:
+        label: 2. About img .webp
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      aboutImgSecondPng:
+        label: 2. About img .png
+        type: files
+        max: 1
+        layout: cards
+        width: 1/2
+      line-c:
         type: line
-
+      
       ctaImgWebp:
         label: CTA img .webp
         type: files

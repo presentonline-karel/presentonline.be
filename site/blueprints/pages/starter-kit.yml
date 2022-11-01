@@ -1,0 +1,116 @@
+title: Starter Kit
+icon: tag
+
+options:
+  changeSlug: false
+
+columns:
+
+  #STARTERKIT TEXT CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Starter kit menu
+      menuHeadline:
+        label: Starter Kit menu
+        type: headline
+        numbered: true
+      navigationLinks:
+        label: Starter kit menu items
+        type: structure
+        columns:
+          anchor:
+            width: 1/3
+          page:
+            width: 1/3
+          section:
+            width: 1/3
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+          page:
+            label: Destination
+            type: pages
+            image: icon
+          section:
+            label: id
+            type: text
+      line-a:
+        type: line
+      
+      #Header
+      headerHeadline:
+        label: Starter kit header
+        type: headline
+        numbered: true
+      headerTitle:
+        label: Header title
+        type: text
+      headerParagraph:
+        label: Header paragraph
+        type: writer
+        inline: true
+      
+      #buttons  
+      headerButtons:
+        label: Button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-b:
+        type: line

@@ -1,0 +1,114 @@
+title: Contact
+icon: email
+
+options:
+  changeSlug: false
+
+columns:
+
+  #CASES IMG CONTENT
+  - width: 1/2
+    sections:
+    fields:
+
+      #Header
+      headerHeadline:
+        label: Header contact
+        type: headline
+        numbered: true
+      headerSubtitle:
+        label: Header subtitle
+        type: text
+      headerTitle:
+        label: Header title
+        type: text
+      headerParagraph:
+        label: Header paragraph
+        type: writer
+        inline: true
+      
+      #buttons  
+      headerButtons:
+        label: Button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 4/8
+          destination:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: checkboxes
+            max: 1
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronBottom: Chevron down
+          typeOfButton:
+            label: Type
+            type: checkboxes
+            max: 1
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+          destination:
+            type: select
+            label: Destination
+            max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-a:
+        type: line
+      
+      #Contact info
+      contactInfoHeadline:
+        label: Contact info
+        type: headline
+        numbered: true
+      contactInfoTitle:
+        label: Contact info title
+        type: text
+      contactInfoParagraph:
+        label: Contact info paragraaf
+        type: writer
+        inline: true
+      line-b:
+        type: line
+      
+      #Maps
+      mapsHeadline:
+        label: Google Maps widget
+        type: headline
+        numbered: true
+      mapsSrcUrl:
+        label: Google maps src url
+        type: url
