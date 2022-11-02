@@ -24,6 +24,37 @@ columns:
     sections:
     fields:
 
+      #Floating Nav
+      floatingNavHeadline:
+        label: Floating nav
+        type: headline
+        numbered: false
+      floatingNavSwitch:
+        label: Floating nav?
+        type: toggle
+        width: 1/2
+        text: 
+          - "no"
+          - "yes"
+      floatingNavInfoPositive:
+        label: Results in
+        type: info
+        text: "**Floating nav: ** nav will hide/show show on scroll"
+        theme: positive
+        width: 1/2
+        when:
+          floatingNavSwitch: yes
+      floatingNavInfoNegative:
+        label: Results in
+        type: info
+        text: "**Default nav: ** nav will stick to top of page"
+        theme: negative
+        width: 1/2
+        when:
+          floatingNavSwitch: no
+      line-z:
+        type: line
+
       #Header
       headerHeadline:
         label: Header

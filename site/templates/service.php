@@ -266,7 +266,10 @@
 <?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
 <?= js('build/js/general/carousel2.js', ['defer' => true]) ?>
 <?= js('build/js/general/carousel3.js', ['defer' => true]) ?>
-<?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+
+<?php if($page->floatingNavSwitch()->toBool() === true): ?>
+    <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+<?php endif; ?>
 
 
 

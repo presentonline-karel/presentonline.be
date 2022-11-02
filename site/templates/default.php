@@ -21,4 +21,11 @@
 
 
 
+<!-- JS SCRIPTS -->
+<?php if($page->floatingNavSwitch()->toBool() === true): ?>
+    <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+<?php endif; ?>
+
+
+
 <?php snippet("general/footer") ?>

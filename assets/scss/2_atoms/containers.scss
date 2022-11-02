@@ -12,7 +12,7 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .container {
-        min-height: calc(100% - 404px);
+        min-height: calc(100vh - 404px);
 
         &-error {
             min-height: 100%;
