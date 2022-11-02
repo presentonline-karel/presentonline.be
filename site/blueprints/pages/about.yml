@@ -13,17 +13,17 @@ columns:
 
       #Header
       headerHeadline:
-        label: Header about
+        label: Header
         type: headline
         numbered: true
       headerSubtitle:
-        label: Header subtitle
+        label: Subtitle
         type: text
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -60,6 +60,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -95,14 +96,14 @@ columns:
         type: headline
         numbered: true
       aboutTitle:
-        label: About title
+        label: Title
         type: text
       aboutParagraph:
-        label: About paragraph
+        label: Paragraph
         type: writer
         inline: true
       aboutNumbers:
-        label: About numbers
+        label: Numbers
         type: structure
         fields:
           title:
@@ -161,6 +162,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination

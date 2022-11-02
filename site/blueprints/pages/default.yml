@@ -7,12 +7,12 @@ columns:
     fields:
 
       defaultHeadline:
-        label: Error pagina tekst
+        label: Error page
         type: headline
       errorPageTitle:
-        label: Titel
+        label: Title
         type: text
       errorPageParagraph:
-        label: Paragraaf
+        label: Paragraph
         type: writer
         inline: true

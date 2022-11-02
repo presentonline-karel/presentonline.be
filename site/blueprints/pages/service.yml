@@ -1,5 +1,5 @@
 title: Service
-icon: globe
+icon: store
 
 options:
   changeSlug: false
@@ -26,14 +26,14 @@ columns:
 
       #Header
       headerHeadline:
-        label: Header service
+        label: Header
         type: headline
         numbered: true
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -102,7 +102,7 @@ columns:
       
       #Steps
       stepsHeadline:
-        label: Steps section
+        label: Steps
         type: headline
         numbered: true
       stepsInfo:
@@ -113,7 +113,7 @@ columns:
         when:
           service: photography
       stepsTitle:
-        label: Steps title
+        label: Title
         type: text
       steps:
         label: Steps
@@ -200,7 +200,7 @@ columns:
       
       #Carousels
       carouselsHeadline:
-        label: Carousels section
+        label: Carousels
         type: headline
         numbered: true
         when:
@@ -271,6 +271,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -322,7 +323,7 @@ columns:
     sections:
     fields:
       websiteImgHeadline:
-        label: Thank you header image
+        label: Service images
         type: headline
         numbered: false
       headerImgWebp:

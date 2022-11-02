@@ -1,5 +1,5 @@
 title: Cases
-icon: globe
+icon: grid
 
 options:
   changeSlug: false
@@ -9,25 +9,27 @@ columns:
   #CASES TEXT CONTENT
   - width: 1/3
     sections:
-    fields:
       listed:
-        template: case
         headline: Listed pages
         type: pages
         status: listed
+        template: case
         image: icon
+          back: black
       unlisted:
         template: case
         headline: Unlisted pages
         type: pages
         status: unlisted
         image: icon
+          back: black
       drafts:
         template: case
-        headline: Pages in draft
+        headline: Drafts
         type: pages
         status: draft
         image: icon
+          back: black
   
   #CASES IMG CONTENT
   - width: 2/3
@@ -36,17 +38,17 @@ columns:
 
       #Header
       headerHeadline:
-        label: Header about
+        label: Header
         type: headline
         numbered: true
       headerSubtitle:
-        label: Header subtitle
+        label: Subtitle
         type: text
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -83,6 +85,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination

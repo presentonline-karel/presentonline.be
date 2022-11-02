@@ -22,7 +22,7 @@ tabs:
             image: icon
               back: black
           drafts:
-            headline: Pages in draft
+            headline: Drafts
             type: pages
             status: draft
             image: icon

@@ -21,7 +21,7 @@
                 <div class="breadcrumbs">
                     <a class="breadcrumb" href="#">Services</a>
                     <i class="fa-solid fa-chevron-right"></i>
-                    <a class="breadcrumb" href="#">Websites &-apps</a>
+                    <a class="breadcrumb" href="#">SERVICE</a>
                 </div>
 
                 <h1 class="header__content__title">Responsive websites & -apps</h1>
@@ -111,6 +111,81 @@
 
 
 
+        <!-- PHOTOGRAPHY SECTIONS -->
+        <main id="photography-sections">
+
+            <!-- PHOTOGRAPHY CAROUSEL -->
+            <div class="photography-section section section-medium">
+                <h3 class="photography-section__title">GAGK Rupelstreek</h3>
+
+                <div class="carousel carousel-1">
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHOTOGRAPHY CAROUSEL -->
+            <div class="photography-section section section-medium">
+                <h3 class="photography-section__title">KdG FabLab</h3>
+
+                <div class="carousel carousel-2">
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- PHOTOGRAPHY CAROUSEL -->
+            <div class="photography-section section section-medium">
+                <h3 class="photography-section__title">Turnkring Energym</h3>
+
+                <div class="carousel carousel-3">
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                    </div>
+                    <div class="carousel__slide">
+                        <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
         <!-- CTA -->
         <?php snippet("general/cta"); ?>
 
@@ -189,6 +264,8 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
+<?= js('build/js/general/carousel2.js', ['defer' => true]) ?>
+<?= js('build/js/general/carousel3.js', ['defer' => true]) ?>
 <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 
 

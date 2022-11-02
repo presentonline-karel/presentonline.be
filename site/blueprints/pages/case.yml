@@ -11,20 +11,20 @@ columns:
     sections:
     fields:
       caseHeadline:
-        label: Case header
+        label: Header
         type: headline
         numbered: true
       caseTags:
-        label: Case tags
+        label: Tags
         type: tags
       caseTitleLong:
-        label: Case title long
+        label: Title long
         type: text
       caseTitleShort:
-        label: Case title short
+        label: Title short
         type: text
       caseParagraph:
-        label: Case paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -61,6 +61,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -95,10 +96,10 @@ columns:
         type: headline
         numbered: true
       challengesTitle:
-        label: Challenges title
+        label: Title
         type: text
       challengesParagraph:
-        label: Challenges paragraph
+        label: Paragraph
         type: writer
         inline: true
       outcomes:
@@ -166,6 +167,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination

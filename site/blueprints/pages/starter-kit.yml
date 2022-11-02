@@ -17,7 +17,7 @@ columns:
         type: headline
         numbered: true
       navigationLinks:
-        label: Starter kit menu items
+        label: Menu items
         type: structure
         columns:
           anchor:
@@ -42,14 +42,14 @@ columns:
       
       #Header
       headerHeadline:
-        label: Starter kit header
+        label: Header
         type: headline
         numbered: true
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -86,6 +86,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -117,14 +118,14 @@ columns:
       
       #Intro
       introHeadline:
-        label: Starter kit intro
+        label: Intro
         type: headline
         numbered: true
       introTitle:
-        label: Intro title
+        label: Title
         type: text
       introParagraph:
-        label: Intro paragraph
+        label: Paragraph
         type: writer
         inline: true
       line-c:
@@ -195,18 +196,18 @@ columns:
       
       #Features
       featuresHeadline:
-        label: Starter kit feature section
+        label: Features
         type: headline
         numbered: true
       featuresTitle:
-        label: Features title
+        label: Title
         type: text
       featuresParagraph:
-        label: Intro paragraph
+        label: Intro
         type: writer
         inline: true
       featuresSubtitle:
-        label: Features subtitle
+        label: Subtitle
         type: text
       features:
         label: Features
@@ -219,7 +220,7 @@ columns:
         type: line
       
       includesHeadline:
-        label: Starter kit includes
+        label: Includes
         type: headline
         numbered: false
       includes:
@@ -313,7 +314,7 @@ columns:
       
       #Price
       priceHeadline:
-        label: Starter kit price
+        label: Price
         type: headline
         numbered: false
       priceFrom:
@@ -388,7 +389,7 @@ columns:
       
       #Testimonials
       testimonialsHeadline:
-        label: Testimonials section
+        label: Testimonials
         type: headline
         numbered: true
       testimonials:
@@ -419,14 +420,14 @@ columns:
       
       #Intrest section
       intrestSectionHeadline:
-        label: Intrest section
+        label: Intrest
         type: headline
         numbered: true
       intrestSectionTitle:
-        label: Intrest section title
+        label: Title
         type: text
       intrestSectionParagraph:
-        label: Intrest section paragraaf
+        label: Paragraph
         type: writer
         inline: true
       

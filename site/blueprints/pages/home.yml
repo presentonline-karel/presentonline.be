@@ -13,25 +13,29 @@ columns:
 
       #Hero
       heroHeadline:
-        label: Hero section
+        label: Hero
         type: headline
         numbered: true
       heroTitleMobile:
-        label: Hero titel mobile
+        label: H1 title mobile
         type: text
+      typedWordsInfo:
+        label:
+        type: info
+        text: Animation only visible on **mobile**
       typedWords:
-        label: Hero typed words
+        label: Typed words for animation
         type: structure
         fields:
           word:
             label: Word
             type: text
       heroTitleDesktop:
-        label: Hero title desktop
+        label: H1 title desktop
         type: writer
         inline: true
       heroParagraph:
-        label: Hero paragraph
+        label: Paragraph
         type: writer
         inline: true
 
@@ -68,6 +72,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -101,11 +106,11 @@ columns:
 
       #Clients
       clientsHeadline:
-        label: Clients section
+        label: Clients
         type: headline
         numbered: true
       clientsTitle:
-        label: Clients title
+        label: Title
         type: text
       clients:
         label: Clients
@@ -136,11 +141,11 @@ columns:
 
       #Services
       servicesHeadline:
-        label: Services section
+        label: Services
         type: headline
         numbered: true
       servicesTitle:
-        label: Services title
+        label: Title
         type: text
       services:
         label: Services
@@ -173,7 +178,7 @@ columns:
 
       #Testimonials
       testimonialsHeadline:
-        label: Testimonials section
+        label: Testimonials
         type: headline
         numbered: true
       testimonials:
@@ -245,6 +250,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -285,7 +291,7 @@ columns:
       serviceImgInfo:
         label:
         type: info
-        text: Only gets showed on mobile
+        text: Service img only visible on **mobile**
       servicesImgWebp:
         label: Services img .webp
         type: files

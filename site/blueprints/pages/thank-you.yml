@@ -13,17 +13,17 @@ columns:
 
       #Header
       headerHeadline:
-        label: Header thank you
+        label: Header
         type: headline
         numbered: true
       headerSubtitle:
-        label: Header subtitle
+        label: Subtitle
         type: text
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -60,6 +60,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -86,8 +87,6 @@ columns:
             required: true
             when:
               destination: external
-      line-a:
-        type: line
 
 
       
@@ -96,7 +95,7 @@ columns:
     sections:
     fields:
       thankYouImgHeadline:
-        label: Thank you header image
+        label: Header image
         type: headline
         numbered: false
       headerImgWebp:

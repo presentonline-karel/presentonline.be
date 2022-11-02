@@ -6,24 +6,33 @@ options:
 
 columns:
 
+  #GAP
+  - width: 1/4
+    sections:
+    fields:
+      gap-a:
+        type: gap
+
+
+
   #CASES IMG CONTENT
-  - width: 1/2
+  - width: 2/4
     sections:
     fields:
 
       #Header
       headerHeadline:
-        label: Header contact
+        label: Header
         type: headline
         numbered: true
       headerSubtitle:
-        label: Header subtitle
+        label: Subtitle
         type: text
       headerTitle:
-        label: Header title
+        label: Title
         type: text
       headerParagraph:
-        label: Header paragraph
+        label: Paragraph
         type: writer
         inline: true
       
@@ -60,6 +69,7 @@ columns:
             options:
               button-primary: Primary
               button-secondary: Secondary
+              button-tertiary: Tertiary
           destination:
             type: select
             label: Destination
@@ -95,10 +105,10 @@ columns:
         type: headline
         numbered: true
       contactInfoTitle:
-        label: Contact info title
+        label: Title
         type: text
       contactInfoParagraph:
-        label: Contact info paragraaf
+        label: Paragraph
         type: writer
         inline: true
       line-b:
@@ -110,5 +120,14 @@ columns:
         type: headline
         numbered: true
       mapsSrcUrl:
-        label: Google maps src url
+        label: Src url
         type: url
+
+
+      
+  #GAP
+  - width: 1/4
+    sections:
+    fields:
+      gap-b:
+        type: gap
