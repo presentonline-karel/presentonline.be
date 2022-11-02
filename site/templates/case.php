@@ -38,21 +38,29 @@
 
 
             <!-- Header images -->
-            <div class="header-case__content__images slider-container carousel carousel-1">
-                <div class="carousel__slide">
-                    <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                </div>
-                <div class="carousel__slide">
-                    <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
-                </div>
-                <div class="carousel__slide">
-                    <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                </div>
-                <div class="carousel__slide">
-                    <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
-                </div>
-                <div class="carousel__slide">
-                    <img class="carousel__slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+            <div class="header-case__content__images slider">
+                <div class="slider__inner slide-inner">
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
+                    <div class="slide slide-img">
+                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                    </div>
                 </div>
             </div>
         </div>
@@ -137,7 +145,9 @@
 <!-- JS SCRIPTS -->
 <?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
 
-<?php if($page->floatingNavSwitch()->toBool() === true): ?>
+<?= js('build/js/general/carousel.js', ['defer' => true]) ?>
+
+<?php if ($page->floatingNavSwitch()->toBool() === true) : ?>
     <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
 <?php endif; ?>
 

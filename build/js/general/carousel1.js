@@ -1,4 +1,4 @@
-const carousel1 = () => {
+/*const carousel1 = () => {
   const carousel = document.querySelector(".carousel-1"),
     slides = Array.from(carousel.children);
 
@@ -93,3 +93,4 @@ const carousel1 = () => {
 };
 
 carousel1();
+*/
