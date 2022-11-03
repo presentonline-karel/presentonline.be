@@ -189,7 +189,7 @@
 
 
         <!-- CONTACT -->
-        <section class="contact">
+        <section id="contact" class="contact">
 
             <!-- INFO -->
             <div class="contact__info">
@@ -229,10 +229,6 @@
 <!-- JS SCRIPTS -->
 <?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
 <?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
-
-<?php if($page->floatingNavSwitch()->toBool() === true): ?>
-    <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
-<?php endif; ?>
 
 
 

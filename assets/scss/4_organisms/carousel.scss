@@ -48,19 +48,3 @@
         }
     }
 }
-
-/* TABLET 1024PX */
-@media only screen and (min-width: $tablet-landscape) {
-    /*.carousel {
-        &__slide {
-            width: 506px;
-            height: auto;
-            aspect-ratio: 3/2;
-            object-fit: cover;
-    
-            &__img {
-                aspect-ratio: 3/2;
-            }
-        }
-    }*/
-}

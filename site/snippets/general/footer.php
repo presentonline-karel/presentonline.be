@@ -75,5 +75,9 @@
 
         <!-- MOBILE NAV SCRIPT -->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
+
+        <?php if ($page->floatingNavSwitch()->toBool() === true) : ?>
+            <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+        <?php endif; ?>
     </body>
 </html>

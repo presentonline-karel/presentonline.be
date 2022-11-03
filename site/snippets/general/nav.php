@@ -22,17 +22,35 @@
         <!-- Menu items -->
         <?php if ($site->navigationLinks()->isNotEmpty()) : ?>
             <ul class="link-items">
-                <?php foreach ($site->navigationLinks()->toStructure() as $link) : ?>
-                    <li class="nav__link">
-                        <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?> <?php if($link->notification() == "true") { ?> <div class="nav__link__item__notification"><span><?= $link->number() ?></span></div> <?php } ?> <div class="active-bullet"></div></a>
-                    </li>
-                <?php endforeach; ?>
 
-                <!-- starter kit CTA -->
-                <li class="nav__link buttons">
-                    <a class="button button-primary" href="<?= $site->url() ?>/starter-kit">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-                    <div class="language-button desktop"><i class="fa-solid fa-earth-americas"></i></div>
-                </li>
+                <!-- starter kit menu -->
+                <?php if($page->title() == "Starter Kit"): ?>
+                    <?php foreach ($page->navigationLinks()->toStructure() as $link) : ?>
+                        <li class="nav__link">
+                            <a class="nav__link__item" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?> <?php if($link->notification() == "true") { ?> <div class="nav__link__item__notification"><span><?= $link->number() ?></span></div> <?php } ?> <div class="active-bullet"></div></a>
+                        </li>
+                    <?php endforeach; ?>
+
+                    <!-- CTA -> Home -->
+                    <li class="nav__link buttons">
+                        <a class="button button-primary starter-kit-cta" href="<?= $site->url() ?>/starter-kit/#contact">Get it now<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                        <div class="language-button desktop"><i class="fa-solid fa-earth-americas"></i></div>
+                    </li>
+
+                <!-- default menu -->
+                <?php else: ?>
+                    <?php foreach ($site->navigationLinks()->toStructure() as $link) : ?>
+                        <li class="nav__link">
+                            <a class="nav__link__item <?php if ($link->page()->toPage()->isOpen()) { echo ("active"); } ?>" href="<?= $link->page()->toPage()->url() . $link->section() ?>"><?= $link->anchor() ?> <?php if($link->notification() == "true") { ?> <div class="nav__link__item__notification"><span><?= $link->number() ?></span></div> <?php } ?> <div class="active-bullet"></div></a>
+                        </li>
+                    <?php endforeach; ?>
+
+                    <!-- CTA -> Starter Kit -->
+                    <li class="nav__link buttons">
+                        <a class="button button-primary" href="<?= $site->url() ?>/starter-kit">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                        <div class="language-button desktop"><i class="fa-solid fa-earth-americas"></i></div>
+                    </li>
+                <?php endif; ?>
             </ul>
         <?php endif; ?>
 

@@ -8,7 +8,7 @@
 
         &__images {
 
-            //change by general carousel code
+            /*change by general carousel code
             &__carousel {
                 display: flex;
                 justify-content: flex-start;
@@ -24,7 +24,7 @@
                     object-fit: cover;
                     border-radius: $border-radius-small;
                 }
-            }
+            }*/
         }
     }
 }
@@ -69,6 +69,7 @@
     .header-case {
         &__content {
             padding: 188px 96px 96px 96px;
+            gap: 130px;
         }
     }
 }
@@ -78,6 +79,14 @@
     .header-case {
         &__content {
             padding: 188px 96px 112px 96px;
+
+            &__text {
+                width: 506px;
+            }
+
+            &__images {
+                width: calc(100% - 130px - 506px); //130px gap, 506px text width
+            }
         }
     }
 }

@@ -2,29 +2,30 @@
     width: 100%;
     height: auto;
     height: 229px;
-    //aspect-ratio: 3/2;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: $border-radius-small;
     border: 1px solid $primary-100;
     margin-bottom: 20px;
-    //position: relative;
+
+    &.slide {
+        width: 343px !important;
+
+        .case__id {
+            margin-top: 123px;
+        }
+    }
 
     &:last-of-type {
         margin-bottom: 0;
     }
 
     .button {
-        /*position: relative;
-        top: 24px;
-        right: 24px;*/
-        /*margin-top: 24px;
-        margin-left: auto;*/
         float: right;
         margin-top: 24px;
         margin-right: 24px;
-        color: $neutrals-1000;
+        color: $neutrals-1000 !important;
 
         i {
             color: $primary-600;
@@ -34,9 +35,6 @@
     }
 
     &__id {
-        /*position: absolute;
-        bottom: 24px;
-        left: 24px;*/
         width: calc(100% - 48px);
         float: left;
         margin-top: 96px;
@@ -54,6 +52,14 @@
     .case {
         height: 337px;
 
+        &.slide {
+            width: 328px !important;
+
+            .case__id {
+                margin-top: 195px;
+            }
+        }
+
         &__id {
             margin-top: 204px;
         }
@@ -64,16 +70,19 @@
 @media only screen and (min-width: $tablet-landscape) {
     .case {
         margin-bottom: 0;
-        
-        /*.button {
-            top: 32px;
-            right: 32px;
+        height: 256px;
+
+        &.slide {
+            width: 400px !important;
+
+            .case__id {
+                margin-top: 195px;
+            }
         }
 
         &__id {
-            bottom: 32px;
-            left: 32px;
-        }*/
+            margin-top: 123px;
+        }
     }
 }
 
@@ -81,6 +90,15 @@
 @media screen and (min-width: $desktop-1) {
     .case {
         height: 284px;
+
+        &.slide {
+            width: 426px !important;
+            height: 284px !important;
+
+            .case__id {
+                margin-top: 140px;
+            }
+        }
 
         .button {
             margin-top: 32px;
@@ -98,6 +116,15 @@
 @media screen and (min-width: $desktop-3) {
     .case {
         height: 337px;
+
+        &.slide {
+            width: 506px !important;
+            height: 337px !important;
+
+            .case__id {
+                margin-top: 180px;
+            }
+        }
 
         &__id {
             margin-top: 176px;

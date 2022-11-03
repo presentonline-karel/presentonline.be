@@ -195,6 +195,12 @@
                 background-color: $neutrals-100;
                 color: $primary-600;
 
+                &.starter-kit-cta {
+                    i {
+                        transform: initial;
+                    }
+                }
+
                 i {
                     font-size: 32px;
                     line-height: 32px;

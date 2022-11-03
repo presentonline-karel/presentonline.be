@@ -30,7 +30,7 @@
                     <span class="tag">Photos</span>
                 </div>
 
-                <h1 class="header__content__title">Responsive website for Music2Move</h1>
+                <h1 class="header__content__title">New website for Music2Move</h1>
 
                 <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.<br><br> Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
             </div>
@@ -38,30 +38,10 @@
 
 
             <!-- Header images -->
-            <div class="header-case__content__images slider">
-                <div class="slider__inner slide-inner">
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                    <div class="slide slide-img">
-                        <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                    </div>
-                </div>
+            <div class="header-case__content__images">
+
+                <!-- slider -->
+                <?php snippet('general/slider', ['extraClassCases' => '']); ?>
             </div>
         </div>
     </header>
@@ -143,13 +123,7 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/general/carousel1.js', ['defer' => true]) ?>
-
-<?= js('build/js/general/carousel.js', ['defer' => true]) ?>
-
-<?php if ($page->floatingNavSwitch()->toBool() === true) : ?>
-    <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
-<?php endif; ?>
+<?= js('build/js/general/slider.js', ['defer' => true]) ?>
 
 
 
