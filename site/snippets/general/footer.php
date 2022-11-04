@@ -1,4 +1,4 @@
-        <footer class="footer section section-large">
+        <footer class="footer section section-large fade-section">
 
             <!-- ARROW TOP -->
             <a class="top" href="#container">
@@ -75,6 +75,7 @@
 
         <!-- MOBILE NAV SCRIPT -->
         <?= js('build/js/general/nav.js', ['defer' => true]) ?>
+        <?= js('build/js/general/section-fade-animation.js', ['defer' => true]) ?>
 
         <?php if ($page->floatingNavSwitch()->toBool() === true) : ?>
             <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>

@@ -1,4 +1,5 @@
 // TRANSITIONS
+$transition-time-very-short: 0.1s;
 $transition-time-short: 0.3s;
 $transition-time-medium: 0.5s;
 $transition-time-long: 0.75s;
@@ -6,5 +7,4 @@ $transition-time-long: 0.75s;
 // SHADOWS
 $card-shadow: 0px 8px 24px rgba(52, 58, 64, 0.08);
 $footer-inner-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.35);
-//$menu-shadow: 0px 4px 8px rgba(235, 241, 254, 0.35);
-//$assortment-set-shadow: 0px 4px 4px rgba(37, 37, 37, 0.05);
+$nav-scrolled-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;

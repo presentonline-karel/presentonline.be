@@ -51,7 +51,7 @@
     <main>
 
         <!-- CHALLENGES -->
-        <section id="challenges" class="challenges section">
+        <section id="challenges" class="challenges section fade-section">
             <img class="challenges__img desktop" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
 
             <div class="challenges__text">
@@ -72,7 +72,7 @@
 
 
         <!-- NEXT CASE -->
-        <section id="next-case" class="next-case section section-medium">
+        <section id="next-case" class="next-case section section-medium fade-section">
             <h2 class="next-case__title">Next case</h2>
 
             <div class="next-case__cases">

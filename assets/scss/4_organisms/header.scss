@@ -24,6 +24,10 @@
             }
         }
 
+        .typedWord {
+            display: none;
+        }
+
         p {
             margin-bottom: 24px;
         }
@@ -33,7 +37,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 8px;
-            margin-bottom: 32px;
+            //margin-bottom: 32px;
 
             .button {
                 width: 100%;
@@ -52,6 +56,15 @@
             color: $neutrals-1000;
             text-align: center;
             margin-bottom: 0;
+        }
+    }
+
+    //Home header
+    &-home {
+        &__content {
+            &__title {
+                margin-bottom: 0px;
+            }
         }
     }
 

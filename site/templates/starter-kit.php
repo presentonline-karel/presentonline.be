@@ -40,9 +40,7 @@
                     <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
                 </div>
 
-                <p class="language">
-                    <i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language
-                </p>
+                <!-- <p class="language"><i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language</p> -->
             </div>
 
             <img class="header-starter-kit__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="karrel" />
@@ -54,7 +52,7 @@
     <main>
 
         <!-- INTRO -->
-        <section id="intro" class="intro section">
+        <section id="intro" class="intro section fade-section">
 
             <!-- Intro text -->
             <div class="intro__text">
@@ -71,7 +69,7 @@
 
 
         <!-- FEATURES -->
-        <section id="features" class="features-section section">
+        <section id="features" class="features-section section fade-section">
             <h2>What is the PO Starter Kit?</h2>
             <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
 
@@ -89,7 +87,7 @@
 
 
         <!-- INCLUDES -->
-        <section id="includes" class="includes cards section section-large">
+        <section id="includes" class="includes cards section section-large fade-section">
 
             <!-- Included box - text -->
             <div class="includes__text includes__box">
@@ -189,7 +187,7 @@
 
 
         <!-- CONTACT -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact fade-section">
 
             <!-- INFO -->
             <div class="contact__info">

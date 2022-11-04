@@ -23,9 +23,13 @@
             gap: 8px;
             margin-bottom: 24px;
 
+            picture {
+                width: 50%;
+            }
+
             img {
                 flex-grow: 1;
-                width: 50%;
+                width: 100%;
                 height: auto;
                 aspect-ratio: 3/2;
                 object-fit: cover;

@@ -1,20 +1,6 @@
 <?php snippet("general/header") ?>
 
 
-<!-- SWITCH LANGUAGES -> In modal steken -->
-<?php /* <nav class="languages">
-            <ul>
-                <?php foreach ($kirby->languages() as $language) : ?>
-                    <li<?php e($kirby->language() == $language, ' class="active"') ?>>
-                        <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
-                            <?= html($language->name()) ?>
-                        </a>
-                        </li>
-                    <?php endforeach ?>
-            </ul>
-        </nav> */ ?>
-
-
 
 <!-- HOME CONTAINER -->
 <div id="container" class="container container-home">
@@ -27,18 +13,29 @@
 
         <!-- HEADER HOME - CONTENT -->
         <div class="header__content header-home__content">
-            <h1 class="header__content__title mobile">Uw partner voor <span>websites|</span></h1>
+            <h1 class="header__content__title header-home__content__title mobile"><?= $page->heroTitleMobile() ?></h1>
+            <h1 class="typing mobile">Websites</h1>
+
+            <!-- Typed words -->
+            <?php if ($page->typedWords()->isNotEmpty()) : ?>
+                <?php foreach ($page->typedWords()->toStructure() as $typedWord) : ?>
+                    <div class="typedWord"><?= $typedWord->word() ?></div>
+                <?php endforeach; ?>
+            <?php endif; ?>
+
             <h1 class="header__content__title desktop"><?= $page->heroTitle() ?></h1>
-            <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo. Suspendisse justo orci, egestas eget facilisis id, semper a nibh.</p>
+            <p><?= $page->heroParagraph() ?></p>
 
-            <div class="buttons">
-                <a class="button button-primary" href="#">What we do<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
-                <a class="button button-secondary" href="#">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-            </div>
+            <!-- Hero buttons -->
+            <?php if($page->heroButtons()->isNotEmpty()): ?>
+                <div class="buttons">
 
-            <p class="language">
-                <i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language
-            </p>
+                    <!-- button -->
+                    <?php foreach($page->heroButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if($button->destination() == "internal") { echo($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo($button->externalUrl()); } ?>" <?php if($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?> <?php if($button->icon() == "chevronRight") { ?> <i class="anchor-first fa fa-chevron-right" aria-hidden="true"></i> <?php } elseif($button->icon() == "chevronBottom") { ?> <i class="anchor-first no-hover fa fa-chevron-down" aria-hidden="true"></i> <?php } ?></a>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -47,22 +44,55 @@
     <main>
 
         <!-- CLIENTS -->
-        <div id="clients" class="clients-section section section-small">
-            <h3>Onze klanten</h3>
+        <section id="clients" class="clients-section section section-small">
+            <h3><?= $page->clientsTitle() ?></h3>
 
             <!-- Client items -->
-            <div class="clients">
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client1.svg" alt="Client logo" /></a>
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client2.svg" alt="Client logo" /></a>
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client1.svg" alt="Client logo" /></a>
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client2.svg" alt="Client logo" /></a>
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client1.svg" alt="Client logo" /></a>
-                <a class="client" href="#"><img class="client__img" src="<?= $site->url() ?>/../assets/img/Client2.svg" alt="Client logo" /></a>
-            </div>
+            <?php if($page->clients()->isNotEmpty()): ?>
+                <div class="clients">
+
+                    <!-- client -->
+                    <?php foreach($page->clients()->toStructure() as $client): ?>
+
+                        <!-- client with website -->
+                        <?php if($client->url()->isNotEmpty()): ?>
+                            <a class="client" href="<?= $client->url() ?>" target="_blank">
+
+                                <!-- client logo -->
+                                <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
+                                    <?php if ($clientLogoPng = $client->logoPng()->toFile()) : ?>
+                                        <picture>
+                                            <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
+                                            <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
+                                            <img src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                        </picture>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </a>
+                        
+                        <!-- client no website -->
+                        <?php else: ?>
+                            <div class="client">
+
+                                <!-- client logo -->
+                                <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
+                                    <?php if ($clientLogoPng = $client->logoPng()->toFile()) : ?>
+                                        <picture>
+                                            <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
+                                            <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
+                                            <img src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                        </picture>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            </div>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
 
             <!-- CTA -> To cases -->
             <a class="button button-tertiary large" href="#">What we do for them<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-        </div>
+        </section>
 
 
 
@@ -85,6 +115,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
+<?= js('build/js/home/typing-animation.js', ['defer' => true]) ?>
 
 
 

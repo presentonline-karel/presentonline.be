@@ -80,8 +80,10 @@ columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -182,6 +184,13 @@ columns:
       services:
         label: Services
         type: structure
+        columns:
+          icon:
+            width: 2/8
+          title:
+            width: 3/8
+          destinationPage:
+            width: 3/8
         fields:
           icon:
             label: Icon
@@ -216,6 +225,13 @@ columns:
       testimonials:
         label: Testimonials
         type: structure
+        columns:
+          testimonialText:
+            width: 4/8
+          reviewerName:
+            width: 2/8
+          reviewerFunction:
+            width: 2/8
         fields:
           testimonialText:
             label: Testimonial
@@ -229,7 +245,6 @@ columns:
             label: Photo / logo company .png
             type: files
             max: 1
-            required: true
           reviewerName:
             label: Name
             type: text
@@ -248,6 +263,13 @@ columns:
         label: CTA text
         type: writer
         inline: true
+      ctaFeatures:
+        label: CTA Features
+        type: structure
+        fields:
+          feature:
+            label: Feature
+            type: text
       
       #buttons  
       ctaButtons:
@@ -330,12 +352,14 @@ columns:
         max: 1
         layout: cards
         width: 1/2
+        cover: true
       servicesImgPng:
         label: Services img .png
         type: files
         max: 1
         layout: cards
         width: 1/2
+        cover: true
       line-e:
         type: line
 
@@ -345,9 +369,11 @@ columns:
         max: 1
         layout: cards
         width: 1/2
+        cover: true
       ctaImgPng:
         label: CTA img .png
         type: files
         max: 1
         layout: cards
         width: 1/2
+        cover: true

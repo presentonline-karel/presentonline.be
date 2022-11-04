@@ -1,14 +1,11 @@
 .testimonial {
     display: none;
     opacity: 0;
-    transition: all $transition-time-short;
     width: 100%;
     justify-content: space-between;
     align-items: center;
     gap: 36px;
-
-    //position: relative;
-    //display: flex;
+    transition: all $transition-time-short ease-in-out;
 
     &.active {
         display: flex;

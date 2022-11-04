@@ -40,7 +40,7 @@
     <main>
 
         <!-- KITS -->
-        <section id="service-features" class="service-features-section section section-large">
+        <section id="service-features" class="service-features-section section section-large fade-section">
             <h2 class="service-features-section__title">De juiste oplossing voor uw project</h2>
             <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
 
@@ -115,7 +115,7 @@
         <main id="photography-sections">
 
             <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium">
+            <div class="photography-section section section-medium fade-section">
                 <h3 class="photography-section__title">GAGK Rupelstreek</h3>
 
                 <!-- slider -->
@@ -123,7 +123,7 @@
             </div>
 
             <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium">
+            <div class="photography-section section section-medium fade-section">
                 <h3 class="photography-section__title">KdG FabLab</h3>
 
                 <!-- slider -->
@@ -131,7 +131,7 @@
             </div>
 
             <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium">
+            <div class="photography-section section section-medium fade-section">
                 <h3 class="photography-section__title">Turnkring Energym</h3>
 
                 <!-- slider -->
@@ -147,7 +147,7 @@
 
 
         <!-- CASES CAROUSEL -->
-        <div id="cases" class="carousel-section section section-medium">
+        <div id="cases" class="carousel-section section section-medium fade-section">
             <h2 class="carousel-section__title">Website cases</h2>
 
             <!-- slider -->

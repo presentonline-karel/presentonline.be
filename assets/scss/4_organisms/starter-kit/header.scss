@@ -2,7 +2,7 @@
     &__content {
         padding: 31px 16px 56px 16px;
 
-        .language {
+        .buttons {
             margin-bottom: 48px;
         }
 
@@ -35,6 +35,7 @@
 
             .buttons {
                 justify-content: flex-start;
+                margin-bottom: 0;
             }
 
             .language {

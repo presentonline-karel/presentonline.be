@@ -34,7 +34,14 @@
                     <!-- CTA -> Home -->
                     <li class="nav__link buttons">
                         <a class="button button-primary starter-kit-cta" href="<?= $site->url() ?>/starter-kit/#contact">Get it now<i class="anchor-first fa-solid fa-arrow-down"></i></a>
-                        <div class="language-button desktop"><i class="fa-solid fa-earth-americas"></i></div>
+                        
+                        <!-- Language selector -->
+                        <?php foreach ($kirby->languages() as $language) : ?>
+                            <a <?php e($kirby->language() == $language, ' class="language-button desktop active"') ?> class="language-button desktop" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                                <?= html($language->name()) ?>
+                                <i class="anchor-first fa-solid fa-earth-americas"></i>
+                            </a>
+                        <?php endforeach ?>
                     </li>
 
                 <!-- default menu -->
@@ -48,7 +55,14 @@
                     <!-- CTA -> Starter Kit -->
                     <li class="nav__link buttons">
                         <a class="button button-primary" href="<?= $site->url() ?>/starter-kit">Starter Kit<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-                        <div class="language-button desktop"><i class="fa-solid fa-earth-americas"></i></div>
+
+                        <!-- Language selector -->
+                        <?php foreach ($kirby->languages() as $language) : ?>
+                            <a <?php e($kirby->language() == $language, ' class="language-button desktop active"') ?> class="language-button desktop" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                                <?= html($language->name()) ?>
+                                <i class="anchor-first fa-solid fa-earth-americas"></i>
+                            </a>
+                        <?php endforeach ?>
                     </li>
                 <?php endif; ?>
             </ul>
@@ -60,10 +74,13 @@
             <!-- socials -->
             <?php snippet("general/socials", ['color' => 'neutrals-100']) ?>
 
-            <!-- language -->
-            <p class="language">
-                <i class="icon-first fa fa-globe" aria-hidden="true"></i>ENG
-            </p>
+            <!-- Language selector -->
+            <?php foreach ($kirby->languages() as $language) : ?>
+                <a <?php e($kirby->language() == $language, ' class="language active"') ?> class="language" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                    <i class="icon-first fa-solid fa-earth-americas"></i>    
+                    <?= html($language->name()) ?>
+                </a>
+            <?php endforeach ?>
         </div>
     </div>
 
@@ -76,3 +93,18 @@
         <div class="burger-line line3"></div>
     </div>
 </nav>
+
+
+
+<!-- SWITCH LANGUAGES -> In modal steken -->
+<?php /* <nav class="languages">
+    <ul>
+        <?php foreach ($kirby->languages() as $language) : ?>
+            <li<?php e($kirby->language() == $language, ' class="active"') ?>>
+                <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
+                    <?= html($language->name()) ?>
+                </a>
+            </li>
+        <?php endforeach ?>
+    </ul>
+</nav> */ ?>

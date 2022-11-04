@@ -1,102 +1,54 @@
-<!-- TESTIMONIALS -->
-<section id="testimonials" class="testimonials-section section section-medium">
+<section id="testimonials" class="testimonials-section section section-medium fade-section">
 
     <!-- Testimonials items -->
-    <div class="testimonials">
+    <?php if ($page->testimonials()->isNotEmpty()) : ?>
+        <div class="testimonials">
 
-        <!-- testimonial -->
-        <div class="slide-container testimonial">
+            <!-- testimonial -->
+            <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+                <div class="slide-container testimonial">
 
-            <!-- arrow left -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
-
-            <div>
-                <!-- testimonial -->
-                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
-
-                <!-- person -->
-                <div class="testimonial__id flex">
-
-                    <!-- image -->
-                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
+                    <!-- arrow left -->
+                    <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
 
                     <div>
-                        <h5 class="testimonial__id__name">Karel Decoene</h5>
-                        <p class="testimonial__id__function">CEO, Present Online</p>
-                    </div>
-                </div>
-            </div>
+                        <!-- testimonial -->
+                        <p class="testimonial__p"><?= $testimonial->testimonialText() ?></p>
 
-            <!-- arrow right -->
-            <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
+                        <!-- person -->
+                        <div class="testimonial__id flex">
+
+                            <!-- reviewer logo/photo -->
+                            <?php if ($reviewerImgWebp = $testimonial->reviewerPictureWebp()->toFile()) : ?>
+                                <?php if ($reviewerImgPng = $testimonial->reviewerPicturePng()->toFile()) : ?>
+                                    <picture>
+                                        <source srcSet="<?= $reviewerImgWebp->url() ?>" type="image/webp" />
+                                        <source srcSet="<?= $reviewerImgPng->url() ?>" type="image/jpg" />
+                                        <img class="testimonial__id__picture" src="<?= $reviewerImgPng->url() ?>" alt="<?= $reviewerImgPng->alt() ?>" />
+                                    </picture>
+                                <?php endif; ?>
+                            <?php endif; ?>
+
+                            <div>
+                                <h5 class="testimonial__id__name"><?= $testimonial->reviewerName() ?></h5>
+                                <p class="testimonial__id__function"><?= $testimonial->reviewerFunction() ?></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- arrow right -->
+                    <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
+                </div>
+            <?php endforeach; ?>
         </div>
 
 
 
-        <!-- testimonial -->
-        <div class="slide-container testimonial">
-
-            <!-- arrow left -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
-
-            <div>
-                <!-- testimonial -->
-                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
-
-                <!-- person -->
-                <div class="testimonial__id flex">
-
-                    <!-- image -->
-                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
-
-                    <div>
-                        <h5 class="testimonial__id__name">Robbe de Smet</h5>
-                        <p class="testimonial__id__function">LO Leerkracht</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- arrow right -->
-            <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
+        <!-- testimonials bullets -->
+        <div class="bullets">
+            <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+                <div class="bullet"></div>
+            <?php endforeach; ?>
         </div>
-
-
-
-        <!-- testimonial -->
-        <div class="slide-container testimonial">
-
-            <!-- arrow left -->
-            <i class="prev fa fa-arrow-left primary-color-600" aria-hidden="true"></i>
-
-            <div>
-
-                <!-- testimonial -->
-                <p class="testimonial__p">“Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus.”</p>
-
-                <!-- person -->
-                <div class="testimonial__id flex">
-
-                    <!-- image -->
-                    <img class="testimonial__id__picture" src="<?= $site->url() ?>/../assets/img/services.png" alt="foto" />
-
-                    <div>
-                        <h5 class="testimonial__id__name">Driss Merckx</h5>
-                        <p class="testimonial__id__function">Architect</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- arrow right -->
-            <i class="next fa fa-arrow-right primary-color-600" aria-hidden="true"></i>
-        </div>
-    </div>
-
-
-
-    <!-- testimonials bullets -->
-    <div class="bullets">
-        <div class="bullet"></div>
-        <div class="bullet"></div>
-        <div class="bullet"></div>
-    </div>
+    <?php endif; ?>
 </section>

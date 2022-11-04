@@ -24,7 +24,7 @@
 
     //nav active after scrolling upwards
     &-scrolled {
-        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+        box-shadow: $nav-scrolled-shadow;
     }
 
     .logo {
@@ -157,14 +157,18 @@
                 font-size: 16px;
                 letter-spacing: -0.01em;
                 color: $neutrals-100;
+                display: flex;
+                align-items: center;
+
+                &.active {
+                    display: none;
+                }
 
                 i {
                     font-size: 24px;
                     line-height: 24px;
                     width: 24px;
                     height: 24px;
-                    position: relative;
-                    top: 3px;
                 }
             }
         }
@@ -342,20 +346,32 @@
                         gap: 12px;
 
                         .language-button {
-                            width: 44px;
+                            display: flex;
+                            align-items: center;
                             height: 44px;
                             background-color: $neutrals-300;
                             border-radius: $border-radius-small;
+                            padding: 12px;
+                            color: $neutrals-1000;
+                            font-weight: 700;
+                            line-height: 20px;
+                            transition: all $transition-time-short;
+
+                            &.active {
+                                display: none;
+                            }
+
+                            &:hover {
+                                background-color: $neutrals-500;
+                            }
 
                             i {
                                 font-size: 20px;
                                 line-height: 20px;
+                                font-size: 20px;
+                                line-height: 20px;
                                 width: 20px;
                                 height: 20px;
-                                position: relative;
-                                top: 12px;
-                                left: 12px;
-                                color: $neutrals-1000;
                             }
                         }
                     }
@@ -365,7 +381,6 @@
                         white-space: nowrap;
                         width: 100%;
                         color: $neutrals-1000;
-                        //border-bottom: 3px solid transparent;
                         transition: all $transition-time-short ease-in-out;
 
                         &__notification {

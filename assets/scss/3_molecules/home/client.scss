@@ -1,24 +1,26 @@
 .clients {
     .client {
         width: 100%;
-        height: auto;
-        //position: sticky;
         height: 72px;
         border: 1px solid $primary-100;
         border-radius: $border-radius-small;
-        //z-index: 1;
 
-        &__img {
+        img {
             width: calc(100% - 24px);
             height: calc(100% - 24px);
             object-fit: contain;
             margin-top: 12px;
             margin-left: 12px;
-            /*position: relative;
+            transition: all $transition-time-short ease-in-out; 
+
+            /*filter: grayscale(100%);
+            -webkit-filter: grayscale(1);
             z-index: 0;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;*/
+
+            &:hover {
+                filter: none;
+                -webkit-filter: grayscale(0);
+            }*/
         }
     }
 }
@@ -41,7 +43,7 @@
             border: none;
             background-color: $neutrals-200;
 
-            &__img {
+            img {
                 width: calc(100% - 32px);
                 height: calc(100% - 32px);
             }
