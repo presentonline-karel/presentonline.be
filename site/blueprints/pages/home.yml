@@ -280,8 +280,10 @@ columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
