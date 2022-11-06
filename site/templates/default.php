@@ -12,10 +12,10 @@
 
     <!-- Error content -->
     <section class="error-content">
-        <h1>Oooppsss</h1>
-        <p>This page doesn’t exist</p>
+        <h1><?= $page->errorPageTitle() ?></h1>
+        <p><?= $page->errorPageParagraph() ?></p>
 
-        <a class="button button-primary">Home<i class="anchor-first fa-solid fa-chevron-right"></i></a>
+        <a class="button button-primary" href="<?= $pages->find('home')->url() ?>">Home<i class="anchor-first fa-solid fa-chevron-right"></i></a>
     </section>
 </div>
 

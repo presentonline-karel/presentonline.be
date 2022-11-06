@@ -24,6 +24,16 @@
         align-items: center;
         gap: 48px;
 
+        &__text {
+            .features {
+                margin-bottom: 0;
+            }
+
+            .button {
+                display: none;
+            }
+        }
+
         &__img {
             display: block;
             //width: 50%;

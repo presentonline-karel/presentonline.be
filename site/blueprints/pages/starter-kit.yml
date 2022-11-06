@@ -84,7 +84,7 @@ columns:
         type: writer
         inline: true
       
-      #buttons  
+      #buttons
       headerButtons:
         label: Button(s)
         type: structure
@@ -93,8 +93,10 @@ columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -103,17 +105,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary
@@ -159,20 +162,20 @@ columns:
         label: Paragraph
         type: writer
         inline: true
-      line-c:
-        type: line
 
       #buttons  
-      introButton:
-        label: Button
+      introButtons:
+        label: Button(s)
         type: structure
-        max: 1
+        max: 2
         columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -181,17 +184,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary
@@ -222,7 +226,7 @@ columns:
             required: true
             when:
               destination: external
-      line-d:
+      line-c:
         type: line
       
       #Features
@@ -247,7 +251,7 @@ columns:
           feature:
             label: Feature
             type: text
-      line-e:
+      line-d:
         type: line
       
       includesHeadline:
@@ -280,7 +284,7 @@ columns:
             type: writer
             inline: true
 
-          #buttons  
+          #buttons
           includeButton:
             label: Button
             type: structure
@@ -289,8 +293,10 @@ columns:
               typeOfButton:
                 width: 2/8
               anchor:
-                width: 4/8
+                width: 2/8
               destination:
+                width: 2/8
+              internalPage:
                 width: 2/8
             fields:
               anchor:
@@ -299,17 +305,18 @@ columns:
                 required: true
               icon:
                 label: Icon
-                type: checkboxes
-                max: 1
+                type: radio
                 required: true
                 options:
                   noIcon: None
                   chevronRight: Chevron right
-                  chevronBottom: Chevron down
+                  chevronDown: Chevron down
+                  arrowRight: Arrow right
+                  arrowRightTop: Arrow right top
+                  arrowDown: Arrow down
               typeOfButton:
                 label: Type
-                type: checkboxes
-                max: 1
+                type: radio
                 options:
                   button-primary: Primary
                   button-secondary: Secondary
@@ -340,7 +347,7 @@ columns:
                 required: true
                 when:
                   destination: external
-      line-f:
+      line-e:
         type: line
       
       #Price
@@ -357,15 +364,17 @@ columns:
 
       #buttons
       priceButtons:
-        label: Price button(s)
+        label: Button
         type: structure
         max: 2
         columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -374,17 +383,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary
@@ -415,7 +425,7 @@ columns:
             required: true
             when:
               destination: external
-      line-g:
+      line-f:
         type: line
       
       #Testimonials
@@ -446,7 +456,7 @@ columns:
           reviewerFunction:
             label: Function
             type: text
-      line-h:
+      line-g:
         type: line
       
       #Intrest section
@@ -486,7 +496,7 @@ columns:
         max: 1
         layout: cards
         width: 1/2
-      line-i:
+      line-h:
         type: line
       introImgWebp:
         label: Intro image .webp

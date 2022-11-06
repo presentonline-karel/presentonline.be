@@ -92,17 +92,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary
@@ -270,7 +271,7 @@ columns:
           feature:
             label: Feature
             type: text
-      
+       
       #buttons  
       ctaButtons:
         label: Button(s)
@@ -292,17 +293,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary

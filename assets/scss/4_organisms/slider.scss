@@ -13,9 +13,6 @@
             overflow-y: hidden;
             gap: 8px;
 
-            //dynamic
-            grid-template-columns: repeat(7, 1fr);
-
             //Scrollbar
             &::-webkit-scrollbar {
                 height: 5px;

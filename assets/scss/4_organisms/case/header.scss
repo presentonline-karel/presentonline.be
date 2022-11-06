@@ -4,27 +4,10 @@
             p {
                 margin-bottom: 32px;
             }
-        }
 
-        &__images {
-
-            /*change by general carousel code
-            &__carousel {
-                display: flex;
-                justify-content: flex-start;
-                align-items: center;
-                gap: 8px;
-                margin-bottom: 16px;
-                overflow-x: scroll;
-
-                img {
-                    width: 256px;
-                    height: auto;
-                    aspect-ratio: 1/1;
-                    object-fit: cover;
-                    border-radius: $border-radius-small;
-                }
-            }*/
+            .button {
+                display: none;
+            }
         }
     }
 }
@@ -53,7 +36,11 @@
                 width: 50%;
 
                 p {
-                    margin-bottom: 0;
+                    margin-bottom: 32px;
+                }
+
+                .button {
+                    display: inline-block;
                 }
             }
 

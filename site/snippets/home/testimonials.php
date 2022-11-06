@@ -1,11 +1,13 @@
+<?php $homePage = $pages->find('home'); ?>
+
 <section id="testimonials" class="testimonials-section section section-medium fade-section">
 
     <!-- Testimonials items -->
-    <?php if ($page->testimonials()->isNotEmpty()) : ?>
+    <?php if ($homePage->testimonials()->isNotEmpty()) : ?>
         <div class="testimonials">
 
             <!-- testimonial -->
-            <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+            <?php foreach ($homePage->testimonials()->toStructure() as $testimonial) : ?>
                 <div class="slide-container testimonial">
 
                     <!-- arrow left -->
@@ -46,7 +48,7 @@
 
         <!-- testimonials bullets -->
         <div class="bullets">
-            <?php foreach ($page->testimonials()->toStructure() as $testimonial) : ?>
+            <?php foreach ($homePage->testimonials()->toStructure() as $testimonial) : ?>
                 <div class="bullet"></div>
             <?php endforeach; ?>
         </div>

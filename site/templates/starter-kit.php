@@ -32,18 +32,31 @@
         <div class="header__content header-starter-kit__content">
 
             <div class="header__content__text header-starter-kit__content__text">
-                <h1 class="header__content__title">Proffesionele website nodig voor een klein budget?</h1>
-                <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
+                <h1 class="header__content__title"><?= $page->headerTitle() ?></h1>
+                <p><?= $page->headerParagraph() ?></p>
 
-                <div class="buttons">
-                    <a class="button button-primary" href="#">Get it now<i class="anchor-first fa fa-chevron-down" aria-hidden="true"></i></a>
-                    <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-                </div>
+                <!-- Header buttons -->
+                <?php if($page->headerButtons()->isNotEmpty()): ?>
+                    <div class="buttons">
 
-                <!-- <p class="language"><i class="icon-first fa fa-globe" aria-hidden="true"></i>Switch language</p> -->
+                        <!-- button -->
+                        <?php foreach($page->headerButtons()->toStructure() as $button): ?>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
             </div>
 
-            <img class="header-starter-kit__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="karrel" />
+            <!-- Header img -->
+            <?php if ($headerImgWebp = $page->headerImgWebp()->toFile()) : ?>
+                <?php if ($headerImgPng = $page->headerImgPng()->toFile()) : ?>
+                    <picture>
+                        <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
+                        <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
+                        <img class="header-starter-kit__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" />
+                    </picture>
+                <?php endif; ?>
+            <?php endif; ?>
         </div>
     </header>
 
@@ -56,10 +69,17 @@
 
             <!-- Intro text -->
             <div class="intro__text">
-                <h2>Present Online Starter Kit, gedaan met dat geknoei</h2>
-                <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.<br><br> Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+                <h2><?= $page->introTitle() ?></h2>
+                <p><?= $page->introParagraph() ?></p>
 
-                <a class="button button-tertiary large">Ontdek de Starter Kit<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                <!-- Header buttons -->
+                <?php if($page->introButtons()->isNotEmpty()): ?>
+
+                    <!-- button -->
+                    <?php foreach($page->introButtons()->toStructure() as $button): ?>
+                        <a class="button large <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
 
             <!-- Intro img -->
@@ -70,18 +90,23 @@
 
         <!-- FEATURES -->
         <section id="features" class="features-section section fade-section">
-            <h2>What is the PO Starter Kit?</h2>
-            <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            <h2><?= $page->featuresTitle() ?></h2>
+            <p><?= $page->featuresParagraph() ?></p>
 
-            <h3>Handy features</h3>
+            <h3><?= $page->featuresSubtitle() ?></h3>
 
-            <div class="features">
-                <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-            </div>
+            <!-- Features -->
+            <?php if ($page->features()->isNotEmpty()) : ?>
+                <div class="features">
 
-            <a class="button button-primary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                    <!-- feature -->
+                    <?php foreach ($page->features()->toStructure() as $feature) : ?>
+                        <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+
+            <a class="button button-primary" href="https://starter.presentonline.be" target="_blank">Preview<i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i></a>
         </section>
 
 
@@ -91,20 +116,27 @@
 
             <!-- Included box - text -->
             <div class="includes__text includes__box">
-                <h2>What's included?</h2>
+                <h2><?= $page->featuresTitle() ?></h2>
 
                 <div class="desktop">
-                    <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een.</p>
+                    <p><?= $page->featuresParagraph() ?></p>
 
-                    <h3>Handy features</h3>
+                    <h3><?= $page->featuresSubtitle() ?></h3>
 
-                    <div class="features">
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                    </div>
+                    <!-- Features -->
+                    <?php if ($page->features()->isNotEmpty()) : ?>
+                        <div class="features">
+
+                            <!-- feature -->
+                            <?php foreach ($page->features()->toStructure() as $feature) : ?>
+                                <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
+
+            <!-- Includes here ->link on button not on card -->
 
             <!-- Included box - feature -->
             <a class="includes__feature includes__box card">

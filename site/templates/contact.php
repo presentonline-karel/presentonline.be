@@ -30,25 +30,32 @@
 
         <!-- HEADER CONTACT - DESKTOP -->
         <div class="header__content header-contact__content desktop">
-            <h4 class="header-contact__content__title">Contact</h4>
+            <h4 class="header-contact__content__title"><?= $page->headerSubtitle() ?></h4>
 
             <div class="header-contact__content__text">
-                <h1 class="header__content__title">Aarzel niet om contact op te nemen</h1>
-                <p>Suspendisse potenti. Curabitur vestibulum, velit in sagittis auctor, erat odio vulputate nisl, a tempor nulla arcu dapibus leo.</p>
+                <h1 class="header__content__title"><?= $page->headerTitle() ?></h1>
+                <p><?= $page->headerParagraph() ?></p>
 
-                <a class="button button-primary">Get in touch</a>
+                <!-- Header buttons -->
+                <?php if($page->headerButtons()->isNotEmpty()): ?>
+
+                    <!-- button -->
+                    <?php foreach($page->headerButtons()->toStructure() as $button): ?>
+                        <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                    <?php endforeach; ?>
+                <?php endif; ?>
             </div>
         </div>
 
         <!-- HEADER CONTACT - MOBILE -->
         <div class="header__content header-contact__content mobile">
-            <h1 class="header__content__title">Contacteer ons voor meer info</h1>
-            <p>Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            <h1 class="header__content__title"><?= $page->headerTitle() ?></h1>
+            <p><?= $page->headerParagraph() ?></p>
 
             <!-- Contact links -->
             <div class="header-contact__content__links">
-                <a class="link p block"><i class="icon-first primary-color-600 fa-solid fa-phone"></i>0476280902</a>
-                <a class="link p block"><i class="icon-first primary-color-600 fa-solid fa-envelope"></i>info@presentonline.be</a>
+                <a class="link p block" href="tel:<?= $site->telephone() ?>"><i class="icon-first primary-color-600 fa-solid fa-phone"></i><?= $site->telephone() ?></a>
+                <a class="link p block" href="mailto:<? $site->email() ?>"><i class="icon-first primary-color-600 fa-solid fa-envelope"></i><?= $site->email() ?></a>
             </div>
 
             <!-- SNIPPET - SOCIALS -->
@@ -59,24 +66,20 @@
 
 
     <!-- CONTACT -->
-    <main class="contact">
+    <main id="contact" class="contact">
 
         <!-- INFO -->
         <div class="contact__info">
-            <h2 class="neutrals-100">Contact info</h2>
-            <p class="neutrals-100">Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+            <h2 class="neutrals-100"><?= $page->contactInfoTitle() ?></h2>
+            <p class="neutrals-100"><?= $page->contactInfoParagraph() ?></p>
 
             <div class="contact__info__items">
 
                 <!-- Telephone -->
-                <a class="info-item p">
-                    <i class="icon-first fa fa-phone" aria-hidden="true"></i>0476 28 09 02
-                </a>
+                <a class="info-item p" href="tel:<?= $site->telephone() ?>"><i class="icon-first fa fa-phone" aria-hidden="true"></i><?= $site->telephone() ?></a>
 
                 <!-- Email -->
-                <a class="info-item p">
-                    <i class="icon-first fa fa-envelope" aria-hidden="true"></i>info@presentonline.be
-                </a>
+                <a class="info-item p" href="mailto:<?= $site->email() ?>"><i class="icon-first fa fa-envelope" aria-hidden="true"></i><?= $site->email() ?></a>
             </div>
 
             <!-- SNIPPET - SOCIALS -->
@@ -100,7 +103,7 @@
     <section class="maps">
 
         <!-- Maps widget -->
-        <iframe class="maps__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2501.8731508933265!2d4.354607916301425!3d51.16612794341786!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f3b4343150f5%3A0xf2313832a756271!2sPresent%20Online!5e0!3m2!1snl!2sbe!4v1664348117917!5m2!1snl!2sbe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="maps__iframe" src="<?= $page->mapsSrcUrl() ?>" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
 </div>
 

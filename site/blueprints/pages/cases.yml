@@ -83,7 +83,7 @@ columns:
         type: writer
         inline: true
       
-      #buttons  
+      #buttons
       headerButtons:
         label: Button(s)
         type: structure
@@ -92,8 +92,10 @@ columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -102,17 +104,108 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
+            type: radio
+            options:
+              button-primary: Primary
+              button-secondary: Secondary
+              button-tertiary: Tertiary
+          destination:
+            type: select
+            label: Destination
             max: 1
+            required: true
+            options:
+              internal: Internal webpage
+              external: External webpage
+          internalPage:
+            label: Internal webpage
+            type: pages
+            max: 1
+            required: true
+            when:
+              destination: internal
+          idPage:
+            label: Specific id
+            type: text
+            when:
+              destination: internal
+          externalUrl:
+            label: External webpage
+            type: url
+            required: true
+            when:
+              destination: external
+      line-a:
+        type: line
+      
+
+
+      #CTA
+      ctaHeadline:
+        label: CTA - Case detail
+        type: headline
+        numbered: true
+      ctaInfo:
+        label:
+        type: info
+        text: This CTA will show on the **case detail pages**
+        width: 1/2
+      ctaText:
+        label: CTA text
+        type: writer
+        inline: true
+      ctaFeatures:
+        label: CTA Features
+        type: structure
+        fields:
+          feature:
+            label: Feature
+            type: text
+      
+      #buttons  
+      ctaButtons:
+        label: Button(s)
+        type: structure
+        max: 2
+        columns:
+          typeOfButton:
+            width: 2/8
+          anchor:
+            width: 2/8
+          destination:
+            width: 2/8
+          internalPage:
+            width: 2/8
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          icon:
+            label: Icon
+            type: radio
+            required: true
+            options:
+              noIcon: None
+              chevronRight: Chevron right
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
+          typeOfButton:
+            label: Type
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary

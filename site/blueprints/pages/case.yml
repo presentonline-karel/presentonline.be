@@ -93,6 +93,7 @@ columns:
         label: Related cases
         type: pages
         query: page.siblings(true)
+        max: 2
       
 
 

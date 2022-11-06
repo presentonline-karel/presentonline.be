@@ -1,4 +1,4 @@
-<form class="contact-form form" method="POST" action="<?= $page->url() ?>">
+<form id="contact-form" class="contact-form form" method="POST" action="<?= $page->url() ?>">
 
     <!-- HONEYPOT -->
     <div class="honeypot">
@@ -55,5 +55,5 @@
         <small>Error message</small>
     </div>
 
-    <button class="button button-primary" type="submit" name="submit" value="Verstuur">Verstuur <i class="anchor-first fa fa-paper-plane" aria-hidden="true"></i></button>
+    <button class="button button-primary" type="submit" name="submit" value="Verstuur">Verstuur <i class="anchor-first no-hover fa fa-paper-plane" aria-hidden="true"></i></button>
 </form>

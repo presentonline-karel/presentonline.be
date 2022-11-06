@@ -23,6 +23,15 @@
             }
         }
     }
+
+    .button {
+        background-color: $neutrals-100;
+        color: $primary-600;
+
+        &:hover {
+            background-color: $primary-100;
+        }
+    }
 }
 
 /* TABLET 768PX */

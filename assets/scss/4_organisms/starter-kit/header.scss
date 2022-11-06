@@ -26,6 +26,10 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .header-starter-kit__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
         padding: 47px 96px 72px 96px;
         width: 115%;
         gap: 40px;
@@ -44,9 +48,9 @@
         }
 
         &__img {
-            width: 65%;
+            //width: 65%;
+            width: 639px;
             height: auto;
-            //aspect-ratio: 16/9;
             aspect-ratio: 3/2;
             object-fit: cover;
         }
@@ -73,6 +77,7 @@
 
         &__img {
             aspect-ratio: 16/9;
+            width: 832px;
         }
     }
 }
@@ -94,7 +99,8 @@
 
         &__img {
             width: calc(100% - 506px - 130px);
-            max-width: 924px;
+            //max-width: 924px;
+            width: 924px;
             object-fit: contain;
         }
     }
@@ -106,7 +112,8 @@
         padding: 64px 0px 128px 176px;
 
         &__img {
-            max-width: 1084px;
+            //max-width: 1084px;
+            width: 1026px;
         }
     }
 }
@@ -117,7 +124,8 @@
         padding: 64px 0px 128px 336px;
 
         &__img {
-            max-width: 1404px;
+            //max-width: 1404px;
+            width: 1234px;
         }
     }
 }
@@ -128,7 +136,8 @@
         padding: 64px 0px 128px 656px;
 
         &__img {
-            max-width: 2044px;
+            //max-width: 2044px;
+            width: 1650px;
         }
     }
 }
@@ -138,6 +147,11 @@
     .header-starter-kit__content {
         padding: 64px 0px 128px 1096px;
         justify-content: flex-start;
+
+        &__img {
+            //max-width: 2044px;
+            width: 2042px;
+        }
     }
 }
 
