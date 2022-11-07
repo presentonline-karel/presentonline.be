@@ -41,7 +41,7 @@
 
                         <!-- button -->
                         <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                            <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first no-hover fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -77,7 +77,7 @@
 
                     <!-- button -->
                     <?php foreach($page->introButtons()->toStructure() as $button): ?>
-                        <a class="button large <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                        <a class="button large <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first test fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
@@ -116,7 +116,7 @@
 
             <!-- Included box - text -->
             <div class="includes__text includes__box">
-                <h2><?= $page->featuresTitle() ?></h2>
+                <h2><?= $page->includesTitle() ?></h2>
 
                 <div class="desktop">
                     <p><?= $page->featuresParagraph() ?></p>
@@ -136,77 +136,93 @@
                 </div>
             </div>
 
-            <!-- Includes here ->link on button not on card -->
 
-            <!-- Included box - feature -->
-            <a class="includes__feature includes__box card">
-                <div>
-                    <div class="card__icon-container">
-                        <i class="fa-solid fa-keyboard"></i>
+
+            <!-- Includes features -->
+            <?php if($page->includes()->isNotEmpty()): ?>
+                <?php foreach($page->includes()->toStructure() as $include): ?>
+                    
+                    <!-- Included box - feature -->
+                    <div class="includes__feature includes__box card">
+                        <div>
+                            <div class="card__icon-container">
+
+                                <!-- icon -->
+                                <?php switch ($include->icon()) {
+                                case "keyboard":
+                                    ?><i class="fa-solid fa-keyboard" aria-hidden="true"></i><?php
+                                    break;
+                                case "magnifyingGlass":
+                                    ?><i class="fa fa-search" aria-hidden="true"></i><?php
+                                    break;
+                                case "camera":
+                                    ?><i class="fa fa-camera" aria-hidden="true"></i><?php
+                                    break;
+                                case "pencilRuler":
+                                    ?><i class="fa fa-pencil" aria-hidden="true"></i><?php
+                                    break;
+                                case "lightbulb":
+                                    ?><i class="fa fa-lightbulb-o" aria-hidden="true"></i><?php
+                                    break;
+                                case "pencil":
+                                    ?><i class="fa-solid fa-pencil" aria-hidden="true"></i><?php
+                                    break;
+                                case "thumbsUp":
+                                    ?><i class="fa-solid fa-thumbs-up" aria-hidden="true"></i><?php
+                                    break;
+                                default:
+                                    ?><i class="fa fa-check" aria-hidden="true"></i><?php
+                                } ?>
+                            </div>
+
+                            <h3 class="card__title"><?= $include->title() ?></h3>
+                            <p><?= $include->explanation() ?></p>
+
+                            <!-- features -->
+                            <?php if ($include->features()->isNotEmpty()) : ?>
+                                <div class="features">
+
+                                    <!-- feature -->
+                                    <?php foreach ($include->features()->toStructure() as $feature) : ?>
+                                        <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+
+
+
+                        <!-- include button -->
+                        <?php if($include->includeButton()->isNotEmpty()): ?>
+
+                            <!-- button -->
+                            <?php foreach($include->includeButton()->toStructure() as $button): ?>
+                                <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
+                <?php endforeach; ?>
+            <?php endif; ?>
 
-                    <h3 class="card__title">Professionele website</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-                </div>
 
-                <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
-            </a>
-
-            <!-- Included box - feature -->
-            <a class="includes__feature includes__box card">
-                <div>
-                    <div class="card__icon-container">
-                        <i class="fa-solid fa-pencil"></i>
-                    </div>
-
-                    <h3 class="card__title">CMS panel</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-                </div>
-
-                <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
-            </a>
-
-            <!-- Included box - feature -->
-            <div class="includes__feature includes__box card">
-                <div>
-                    <div class="card__icon-container">
-                        <i class="fa-solid fa-thumbs-up"></i>
-                    </div>
-
-                    <h3 class="card__title">Support</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-                </div>
-            </div>
-
-            <!-- Included box - feature -->
-            <div class="includes__feature includes__box card">
-                <div>
-                    <div class="card__icon-container">
-                        <i class="fa-solid fa-check"></i>
-                    </div>
-
-                    <h3 class="card__title">And much more</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
-
-                    <div class="features">
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                    </div>
-                </div>
-            </div>
 
             <!-- Included box - price -->
             <div class="includes__price includes__box">
                 <div class="includes__price__content">
-                    <h3>Vanaf</h3>
+                    <h3><?= $page->priceFrom() ?></h3>
 
-                    <h2>€499</h2>
+                    <h2><?= $page->price() ?></h2>
 
-                    <div class="buttons">
-                        <a class="button button-primary" href="#">Get it now</a>
-                        <a class="button button-secondary" href="#">Preview<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-                    </div>
+                    <!-- include button -->
+                    <?php if($page->priceButtons()->isNotEmpty()): ?>
+                        <div class="buttons">
+
+                            <!-- button -->
+                            <?php foreach($page->priceButtons()->toStructure() as $button): ?>
+                                <a class="button <?= $button->typeOfButton() ?>" href="<?php if ($button->destination() == "internal") { echo ($button->internalPage()->toPage()->url() . $button->idPage()); } else { echo ($button->externalUrl()); } ?>" <?php if ($button->destination() == "external") { ?> target="_blank" <?php } ?>><?= $button->anchor() ?><?php if ($button->icon() == "chevronRight") { ?><i class="anchor-first fa fa-chevron-right"></i><?php } elseif ($button->icon() == "chevronDown") { ?><i class="anchor-first no-hover fa fa-chevron-down"></i> <?php } elseif ($button->icon() == "arrowRight") { ?><i class="anchor-first fa-solid fa-arrow-right"></i><?php } elseif ($button->icon() == "arrowRightTop") { ?><i class="anchor-first no-hover fa-solid fa-arrow-right" style="transform: rotate(-45deg);"></i><?php } elseif ($button->icon() == "arrowDown") { ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i><?php } ?></a>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </section>
@@ -223,29 +239,27 @@
 
             <!-- INFO -->
             <div class="contact__info">
-                <h2 class="neutrals-100">Contact info</h2>
-                <p class="neutrals-100">Het is al geruime tijd een bekend gegeven dat en lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+                <h2 class="neutrals-100"><?= $page->intrestSectionTitle() ?></h2>
+                <p class="neutrals-100"><?= $page->intrestSectionParagraph() ?></p>
 
                 <div class="contact__info__items">
 
                     <!-- Telephone -->
-                    <a class="info-item p">
-                        <i class="icon-first fa fa-phone" aria-hidden="true"></i>0476 28 09 02
-                    </a>
+                    <a class="info-item p" href="tel:<?= $site->telephone() ?>"><i class="icon-first fa fa-phone" aria-hidden="true"></i><?= $site->telephone() ?></a>
 
                     <!-- Email -->
-                    <a class="info-item p">
-                        <i class="icon-first fa fa-envelope" aria-hidden="true"></i>info@presentonline.be
-                    </a>
+                    <a class="info-item p" href="mailto:<?= $site->email() ?>"><i class="icon-first fa fa-envelope" aria-hidden="true"></i><?= $site->email() ?></a>
                 </div>
 
                 <!-- SNIPPET - SOCIALS -->
                 <?php snippet('general/socials', ['color' => 'neutrals-100']); ?>
             </div>
 
+            
+
             <!-- FORMSECTION -->
             <div class="contact__form-section">
-                <h3>Geïnterreseerd?<br> Geef ons een seintje!</h3>
+                <h3><?= $page->intrestSectionTitle() ?></h3>
 
                 <!-- Contactform -->
                 <?php snippet('contact/form') ?>

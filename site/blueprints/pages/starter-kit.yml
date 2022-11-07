@@ -258,9 +258,19 @@ columns:
         label: Includes
         type: headline
         numbered: false
+      includesTitle:
+        label: Includes title
+        type: text
       includes:
         label: Includes
         type: structure
+        columns:
+          icon:
+            width: 2/8
+          title:
+            width: 2/8
+          explanation:
+            width: 4/8
         fields:
           icon:
             label: Icon
@@ -283,6 +293,13 @@ columns:
             label: Explanation
             type: writer
             inline: true
+          features:
+            label: Features
+            type: structure
+            fields:
+              feature:
+                label: Feature
+                type: text
 
           #buttons
           includeButton:
@@ -426,37 +443,6 @@ columns:
             when:
               destination: external
       line-f:
-        type: line
-      
-      #Testimonials
-      testimonialsHeadline:
-        label: Testimonials
-        type: headline
-        numbered: true
-      testimonials:
-        label: Testimonials
-        type: structure
-        fields:
-          testimonialText:
-            label: Testimonial
-            type: writer
-            inline: true
-          reviewerPictureWebp:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-          reviewerPicturePng:
-            label: Photo / logo company .png
-            type: files
-            max: 1
-            required: true
-          reviewerName:
-            label: Name
-            type: text
-          reviewerFunction:
-            label: Function
-            type: text
-      line-g:
         type: line
       
       #Intrest section

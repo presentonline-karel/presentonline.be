@@ -57,18 +57,23 @@ columns:
         label: Paragraph
         type: writer
         inline: true
+      redirectTitle:
+        label: Redirect title
+        type: text
       
       #buttons  
       headerButtons:
-        label: Button(s)
+        label: Button
         type: structure
-        max: 2
+        max: 1
         columns:
           typeOfButton:
             width: 2/8
           anchor:
-            width: 4/8
+            width: 2/8
           destination:
+            width: 2/8
+          internalPage:
             width: 2/8
         fields:
           anchor:
@@ -77,17 +82,18 @@ columns:
             required: true
           icon:
             label: Icon
-            type: checkboxes
-            max: 1
+            type: radio
             required: true
             options:
               noIcon: None
               chevronRight: Chevron right
-              chevronBottom: Chevron down
+              chevronDown: Chevron down
+              arrowRight: Arrow right
+              arrowRightTop: Arrow right top
+              arrowDown: Arrow down
           typeOfButton:
             label: Type
-            type: checkboxes
-            max: 1
+            type: radio
             options:
               button-primary: Primary
               button-secondary: Secondary
