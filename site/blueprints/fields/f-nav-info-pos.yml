@@ -1,0 +1,7 @@
+label: Results in
+type: info
+text: "**Floating nav: ** nav will hide/show show on scroll"
+theme: positive
+width: 1/2
+when:
+  floatingNavSwitch: yes

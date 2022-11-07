@@ -1,0 +1,6 @@
+label: Floating nav?
+type: toggle
+width: 1/2
+text: 
+  - "no"
+  - "yes"

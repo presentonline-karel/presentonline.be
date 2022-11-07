@@ -30,28 +30,11 @@ columns:
         type: headline
         numbered: false
       floatingNavSwitch:
-        label: Floating nav?
-        type: toggle
-        width: 1/2
-        text: 
-          - "no"
-          - "yes"
+        extends: fields/f-nav-switch
       floatingNavInfoPositive:
-        label: Results in
-        type: info
-        text: "**Floating nav: ** nav will hide/show show on scroll"
-        theme: positive
-        width: 1/2
-        when:
-          floatingNavSwitch: yes
+        extends: fields/f-nav-info-pos
       floatingNavInfoNegative:
-        label: Results in
-        type: info
-        text: "**Default nav: ** nav will stick to top of page"
-        theme: negative
-        width: 1/2
-        when:
-          floatingNavSwitch: no
+        extends: fields/f-nav-info-neg
       line-z:
         type: line
 
@@ -70,70 +53,13 @@ columns:
       
       #button 
       headerButton:
-        label: Button
-        type: structure
-        max: 1
-        columns:
-          typeOfButton:
-            width: 2/8
-          anchor:
-            width: 4/8
-          destination:
-            width: 2/8
-        fields:
-          anchor:
-            label: Anchor
-            type: text
-            required: true
-          icon:
-            label: Icon
-            type: checkboxes
-            max: 1
-            required: true
-            options:
-              noIcon: None
-              chevronRight: Chevron right
-              chevronBottom: Chevron down
-          typeOfButton:
-            label: Type
-            type: checkboxes
-            max: 1
-            options:
-              button-primary: Primary
-              button-secondary: Secondary
-              button-tertiary: Tertiary
-          destination:
-            type: select
-            label: Destination
-            max: 1
-            required: true
-            options:
-              internal: Internal webpage
-              external: External webpage
-          internalPage:
-            label: Internal webpage
-            type: pages
-            max: 1
-            required: true
-            when:
-              destination: internal
-          idPage:
-            label: Specific id
-            type: text
-            when:
-              destination: internal
-          externalUrl:
-            label: External webpage
-            type: url
-            required: true
-            when:
-              destination: external
+        extends: fields/button
       line-a:
         type: line
       
       #Steps
       stepsHeadline:
-        label: Steps
+        label: Steps/Kits
         type: headline
         numbered: true
       stepsInfo:
@@ -146,6 +72,10 @@ columns:
       stepsTitle:
         label: Title
         type: text
+      stepsParagraph:
+        label: Paragraph
+        type: writer
+        inline: true
       steps:
         label: Steps
         type: structure
@@ -168,64 +98,7 @@ columns:
                 label: Feature
                 type: text
           stepButton:
-            label: Button
-            type: structure
-            max: 1
-            columns:
-              typeOfButton:
-                width: 2/8
-              anchor:
-                width: 4/8
-              destination:
-                width: 2/8
-            fields:
-              anchor:
-                label: Anchor
-                type: text
-                required: true
-              icon:
-                label: Icon
-                type: checkboxes
-                max: 1
-                required: true
-                options:
-                  noIcon: None
-                  chevronRight: Chevron right
-                  chevronBottom: Chevron down
-              typeOfButton:
-                label: Type
-                type: checkboxes
-                max: 1
-                options:
-                  button-primary: Primary
-                  button-secondary: Secondary
-                  button-tertiary: Tertiary
-              destination:
-                type: select
-                label: Destination
-                max: 1
-                required: true
-                options:
-                  internal: Internal webpage
-                  external: External webpage
-              internalPage:
-                label: Internal webpage
-                type: pages
-                max: 1
-                required: true
-                when:
-                  destination: internal
-              idPage:
-                label: Specific id
-                type: text
-                when:
-                  destination: internal
-              externalUrl:
-                label: External webpage
-                type: url
-                required: true
-                when:
-                  destination: external
+            extends: fields/button
       line-b:
         type: line
       
@@ -271,64 +144,7 @@ columns:
       
       #buttons  
       ctaButtons:
-        label: Button(s)
-        type: structure
-        max: 2
-        columns:
-          typeOfButton:
-            width: 2/8
-          anchor:
-            width: 4/8
-          destination:
-            width: 2/8
-        fields:
-          anchor:
-            label: Anchor
-            type: text
-            required: true
-          icon:
-            label: Icon
-            type: checkboxes
-            max: 1
-            required: true
-            options:
-              noIcon: None
-              chevronRight: Chevron right
-              chevronBottom: Chevron down
-          typeOfButton:
-            label: Type
-            type: checkboxes
-            max: 1
-            options:
-              button-primary: Primary
-              button-secondary: Secondary
-              button-tertiary: Tertiary
-          destination:
-            type: select
-            label: Destination
-            max: 1
-            required: true
-            options:
-              internal: Internal webpage
-              external: External webpage
-          internalPage:
-            label: Internal webpage
-            type: pages
-            max: 1
-            required: true
-            when:
-              destination: internal
-          idPage:
-            label: Specific id
-            type: text
-            when:
-              destination: internal
-          externalUrl:
-            label: External webpage
-            type: url
-            required: true
-            when:
-              destination: external
+        extends: fields/buttons
       line-d:
         type: line
         when:
@@ -341,9 +157,13 @@ columns:
         numbered: true
         when:
           service: websiteApps
+      casesTitle:
+        label: Title
+        type: text
       cases:
         label: Website cases
         type: pages
+        query: site.find('cases')
         when:
           service: websiteApps
   

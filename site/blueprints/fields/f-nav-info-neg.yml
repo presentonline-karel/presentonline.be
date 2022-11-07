@@ -1,0 +1,7 @@
+label: Results in
+type: info
+text: "**Default nav: ** nav will stick to top of page"
+theme: negative
+width: 1/2
+when:
+  floatingNavSwitch: no

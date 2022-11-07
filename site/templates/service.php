@@ -19,19 +19,38 @@
 
                 <!-- breadcrumbs -->
                 <div class="breadcrumbs">
-                    <a class="breadcrumb" href="#">Services</a>
+                    <a class="breadcrumb" href="<?= $site->url() ?>/home/#services">Services</a>
                     <i class="fa-solid fa-chevron-right"></i>
-                    <a class="breadcrumb" href="#">SERVICE</a>
+                    <a class="breadcrumb" href="#"><?= $page->title() ?></a>
                 </div>
 
-                <h1 class="header__content__title">Responsive websites & -apps</h1>
+                <h1 class="header__content__title"><?= $page->headerTitle() ?></h1>
+                <p><?= $page->headerParagraph() ?></p>
 
-                <p>Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele inhoud.</p>
+                <!-- Header button -->
+                <?php if($page->headerButton()->isNotEmpty()): ?>
 
-                <a class="button button-tertiary large desktop">We offer 3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                    <!-- button -->
+                    <?php foreach($page->headerButton()->toStructure() as $button): ?>
+                        <?php snippet('components/button', ["button" => $button]) ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+
+                <!-- <a class="button button-tertiary large desktop">We offer 3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a> -->
             </div>
 
-            <img class="header-service__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" />
+            <!-- Header img -->
+            <?php if ($headerImgWebp = $page->headerImgWebp()->toFile()) : ?>
+                <?php if ($headerImgPng = $page->headerImgPng()->toFile()) : ?>
+                    <picture>
+                        <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
+                        <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
+                        <img src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" />
+                    </picture>
+                <?php endif; ?>
+            <?php endif; ?>
+
+            <?php /* <img class="header-service__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" /> */ ?>
         </div>
     </header>
 
@@ -41,103 +60,119 @@
 
         <!-- KITS -->
         <section id="service-features" class="service-features-section section section-large fade-section">
-            <h2 class="service-features-section__title">De juiste oplossing voor uw project</h2>
-            <p class="service-features-section__p">Het is al geruime tijd een bekend gegeven dat een lezer, tijdens het bekijken van de layout van een pagina, afgeleid wordt door de tekstuele.</p>
+            <h2 class="service-features-section__title"><?= $page->stepsTitle() ?></h2>
+            <p class="service-features-section__p"><?= $page->stepsParagraph() ?></p>
 
-            <a class="button button-tertiary large mobile">We offer 3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+            <a class="button button-tertiary large mobile">3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+
+
 
             <!-- Kits -->
-            <div class="kits cards">
+            <?php if($page->steps()->isNotEmpty()): ?>
+                <div class="kits cards">
 
-                <!-- Starter Kit -->
-                <a class="kit card">
-                    <div>
-                        <div class="card__icon-container">
-                            <span>01</span>
+                    <!-- kit -->
+                    <?php foreach($page->steps()->toStructure() as $serviceFeature): ?>
+                        <div class="kit card">
+                            <div>
+                                <div class="card__icon-container">
+                                    <span><?= $serviceFeature->number() ?></span>
+                                </div>
+
+                                <h3 class="card__title"><?= $serviceFeature->title() ?></h3>
+                                <p><?= $serviceFeature->explanation() ?></p>
+
+                                <!-- Features -->
+                                <?php if($serviceFeature->features()->isNotEmpty()): ?>
+                                    <div class="features">
+
+                                        <!-- feature -->
+                                        <?php foreach($serviceFeature->features()->toStructure() as $feature): ?>
+                                            <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
+                                        <?php endforeach; ?>
+                                    </div>
+                                <?php endif; ?>
+                            </div>
+
+
+
+                            <!-- Step button -->
+                            <?php if($serviceFeature->stepButton()->isNotEmpty()): ?>
+
+                                <!-- button -->
+                                <?php foreach($serviceFeature->stepButton()->toStructure() as $button): ?>
+                                    <?php snippet('components/button', ["button" => $button]) ?>
+                                <?php endforeach; ?>
+                            <?php endif; ?>
                         </div>
-
-                        <h3 class="card__title">Starter Kit</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-
-                        <div class="features">
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        </div>
-                    </div>
-
-                    <button class="button button-tertiary" href="#">Preview<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
-                </a>
-
-                <!-- Advanced Kit -->
-                <div class="kit card">
-                    <div>
-                        <div class="card__icon-container">
-                            <span>02</span>
-                        </div>
-
-                        <h3 class="card__title">Advanced kit</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-
-                        <div class="features">
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
-
-                <!-- Custom Kit -->
-                <a class="kit card">
-                    <div>
-                        <div class="card__icon-container">
-                            <span>03</span>
-                        </div>
-
-                        <h3 class="card__title">Custom kit</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie. Etiam vulputate, lectus efficitur fringilla imperdiet, sapien arcu feugiat orci.</p>
-
-                        <div class="features">
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                            <span class="feature"><i class="icon-first fa-solid fa-check"></i>Feature comes here</span>
-                        </div>
-                    </div>
-
-                    <button class="button button-tertiary" href="#">Free quotation<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></button>
-                </a>
-            </div>
+            <?php endif; ?>
         </section>
 
 
 
-        <!-- PHOTOGRAPHY SECTIONS -->
-        <main id="photography-sections">
+        <!-- PHOTOGRAPHY SECTIONS - NOT DONE -->
+        <?php if($page->carousels()->isNotEmpty()): ?>
+            <main id="photography-sections">
 
-            <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium fade-section">
-                <h3 class="photography-section__title">GAGK Rupelstreek</h3>
+                <!-- PHOTOGRAPHY CAROUSEL -->
+                <div class="photography-section section section-medium fade-section">
+                    <h3 class="photography-section__title">GAGK Rupelstreek</h3>
 
-                <!-- slider -->
-                <?php snippet('general/slider', ['extraClassCases' => '']); ?>
-            </div>
+                    <!-- slider -->
+                    <div class="slider-container">
+                        <div class="slider <?= $extraClassCases ?>">
+                            <div class="slider__inner">
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/employee.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/employee.webp" />
+                                </div>
+                                <div class="slide slide-img">
+                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+                                </div>
+                            </div>
+                        </div>
 
-            <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium fade-section">
-                <h3 class="photography-section__title">KdG FabLab</h3>
+                        <!-- arrows -->
+                        <div class="slider__arrows">
+                            <i class="slider-arrow arrow-left fa-solid fa-arrow-left"></i>
+                            <i class="slider-arrow arrow-right fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
 
-                <!-- slider -->
-                <?php snippet('general/slider', ['extraClassCases' => '']); ?>
-            </div>
+                <!-- PHOTOGRAPHY CAROUSEL -->
+                <div class="photography-section section section-medium fade-section">
+                    <h3 class="photography-section__title">KdG FabLab</h3>
 
-            <!-- PHOTOGRAPHY CAROUSEL -->
-            <div class="photography-section section section-medium fade-section">
-                <h3 class="photography-section__title">Turnkring Energym</h3>
+                    <!-- slider -->
+                    <?php snippet('general/slider', ['extraClassCases' => '']); ?>
+                </div>
 
-                <!-- slider -->
-                <?php snippet('general/slider', ['extraClassCases' => '']); ?>
-            </div>
-        </main>
+                <!-- PHOTOGRAPHY CAROUSEL -->
+                <div class="photography-section section section-medium fade-section">
+                    <h3 class="photography-section__title">Turnkring Energym</h3>
+
+                    <!-- slider -->
+                    <?php snippet('general/slider', ['extraClassCases' => '']); ?>
+                </div>
+            </main>
+        <?php endif; ?>
 
 
 
@@ -147,130 +182,56 @@
 
 
         <!-- CASES CAROUSEL -->
-        <div id="cases" class="carousel-section section section-medium fade-section">
-            <h2 class="carousel-section__title">Website cases</h2>
+        <?php if($page->cases()->isNotEmpty()): ?>
+            <div id="cases" class="carousel-section section section-medium fade-section">
+                <h2 class="carousel-section__title"><?= $page->casesTitle() ?></h2>
 
-            <!-- slider -->
-            <div class="slider-container">
+                <!-- slider -->
+                <div class="slider-container">
 
-                <!-- casesSlider class -->
-                <div class="slider casesSlider">
-                    <div class="slider__inner">
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+                    <!-- casesSlider class -->
+                    <div class="slider casesSlider">
+                        <div class="slider__inner" style="grid-template-columns: repeat(<?= count($page->cases()->toPages()) ?>, 1fr);">
+                            
+                            <!-- case -->
+                            <?php foreach($page->cases()->toPages() as $case): ?>
+                                <?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) : ?>
+                                    <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgWebp()->toFile()->url() ?>');">
+                                <?php else: ?>
+                                    <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgPng()->toFile()->url() ?>');">
+                                <?php endif; ?>
 
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
+                                    <!-- case button -->
+                                    <button class="button button-tertiary">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
+                                    <!-- case text -->
+                                    <div class="case__id">
+                                        <h2 class="case__id__title"><?= $case->caseTitleShort() ?></h2>
 
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
+                                        <!-- case tags -->
+                                        <?php if ($case->caseTags()->isNotEmpty()) : ?>
+                                            <div class="tags">
 
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
-
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
-
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
-
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
-
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide slide-img case" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $site->url() ?>/../assets/img/cta.png');">
-
-                            <!-- case button -->
-                            <a class="button button-tertiary" href="#">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></a>
-
-                            <!-- case text -->
-                            <div class="case__id">
-                                <h2 class="case__id__title">Music2Move</h2>
-
-                                <div class="tags">
-                                    <span class="tag">Website</span>
-                                    <span class="tag">Photos</span>
-                                </div>
-                            </div>
+                                                <!-- tag -->
+                                                <?php foreach ($case->caseTags()->split() as $tag) : ?>
+                                                    <span class="tag"><?= $tag ?></span>
+                                                <?php endforeach; ?>
+                                            </div>
+                                        <?php endif; ?>
+                                    </div>
+                                </a>
+                            <?php endforeach; ?>
                         </div>
                     </div>
-                </div>
 
-                <!-- arrows -->
-                <div class="slider__arrows">
-                    <i class="slider-arrow arrow-left fa-solid fa-arrow-left"></i>
-                    <i class="slider-arrow arrow-right fa-solid fa-arrow-right"></i>
+                    <!-- arrows -->
+                    <div class="slider__arrows">
+                        <i class="slider-arrow arrow-left fa-solid fa-arrow-left"></i>
+                        <i class="slider-arrow arrow-right fa-solid fa-arrow-right"></i>
+                    </div>
                 </div>
             </div>
-        </div>
+        <?php endif; ?>
     </main>
 </div>
 

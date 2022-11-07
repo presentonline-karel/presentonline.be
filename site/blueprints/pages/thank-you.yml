@@ -17,28 +17,11 @@ columns:
         type: headline
         numbered: false
       floatingNavSwitch:
-        label: Floating nav?
-        type: toggle
-        width: 1/2
-        text: 
-          - "no"
-          - "yes"
+        extends: fields/f-nav-switch
       floatingNavInfoPositive:
-        label: Results in
-        type: info
-        text: "**Floating nav: ** nav will hide/show show on scroll"
-        theme: positive
-        width: 1/2
-        when:
-          floatingNavSwitch: yes
+        extends: fields/f-nav-info-pos
       floatingNavInfoNegative:
-        label: Results in
-        type: info
-        text: "**Default nav: ** nav will stick to top of page"
-        theme: negative
-        width: 1/2
-        when:
-          floatingNavSwitch: no
+        extends: fields/f-nav-info-neg
       line-z:
         type: line
 
@@ -63,67 +46,7 @@ columns:
       
       #buttons  
       headerButtons:
-        label: Button
-        type: structure
-        max: 1
-        columns:
-          typeOfButton:
-            width: 2/8
-          anchor:
-            width: 2/8
-          destination:
-            width: 2/8
-          internalPage:
-            width: 2/8
-        fields:
-          anchor:
-            label: Anchor
-            type: text
-            required: true
-          icon:
-            label: Icon
-            type: radio
-            required: true
-            options:
-              noIcon: None
-              chevronRight: Chevron right
-              chevronDown: Chevron down
-              arrowRight: Arrow right
-              arrowRightTop: Arrow right top
-              arrowDown: Arrow down
-          typeOfButton:
-            label: Type
-            type: radio
-            options:
-              button-primary: Primary
-              button-secondary: Secondary
-              button-tertiary: Tertiary
-          destination:
-            type: select
-            label: Destination
-            max: 1
-            required: true
-            options:
-              internal: Internal webpage
-              external: External webpage
-          internalPage:
-            label: Internal webpage
-            type: pages
-            max: 1
-            required: true
-            when:
-              destination: internal
-          idPage:
-            label: Specific id
-            type: text
-            when:
-              destination: internal
-          externalUrl:
-            label: External webpage
-            type: url
-            required: true
-            when:
-              destination: external
+        extends: fields/button
 
 
       
