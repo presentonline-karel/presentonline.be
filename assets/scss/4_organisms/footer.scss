@@ -30,21 +30,12 @@
 
         &__p,
         &__a {
+            font-family: $paragraph-font;
             font-size: 16px;
             color: $neutrals-100;
             display: block;
             margin-bottom: 8px;
             line-height: 16px;
-        }
-
-        &__a {
-            font-family: $paragraph-font;
-
-            i {
-                transform: rotate(-45deg);
-                font-size: 14px;
-                line-height: 14px;
-            }
         }
     }
 

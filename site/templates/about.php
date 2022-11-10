@@ -24,7 +24,7 @@
 
                     <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
@@ -42,7 +42,7 @@
             <div class="about__text">
                 <div class="about__text__title flex">
                     <h2><?= $page->aboutTitle() ?></h2>
-                    <img src="<?= $site->url() ?>/../assets/img/hand.svg" alt="Waving hand" />
+                    <img src="<?= $site->url() ?>/../assets/img/hand.svg" alt="Waving hand" loading="lazy" />
                 </div>
 
                 <!-- ABOUT PHOTOS - MOBILE -->
@@ -54,7 +54,7 @@
                             <picture>
                                 <source srcSet="<?= $aboutImgFirstWebp->url() ?>" type="image/webp" />
                                 <source srcSet="<?= $aboutImgFirstPng->url() ?>" type="image/jpg" />
-                                <img src="<?= $aboutImgFirstPng->url() ?>" alt="<?= $aboutImgFirstPng->alt() ?>" />
+                                <img src="<?= $aboutImgFirstPng->url() ?>" alt="<?= $aboutImgFirstPng->alt() ?>" loading="lazy" />
                             </picture>
                         <?php endif; ?>
                     <?php endif; ?>
@@ -65,7 +65,7 @@
                             <picture>
                                 <source srcSet="<?= $aboutImgSecondWebp->url() ?>" type="image/webp" />
                                 <source srcSet="<?= $aboutImgSecondPng->url() ?>" type="image/jpg" />
-                                <img src="<?= $aboutImgSecondPng->url() ?>" alt="<?= $aboutImgSecondPng->alt() ?>" />
+                                <img src="<?= $aboutImgSecondPng->url() ?>" alt="<?= $aboutImgSecondPng->alt() ?>" loading="lazy" />
                             </picture>
                         <?php endif; ?>
                     <?php endif; ?>
@@ -95,7 +95,7 @@
                         <picture>
                             <source srcSet="<?= $aboutImgFirstWebp->url() ?>" type="image/webp" />
                             <source srcSet="<?= $aboutImgFirstPng->url() ?>" type="image/jpg" />
-                            <img src="<?= $aboutImgFirstPng->url() ?>" alt="<?= $aboutImgFirstPng->alt() ?>" />
+                            <img src="<?= $aboutImgFirstPng->url() ?>" alt="<?= $aboutImgFirstPng->alt() ?>" loading="lazy" />
                         </picture>
                     <?php endif; ?>
                 <?php endif; ?>
@@ -106,7 +106,7 @@
                         <picture>
                             <source srcSet="<?= $aboutImgSecondWebp->url() ?>" type="image/webp" />
                             <source srcSet="<?= $aboutImgSecondPng->url() ?>" type="image/jpg" />
-                            <img src="<?= $aboutImgSecondPng->url() ?>" alt="<?= $aboutImgSecondPng->alt() ?>" />
+                            <img src="<?= $aboutImgSecondPng->url() ?>" alt="<?= $aboutImgSecondPng->alt() ?>" loading="lazy" />
                         </picture>
                     <?php endif; ?>
                 <?php endif; ?>
@@ -123,7 +123,7 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/about/counter-animation.js', ['defer' => true]) ?>
+<?= js("build/js/about/counter-animation.js", ["defer" => true]) ?>
 
 
 

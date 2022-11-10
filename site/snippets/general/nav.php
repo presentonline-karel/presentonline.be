@@ -3,7 +3,7 @@
     <!-- NAV LOGO -->
     <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
         <?php if ($site->logoLight()->isNotEmpty()) : ?>
-            <img class="nav-links__top__logo" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" />
+            <img class="nav-links__top__logo" src="<?= $site->logoDark()->toFile()->url() ?>" alt="<?= $site->logoDark()->toFile()->alt() ?>" loading="lazy" />
         <?php endif; ?>
     </a>
 
@@ -15,7 +15,7 @@
         <!-- Logo -->
         <?php if ($site->logoLight()->isNotEmpty()) : ?>
             <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
-                <img class="nav-links__top__logo mobile" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
+                <img class="nav-links__top__logo mobile" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" loading="lazy" />
             </a>
         <?php endif; ?>
 
@@ -72,7 +72,7 @@
         <div class="bottom">
 
             <!-- socials -->
-            <?php snippet("general/socials", ['color' => 'neutrals-100']) ?>
+            <?php snippet("general/socials", ["color" => "neutrals-100"]) ?>
 
             <!-- Language selector -->
             <?php foreach ($kirby->languages() as $language) : ?>
@@ -93,18 +93,3 @@
         <div class="burger-line line3"></div>
     </div>
 </nav>
-
-
-
-<!-- SWITCH LANGUAGES -> In modal steken -->
-<?php /* <nav class="languages">
-    <ul>
-        <?php foreach ($kirby->languages() as $language) : ?>
-            <li<?php e($kirby->language() == $language, ' class="active"') ?>>
-                <a href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
-                    <?= html($language->name()) ?>
-                </a>
-            </li>
-        <?php endforeach ?>
-    </ul>
-</nav> */ ?>

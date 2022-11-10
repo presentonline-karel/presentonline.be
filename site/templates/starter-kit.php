@@ -15,10 +15,10 @@
                 <p><?= $success ?></p>
             </div>
         <?php else : ?>
-            <?php if (isset($alert['error'])) : ?>
+            <?php if (isset($alert["error"])) : ?>
                 <div class="alert error">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                    <p><?= $alert['error'] ?></p>
+                    <p><?= $alert["error"] ?></p>
                 </div>
             <?php endif ?>
         <?php endif; ?>
@@ -41,7 +41,7 @@
 
                         <!-- button -->
                         <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -53,7 +53,7 @@
                     <picture>
                         <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
                         <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
-                        <img class="header-starter-kit__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" />
+                        <img class="header-starter-kit__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" loading="lazy" />
                     </picture>
                 <?php endif; ?>
             <?php endif; ?>
@@ -77,13 +77,21 @@
 
                     <!-- button -->
                     <?php foreach($page->introButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
 
             <!-- Intro img -->
-            <img class="intro__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="karrel" />
+            <?php if ($introImgWebp = $page->introImgWebp()->toFile()) : ?>
+                <?php if ($introImgPng = $page->introImgPng()->toFile()) : ?>
+                    <picture>
+                        <source srcSet="<?= $introImgWebp->url() ?>" type="image/webp" />
+                        <source srcSet="<?= $introImgPng->url() ?>" type="image/jpg" />
+                        <img class="intro__img" src="<?= $introImgPng->url() ?>" alt="<?= $introImgPng->alt() ?>" loading="lazy" />
+                    </picture>
+                <?php endif; ?>
+            <?php endif; ?>
         </section>
 
 
@@ -197,7 +205,7 @@
 
                             <!-- button -->
                             <?php foreach($include->includeButton()->toStructure() as $button): ?>
-                                <?php snippet('components/button', ["button" => $button]) ?>
+                                <?php snippet("components/button", ["button" => $button]) ?>
                             <?php endforeach; ?>
                         <?php endif; ?>
                     </div>
@@ -219,7 +227,7 @@
 
                             <!-- button -->
                             <?php foreach($page->priceButtons()->toStructure() as $button): ?>
-                                <?php snippet('components/button', ["button" => $button]) ?>
+                                <?php snippet("components/button", ["button" => $button]) ?>
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
@@ -252,7 +260,7 @@
                 </div>
 
                 <!-- SNIPPET - SOCIALS -->
-                <?php snippet('general/socials', ['color' => 'neutrals-100']); ?>
+                <?php snippet("general/socials", ["color" => "neutrals-100"]); ?>
             </div>
 
             
@@ -262,7 +270,7 @@
                 <h3><?= $page->intrestSectionTitle() ?></h3>
 
                 <!-- Contactform -->
-                <?php snippet('contact/form') ?>
+                <?php snippet("contact/form") ?>
             </div>
         </section>
     </main>
@@ -271,8 +279,8 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
-<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
+<?= js("build/js/home/testimonials-slider.js", ["defer" => true]) ?>
+<?= js("build/js/contact/form-feedback.js", ["defer" => true]) ?>
 
 
 

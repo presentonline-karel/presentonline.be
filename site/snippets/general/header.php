@@ -19,14 +19,14 @@
         <meta content="PresentOnline" name="author">
         <meta content="<?= $site->metaDescription() ?>" name="description">
         <meta content="index,follow,noodp" name="robots">
-        <meta content="<?= $site->titleWebsite() ?>" property="og:title">
-        <meta content="<?= $site->titleWebsite() ?>" property="og:site_name">
+        <meta content="<?= $site->metaTitle() ?>" property="og:title">
+        <meta content="<?= $site->metaTitle() ?>" property="og:site_name">
         <meta content="<?= $site->metaDescription() ?>" property="og:description">
         <meta content="website" property="og:type">
         <meta content="<?= $site->url() ?>" property="og:url">
         <meta content="PresentOnline" property="article:author">
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:title" content="<?= $site->titleWebsite() ?>" />
+        <meta name="twitter:title" content="<?= $site->metaTitle() ?>" />
         <meta name="twitter:site" content="presentonlinebe" />
         <meta name="twitter:creator" content="presentonline">
         <meta name="twitter:image" content="<?= $previewImage ?>">
@@ -43,7 +43,7 @@
         <meta name="theme-color" content="#ffffff">
 
         <!-- STYLESHEETS -->
-        <?= css('build/css/style.css') ?>
+        <?= css("build/css/style.css") ?>
 
         <!-- FONT AWESOME -->
         <script src="https://kit.fontawesome.com/5ce8890823.js" crossorigin="anonymous"></script>

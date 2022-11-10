@@ -53,6 +53,9 @@ columns:
         label: Challenges & successes
         type: headline
         numbered: true
+      challengesTitle:
+        label: Title
+        type: text
       challengesParagraph:
         label: Paragraph
         type: writer

@@ -32,7 +32,7 @@
 
                     <!-- button -->
                     <?php foreach($page->heroButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
@@ -58,13 +58,16 @@
                         <?php if($client->url()->isNotEmpty()): ?>
                             <a class="client" href="<?= $client->url() ?>" target="_blank">
 
+                                <!-- client logo gray -->
+                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" />
+
                                 <!-- client logo -->
                                 <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
                                     <?php if ($clientLogoPng = $client->logoPng()->toFile()) : ?>
                                         <picture>
                                             <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
                                             <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
-                                            <img src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
                                         </picture>
                                     <?php endif; ?>
                                 <?php endif; ?>
@@ -74,13 +77,16 @@
                         <?php else: ?>
                             <div class="client">
 
+                                <!-- client color -->
+                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" />
+
                                 <!-- client logo -->
                                 <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
                                     <?php if ($clientLogoPng = $client->logoPng()->toFile()) : ?>
                                         <picture>
                                             <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
                                             <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
-                                            <img src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
                                         </picture>
                                     <?php endif; ?>
                                 <?php endif; ?>
@@ -114,8 +120,8 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/home/testimonials-slider.js', ['defer' => true]) ?>
-<?= js('build/js/home/typing-animation.js', ['defer' => true]) ?>
+<?= js("build/js/home/testimonials-slider.js", ["defer" => true]) ?>
+<?= js("build/js/home/typing-animation.js", ["defer" => true]) ?>
 
 
 

@@ -80,6 +80,10 @@ columns:
           url:
             width: 2/3
         fields:
+          logoGray:
+            label: Client logo gray .png
+            type: files
+            max: 1
           logoWebp:
             label: Client logo .webp
             type: files

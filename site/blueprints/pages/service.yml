@@ -141,6 +141,13 @@ columns:
         label: CTA text
         type: writer
         inline: true
+      ctaFeatures:
+        label: CTA Features
+        type: structure
+        fields:
+          feature:
+            label: Feature
+            type: text
       
       #buttons  
       ctaButtons:
@@ -160,6 +167,8 @@ columns:
       casesTitle:
         label: Title
         type: text
+        when:
+          service: websiteApps
       cases:
         label: Website cases
         type: pages

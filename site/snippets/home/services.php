@@ -55,7 +55,7 @@
             <picture>
                 <source srcSet="<?= $servicesImgWebp->url() ?>" type="image/webp" />
                 <source srcSet="<?= $servicesImgPng->url() ?>" type="image/jpg" />
-                <img class="services-section__img" src="<?= $servicesImgPng->url() ?>" alt="<?= $servicesImgPng->alt() ?>" />
+                <img class="services-section__img" src="<?= $servicesImgPng->url() ?>" alt="<?= $servicesImgPng->alt() ?>" loading="lazy" />
             </picture>
         <?php endif; ?>
     <?php endif; ?>

@@ -1,16 +1,16 @@
-const {src, dest, series, parallel, watch} = require('gulp');
-const del = require('del');
+const {src, dest, series, parallel, watch} = require("gulp");
+const del = require("del");
 
-//const browserSync = require('browser-sync');
-const browserSync = require('browser-sync').create();
+//const browserSync = require("browser-sync");
+const browserSync = require("browser-sync").create();
 
-/* const sass = require('gulp-sass'); */
-const sass = require('gulp-sass')(require('sass'));
+/* const sass = require("gulp-sass"); */
+const sass = require("gulp-sass")(require("sass"));
 
-const origin = 'assets';
-const destination = 'build';
+const origin = "assets";
+const destination = "build";
 
-sass.compiler = require('node-sass');
+sass.compiler = require("node-sass");
 
 
 
@@ -27,7 +27,7 @@ function css(cb) {
 function scss(cb) {
     src(`${origin}/scss/style.scss`)
     .pipe(sass({
-        outputStyle: 'compressed'
+        outputStyle: "compressed"
     }))
     
     .pipe(dest(`${destination}/css`));
@@ -41,9 +41,9 @@ function js(cb) {
 }
 
 function watcher(cb) {
-    watch(`${origin}/**/*.css`).on('change', series(css, browserSync.reload))
-    watch(`${origin}/**/**/*.scss`).on('change', series(scss, browserSync.reload))
-    watch(`${origin}/**/**/*.js`).on('change', series(js, browserSync.reload))
+    watch(`${origin}/**/*.css`).on("change", series(css, browserSync.reload))
+    watch(`${origin}/**/**/*.scss`).on("change", series(scss, browserSync.reload))
+    watch(`${origin}/**/**/*.js`).on("change", series(js, browserSync.reload))
     cb();
 }
 

@@ -9,7 +9,7 @@
     <header class="header header-thank-you">
 
         <!-- NAV -->
-        <?php snippet('general/nav') ?>
+        <?php snippet("general/nav") ?>
 
         <!-- Header content -->
         <div class="header__content header-thank-you__content">
@@ -26,20 +26,20 @@
 
                     <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
 
 
 
-            <!-- about img -->
+            <!-- header img -->
             <?php if ($headerImgWebp = $page->headerImgWebp()->toFile()) : ?>
                 <?php if ($headerImgPng = $page->headerImgPng()->toFile()) : ?>
                     <picture>
                         <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
                         <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
-                        <img class="header-thank-you__content__img desktop" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" />
+                        <img class="header-thank-you__content__img desktop" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" loading="lazy" />
                     </picture>
                 <?php endif; ?>
             <?php endif; ?>

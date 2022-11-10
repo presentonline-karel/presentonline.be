@@ -15,14 +15,14 @@
                     <!-- Logo -->
                     <?php if ($site->logoLight()->isNotEmpty()) : ?>
                         <a class="logo" href="<?= $site->url() ?>" aria-label="Home">
-                            <img class="nav-links__top__logo" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" />
+                            <img class="nav-links__top__logo" src="<?= $site->logoLight()->toFile()->url() ?>" alt="<?= $site->logoLight()->toFile()->alt() ?>" loading="lazy" />
                         </a>
                     <?php endif; ?>
 
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pretium id nibh a molestie.</p>
+                    <p><?= $site->introParagraph() ?></p>
 
                     <!-- Socials -->
-                    <?php snippet("general/socials", ['color' => 'neutrals-100']) ?>
+                    <?php snippet("general/socials", ["color" => "neutrals-100"]) ?>
                 </div>
 
 
@@ -31,8 +31,8 @@
                 <div class="contact footer__section">
                     <h3>Contact</h3>
 
-                    <p class="footer__section__p"><i class="icon-first fa fa-phone" aria-hidden="true"></i>0476 28 09 02</p>
-                    <p class="footer__section__p"><i class="icon-first fa fa-envelope" aria-hidden="true"></i>info@presentonline.be</p>
+                    <a class="footer__section__p" href="tel:<?= $site->telephone() ?>"><i class="icon-first fa fa-phone" aria-hidden="true"></i><?= $site->telephone() ?></a>
+                    <a class="footer__section__p" href="mailto:<?= $site->email() ?>"><i class="icon-first fa fa-envelope" aria-hidden="true"></i><?= $site->email() ?></a>
                 </div>
 
 
@@ -41,25 +41,26 @@
 
                     <!-- SERVICES -->
                     <div class="services footer__section">
-                        <h3>Diensten</h3>
+                        <h3><?= $site->servicesTitle() ?></h3>
 
-                        <a class="footer__section__a" href="#">Websites &-apps</a>
-                        <a class="footer__section__a" href="#">SEO</a>
-                        <a class="footer__section__a" href="#">Photography</a>
-                        <a class="footer__section__a" href="#">Graphic design</a>
-                        <a class="footer__section__a" href="#">Concept & advice</a>
+                        <?php if($site->services()->isNotEmpty()): ?>
+                            <?php foreach($site->services()->toStructure() as $service): ?>
+                                <a class="footer__section__a" href="<?= $service->page()->toPage()->url() . $service->section() ?>"><?= $service->anchor() ?></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
+
+
 
                     <!-- SITEMAP -->
                     <div class="sitemap footer__section">
                         <h3>Sitemap</h3>
 
-                        <a class="footer__section__a" href="#">Home</a>
-                        <a class="footer__section__a" href="#">Diensten</a>
-                        <a class="footer__section__a" href="#">Over ons</a>
-                        <a class="footer__section__a" href="#">Projecten</a>
-                        <a class="footer__section__a" href="#">Contact</a>
-                        <a class="footer__section__a" href="#">Starter Kit<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <?php if($site->sitemap()->isNotEmpty()): ?>
+                            <?php foreach($site->sitemap()->toStructure() as $sitemapPage): ?>
+                                <a class="footer__section__a" href="<?= $sitemapPage->page()->toPage()->url() . $sitemapPage->section() ?>"><?= $sitemapPage->anchor() ?></a>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -68,17 +69,19 @@
 
             <hr class="line footer-line">
 
-            <p class="copyright">©PresentOnline. All rights reserved. |  BTW BE 0772.635.880</p>
+
+
+            <p class="copyright"><?= $site->copyright() ?>  |  <?= $site->btwNr() ?></p>
         </footer>
 
 
 
         <!-- MOBILE NAV SCRIPT -->
-        <?= js('build/js/general/nav.js', ['defer' => true]) ?>
-        <?= js('build/js/general/section-fade-animation.js', ['defer' => true]) ?>
+        <?= js("build/js/general/nav.js", ["defer" => true]) ?>
+        <?= js("build/js/general/section-fade-animation.js", ["defer" => true]) ?>
 
         <?php if ($page->floatingNavSwitch()->toBool() === true) : ?>
-            <?= js('build/js/general/nav-fade.js', ['defer' => true]) ?>
+            <?= js("build/js/general/nav-fade.js", ["defer" => true]) ?>
         <?php endif; ?>
     </body>
 </html>

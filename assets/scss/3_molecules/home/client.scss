@@ -1,17 +1,18 @@
 .clients {
     .client {
         width: 100%;
-        height: 72px;
-        border: 1px solid $primary-100;
+        height: 100px;
+        background-color: $neutrals-100;
+        //border: 1px solid $primary-100;
         border-radius: $border-radius-small;
 
         img {
-            width: calc(100% - 24px);
-            height: calc(100% - 24px);
+            width: calc(100% - 48px);
+            height: calc(100% - 48px);
             object-fit: contain;
-            margin-top: 12px;
-            margin-left: 12px;
-            transition: all $transition-time-short ease-in-out; 
+            margin-top: 24px;
+            margin-left: 24px;
+            transition: all $transition-time-short ease-in-out;
 
             /*filter: grayscale(100%);
             -webkit-filter: grayscale(1);
@@ -21,6 +22,41 @@
                 filter: none;
                 -webkit-filter: grayscale(0);
             }*/
+        }
+
+        .logo-grayscale {
+            display: block;
+            opacity: 1
+        }
+
+        .logo-color {
+            opacity: 0;
+            display: none;
+        }
+    }
+}
+
+/* TABLET 768PX */
+@media only screen and (min-width: $tablet-portrait) {
+    .clients {
+        .client {
+            height: 128px;
+    
+            img {
+                width: calc(100% - 64px);
+                height: calc(100% - 64px);
+                margin-top: 32px;
+                margin-left: 32px;
+    
+                /*filter: grayscale(100%);
+                -webkit-filter: grayscale(1);
+                z-index: 0;
+    
+                &:hover {
+                    filter: none;
+                    -webkit-filter: grayscale(0);
+                }*/
+            }
         }
     }
 }
@@ -38,15 +74,16 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-1) {
     .clients {
-        .client {
-            min-height: 112px;
-            border: none;
-            background-color: $neutrals-200;
-
-            img {
-                width: calc(100% - 32px);
-                height: calc(100% - 32px);
+        .client:hover {
+            .logo-grayscale {
+                opacity: 0;
+                display: none;
+            }
+    
+            .logo-color {
+                opacity: 1;
+                display: block;
             }
         }
     }
-}
+} 

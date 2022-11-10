@@ -15,10 +15,10 @@
                 <p><?= $success ?></p>
             </div>
         <?php else : ?>
-            <?php if (isset($alert['error'])) : ?>
+            <?php if (isset($alert["error"])) : ?>
                 <div class="alert error">
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
-                    <p><?= $alert['error'] ?></p>
+                    <p><?= $alert["error"] ?></p>
                 </div>
             <?php endif ?>
         <?php endif; ?>
@@ -41,7 +41,7 @@
 
                     <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>
@@ -59,7 +59,7 @@
             </div>
 
             <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials', ['color' => 'primary-color-600']) ?>
+            <?php snippet("general/socials", ["color" => "primary-color-600"]) ?>
         </div>
     </header>
 
@@ -83,7 +83,7 @@
             </div>
 
             <!-- SNIPPET - SOCIALS -->
-            <?php snippet('general/socials', ['color' => 'neutrals-100']); ?>
+            <?php snippet("general/socials", ["color" => "neutrals-100"]); ?>
         </div>
 
 
@@ -93,7 +93,7 @@
             <h3><?= $page->contactFormTitle() ?></h3>
 
             <!-- Contactform -->
-            <?php snippet('contact/form') ?>
+            <?php snippet("contact/form") ?>
         </div>
     </main>
 
@@ -110,7 +110,7 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/contact/form-feedback.js', ['defer' => true]) ?>
+<?= js("build/js/contact/form-feedback.js", ["defer" => true]) ?>
 
 
 

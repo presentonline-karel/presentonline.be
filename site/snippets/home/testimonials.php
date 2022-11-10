@@ -1,4 +1,4 @@
-<?php $homePage = $pages->find('home'); ?>
+<?php $homePage = $pages->find("home"); ?>
 
 <section id="testimonials" class="testimonials-section section section-medium fade-section">
 
@@ -26,7 +26,7 @@
                                     <picture>
                                         <source srcSet="<?= $reviewerImgWebp->url() ?>" type="image/webp" />
                                         <source srcSet="<?= $reviewerImgPng->url() ?>" type="image/jpg" />
-                                        <img class="testimonial__id__picture" src="<?= $reviewerImgPng->url() ?>" alt="<?= $reviewerImgPng->alt() ?>" />
+                                        <img class="testimonial__id__picture" src="<?= $reviewerImgPng->url() ?>" alt="<?= $reviewerImgPng->alt() ?>" loading="lazy" />
                                     </picture>
                                 <?php endif; ?>
                             <?php endif; ?>

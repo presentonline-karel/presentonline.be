@@ -9,7 +9,7 @@
 
     .clients {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 8px;
         margin-bottom: 32px;
     }
@@ -31,13 +31,17 @@
 @media only screen and (min-width: $tablet-portrait) {
     .clients-section {
         padding: 72px 48px;
+
+        .clients {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 }
 
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .clients-section {
-        padding: 72px 202px;
+        padding: 72px 96px;
 
         .clients {
             grid-template-columns: repeat(4, 1fr);
@@ -58,14 +62,14 @@
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-1) {
     .clients-section {
-        padding: 96px 308px;
+        padding: 96px 202px;
 
         h3 {
             margin-bottom: 40px;
         }
 
         .clients {
-            gap: 24px;
+            gap: 8px;
             margin-bottom: 48px;
         }
     }
@@ -74,8 +78,6 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .clients-section {
-        //padding: 128px 308px;
-
         .button-tertiary {
             font-size: 24px;
             line-height: 32px;

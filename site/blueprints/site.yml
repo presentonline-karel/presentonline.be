@@ -236,6 +236,9 @@ tabs:
             label: Services
             type: headline
             numbered: true
+          servicesTitle:
+            label: Title
+            type: text
           services:
             label: Services
             type: structure

@@ -29,7 +29,7 @@
 
             <!-- button -->
             <?php foreach($page->ctaButtons()->toStructure() as $button): ?>
-                <?php snippet('components/button', ["button" => $button]) ?>
+                <?php snippet("components/button", ["button" => $button]) ?>
             <?php endforeach; ?>
         </div>
     <?php endif; ?>

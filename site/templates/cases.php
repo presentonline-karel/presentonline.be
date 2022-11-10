@@ -24,7 +24,7 @@
 
                     <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>

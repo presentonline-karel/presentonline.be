@@ -51,16 +51,16 @@
                 <div class="header-case__content__images slider-container">
                     <div class="slider">
                         <div class="slider__inner" style="grid-template-columns: repeat(<?= count($page->mockupsWebp()->toFiles()) ?>, 1fr);">
-                            <?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) : ?>
+                            <?php if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
                                 <?php foreach($page->mockupsWebp()->toFiles() as $image): ?>
                                     <div class="slide slide-img">
-                                        <img class="slide__img" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>"/>
+                                        <img class="slide__img" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" />
                                     </div>
                                 <?php endforeach; ?>
                             <?php else: ?>
                                 <?php foreach($page->mockupsPng()->toFiles() as $image): ?>
                                     <div class="slide slide-img">
-                                        <img class="slide__img" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>"/>
+                                        <img class="slide__img" src="<?= $image->url() ?>" alt="<?= $image->alt() ?>" loading="lazy" />
                                     </div>
                                 <?php endforeach; ?>
                             <?php endif; ?>
@@ -90,13 +90,13 @@
                     <picture>
                         <source srcSet="<?= $challengeImgWebp->url() ?>" type="image/webp" />
                         <source srcSet="<?= $challengeImgPng->url() ?>" type="image/jpg" />
-                        <img class="challenges__img desktop" src="<?= $challengeImgPng->url() ?>" alt="<?= $challengeImgPng->alt() ?>" />
+                        <img class="challenges__img desktop" src="<?= $challengeImgPng->url() ?>" alt="<?= $challengeImgPng->alt() ?>" loading="lazy" />
                     </picture>
                 <?php endif; ?>
             <?php endif; ?>
 
             <div class="challenges__text">
-                <h2>Challenges & successes</h2>
+                <h2><?= $page->challengesTitle() ?></h2>
 
                 <p><?= $page->challengesParagraph() ?></p>
 
@@ -191,7 +191,7 @@
 
                         <!-- button -->
                         <?php foreach($casesPage->ctaButtons()->toStructure() as $button): ?>
-                            <?php snippet('components/button', ["button" => $button]) ?>
+                            <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>
                     </div>
                 <?php endif; ?>
@@ -203,7 +203,7 @@
 
 
 <!-- JS SCRIPTS -->
-<?= js('build/js/general/slider.js', ['defer' => true]) ?>
+<?= js("build/js/general/slider.js", ["defer" => true]) ?>
 
 
 

@@ -9,7 +9,7 @@
     <header class="header header-service">
 
         <!-- NAV -->
-        <?php snippet('general/nav') ?>
+        <?php snippet("general/nav") ?>
 
         <!-- Header content -->
         <div class="header__content header-service__content">
@@ -32,11 +32,9 @@
 
                     <!-- button -->
                     <?php foreach($page->headerButton()->toStructure() as $button): ?>
-                        <?php snippet('components/button', ["button" => $button]) ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
-
-                <!-- <a class="button button-tertiary large desktop">We offer 3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a> -->
             </div>
 
             <!-- Header img -->
@@ -45,12 +43,10 @@
                     <picture>
                         <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
                         <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
-                        <img src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" />
+                        <img class="header-service__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" loading="lazy" />
                     </picture>
                 <?php endif; ?>
             <?php endif; ?>
-
-            <?php /* <img class="header-service__content__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" alt="Carousel img" /> */ ?>
         </div>
     </header>
 
@@ -58,119 +54,108 @@
 
     <main>
 
-        <!-- KITS -->
-        <section id="service-features" class="service-features-section section section-large fade-section">
-            <h2 class="service-features-section__title"><?= $page->stepsTitle() ?></h2>
-            <p class="service-features-section__p"><?= $page->stepsParagraph() ?></p>
+        <!-- KITS/STEPS -->
+        <?php if($page->steps()->isNotEmpty()): ?>
+            <section id="service-features" class="service-features-section section section-large fade-section">
+                <h2 class="service-features-section__title"><?= $page->stepsTitle() ?></h2>
+                <p class="service-features-section__p"><?= $page->stepsParagraph() ?></p>
 
-            <a class="button button-tertiary large mobile">3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                <a class="button button-tertiary large mobile">3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
 
 
 
-            <!-- Kits -->
-            <?php if($page->steps()->isNotEmpty()): ?>
-                <div class="kits cards">
+                <!-- Kits -->
+                <?php if($page->steps()->isNotEmpty()): ?>
+                    <div class="kits cards">
 
-                    <!-- kit -->
-                    <?php foreach($page->steps()->toStructure() as $serviceFeature): ?>
-                        <div class="kit card">
-                            <div>
-                                <div class="card__icon-container">
-                                    <span><?= $serviceFeature->number() ?></span>
+                        <!-- kit -->
+                        <?php foreach($page->steps()->toStructure() as $serviceFeature): ?>
+                            <div class="kit card">
+                                <div>
+                                    <div class="card__icon-container">
+                                        <span><?= $serviceFeature->number() ?></span>
+                                    </div>
+
+                                    <h3 class="card__title"><?= $serviceFeature->title() ?></h3>
+                                    <p><?= $serviceFeature->explanation() ?></p>
+
+                                    <!-- Features -->
+                                    <?php if($serviceFeature->features()->isNotEmpty()): ?>
+                                        <div class="features">
+
+                                            <!-- feature -->
+                                            <?php foreach($serviceFeature->features()->toStructure() as $feature): ?>
+                                                <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
+                                            <?php endforeach; ?>
+                                        </div>
+                                    <?php endif; ?>
                                 </div>
 
-                                <h3 class="card__title"><?= $serviceFeature->title() ?></h3>
-                                <p><?= $serviceFeature->explanation() ?></p>
 
-                                <!-- Features -->
-                                <?php if($serviceFeature->features()->isNotEmpty()): ?>
-                                    <div class="features">
 
-                                        <!-- feature -->
-                                        <?php foreach($serviceFeature->features()->toStructure() as $feature): ?>
-                                            <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
-                                        <?php endforeach; ?>
-                                    </div>
+                                <!-- Step button -->
+                                <?php if($serviceFeature->stepButton()->isNotEmpty()): ?>
+
+                                    <!-- button -->
+                                    <?php foreach($serviceFeature->stepButton()->toStructure() as $button): ?>
+                                        <?php snippet("components/button", ["button" => $button]) ?>
+                                    <?php endforeach; ?>
                                 <?php endif; ?>
                             </div>
+                        <?php endforeach; ?>
+                    </div>
+                <?php endif; ?>
+            </section>
+        <?php endif; ?>
 
 
 
-                            <!-- Step button -->
-                            <?php if($serviceFeature->stepButton()->isNotEmpty()): ?>
-
-                                <!-- button -->
-                                <?php foreach($serviceFeature->stepButton()->toStructure() as $button): ?>
-                                    <?php snippet('components/button', ["button" => $button]) ?>
-                                <?php endforeach; ?>
-                            <?php endif; ?>
-                        </div>
-                    <?php endforeach; ?>
-                </div>
-            <?php endif; ?>
-        </section>
-
-
-
-        <!-- PHOTOGRAPHY SECTIONS - NOT DONE -->
+        <!-- PHOTOGRAPHY SECTIONS -->
         <?php if($page->carousels()->isNotEmpty()): ?>
             <main id="photography-sections">
 
                 <!-- PHOTOGRAPHY CAROUSEL -->
-                <div class="photography-section section section-medium fade-section">
-                    <h3 class="photography-section__title">GAGK Rupelstreek</h3>
+                <?php foreach($page->carousels()->toStructure() as $carousel): ?>
+                    <div class="photography-section section section-medium fade-section">
+                        <h3 class="photography-section__title"><?= $carousel->carouselTitle() ?></h3>
 
-                    <!-- slider -->
-                    <div class="slider-container">
-                        <div class="slider <?= $extraClassCases ?>">
-                            <div class="slider__inner">
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/employee.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_back.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/employee.webp" />
-                                </div>
-                                <div class="slide slide-img">
-                                    <img class="slide__img" src="<?= $site->url() ?>/../assets/img/karel_front.webp" />
+
+
+                        <!-- slider -->
+                        <div class="slider-container">
+                            <div class="slider">
+                                <div class="slider__inner" style="grid-template-columns: repeat(<?= count($carousel->carouselImagesPng()->toFiles()) ?>, 1fr);">
+
+                                    <?php if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
+
+                                        <!-- slide -->
+                                        <?php foreach($carousel->carouselImagesPng()->toFiles() as $imgPng): ?>
+                                            <div class="slide slide-img">
+                                                <img class="slide__img" src="<?= $imgPng->url() ?>" alt="<?= $imgPng->alt() ?>" loading="lazy" />
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php else: ?>
+
+                                        <!-- slide -->
+                                        <?php foreach($carousel->carouselImagesWebp()->toFiles() as $imgWebp): ?>
+                                            <div class="slide slide-img">
+                                                <img class="slide__img" src="<?= $imgWebp->url() ?>" alt="<?= $imgWebp->alt() ?>" loading="lazy" />
+                                            </div>
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- arrows -->
-                        <div class="slider__arrows">
-                            <i class="slider-arrow arrow-left fa-solid fa-arrow-left"></i>
-                            <i class="slider-arrow arrow-right fa-solid fa-arrow-right"></i>
+
+
+                            <!-- arrows -->
+                            <div class="slider__arrows">
+                                <i class="slider-arrow arrow-left fa-solid fa-arrow-left"></i>
+                                <i class="slider-arrow arrow-right fa-solid fa-arrow-right"></i>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <!-- PHOTOGRAPHY CAROUSEL -->
-                <div class="photography-section section section-medium fade-section">
-                    <h3 class="photography-section__title">KdG FabLab</h3>
-
-                    <!-- slider -->
-                    <?php snippet('general/slider', ['extraClassCases' => '']); ?>
-                </div>
-
-                <!-- PHOTOGRAPHY CAROUSEL -->
-                <div class="photography-section section section-medium fade-section">
-                    <h3 class="photography-section__title">Turnkring Energym</h3>
-
-                    <!-- slider -->
-                    <?php snippet('general/slider', ['extraClassCases' => '']); ?>
-                </div>
+                <?php endforeach; ?>
             </main>
         <?php endif; ?>
 
@@ -195,7 +180,7 @@
                             
                             <!-- case -->
                             <?php foreach($page->cases()->toPages() as $case): ?>
-                                <?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) : ?>
+                                <?php if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
                                     <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgWebp()->toFile()->url() ?>');">
                                 <?php else: ?>
                                     <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgPng()->toFile()->url() ?>');">
