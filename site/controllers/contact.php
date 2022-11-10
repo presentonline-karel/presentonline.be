@@ -31,7 +31,7 @@ return function ($kirby, $pages, $page, $site) {
                     "from"     => "contact@presentonline.be",
                     "replyTo"  => $data["email"],
                     "to"       => esc($site->email()),
-                    "subject"  => esc($data["name"]) . " - STARTER KIT - contactformulier",
+                    "subject"  => esc($data["name"]) . " - presentonline.be - Contact",
                     "data"     => [
                         "name"   => esc($data["name"]),
                         "email" => esc($data["email"]),
@@ -53,6 +53,10 @@ return function ($kirby, $pages, $page, $site) {
             if (empty($alert) === true) {
                 $success = "Je boodschap is goed aangekomen! Je hoort snel van ons terug.";
                 $data = [];
+
+                if ($page = page('thank-you')) {
+                    return $page->go();
+                }
             }
         }
     }
