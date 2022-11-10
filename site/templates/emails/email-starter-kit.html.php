@@ -1,4 +1,4 @@
-Het contactformulier werd ingevuld door <b><?= $name ?></b><br><br>
+Het presentonline.be contactformulier werd ingevuld door <b><?= $name ?></b><br><br>
 
 <b>Email - </b><?= $email ?><br>
 <b>Onderwerp - </b><?= $subject ?><br>
