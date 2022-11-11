@@ -4,6 +4,7 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 
+
     //When you select text -> primary background color + white text
     &::selection {
         background: $primary-600;
@@ -42,13 +43,13 @@ body {
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
     max-width: 100% !important;
+    overflow-y: scroll;
 }
 
 .stop-scrolling {
     height: 100%;
     max-height: -webkit-fill-available;
     overflow: hidden;
-    overflow-y: hidden;
 }
 
 img {

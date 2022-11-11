@@ -52,8 +52,13 @@
         .flex-desktop {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: flex-start;
             gap: 24px;
+            margin-bottom: 24px;
+
+            .input-group {
+                margin-bottom: 0px;
+            }
         }
     }
 }

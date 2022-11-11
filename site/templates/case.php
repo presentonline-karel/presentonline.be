@@ -90,7 +90,7 @@
                     <picture>
                         <source srcSet="<?= $challengeImgWebp->url() ?>" type="image/webp" />
                         <source srcSet="<?= $challengeImgPng->url() ?>" type="image/jpg" />
-                        <img class="challenges__img desktop" src="<?= $challengeImgPng->url() ?>" alt="<?= $challengeImgPng->alt() ?>" loading="lazy" />
+                        <img class="challenges__img" src="<?= $challengeImgPng->url() ?>" alt="<?= $challengeImgPng->alt() ?>" loading="lazy" />
                     </picture>
                 <?php endif; ?>
             <?php endif; ?>
@@ -123,7 +123,7 @@
         <!-- RELATED CASES -->
         <?php if($page->relatedCases()->isNotEmpty()): ?>
             <section id="next-case" class="next-case section section-medium fade-section">
-                <h2 class="next-case__title">Next cases</h2>
+                <h2 class="next-case__title"><?= $page->relatedCasesTitle() ?></h2>
 
                 <div class="next-case__cases">
 

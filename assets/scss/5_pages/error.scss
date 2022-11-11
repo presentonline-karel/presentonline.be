@@ -1,5 +1,7 @@
 body:has(.container-error) {
-    height: 100%;
+    .container-error {
+        height: 100vh;
+    }
 }
 
 .container-error {

@@ -58,6 +58,13 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .button {
+        &-primary, &-secondary {
+            i {
+                font-size: 16px;
+                line-height: 16px;
+            }
+        }
+
         &-tertiary {
             i {
                 font-size: 20px;

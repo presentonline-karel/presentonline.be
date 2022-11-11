@@ -8,6 +8,7 @@
     border-radius: $border-radius-small;
     border: 1px solid $primary-100;
     margin-bottom: 20px;
+    box-shadow: $card-shadow;
 
     &.slide {
         width: 343px !important;
@@ -29,8 +30,6 @@
 
         i {
             color: $primary-600;
-            font-size: 16px;
-            line-height: 16px;
         }
     }
 
@@ -127,7 +126,7 @@
         }
 
         &__id {
-            margin-top: 176px;
+            margin-top: 160px;
         }
     }
 }

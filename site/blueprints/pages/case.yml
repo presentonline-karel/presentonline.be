@@ -75,6 +75,9 @@ columns:
         label: Related cases
         type: headline
         numbered: true
+      relatedCasesTitle:
+        label: Title
+        type: text
       relatedCases:
         label: Related cases
         type: pages

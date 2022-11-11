@@ -3,12 +3,16 @@
 
     &__title {
         text-align: center;
-        margin-bottom: 24px;
+        margin-bottom: 32px;
     }
 
     &__cases {
         .case {
             margin-bottom: 0;
+
+            &:first-of-type {
+                margin-bottom: 16px;
+            }
         }
     }
 }
@@ -16,10 +20,6 @@
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
     .next-case {
-        &__title {
-            margin-bottom: 40px;
-        }
-
         &__cases {
             display: flex;
             justify-content: space-between;
@@ -27,6 +27,8 @@
             gap: 24px;
 
             .case {
+                margin-bottom: 0 !important;
+
                 .button {
                     top: 24px;
                     right: 24px;

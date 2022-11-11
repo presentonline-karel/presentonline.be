@@ -1,0 +1,12 @@
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .container-thank-you, .container-contact, .container-starter-kit {
+        .nav {
+            .nav-links {
+
+                //To fix weird issue with the menu
+                padding-right: 0px;
+            }
+        }
+    }
+}

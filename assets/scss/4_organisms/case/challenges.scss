@@ -14,6 +14,16 @@
             margin-bottom: 24px;
         }
     }
+
+    &__img {
+        display: block;
+        height: auto;
+        aspect-ratio: 3/2;
+        object-fit: cover;
+        border-radius: $border-radius-small;
+        margin-bottom: 40px;
+        border: 1px solid $primary-100;
+    }
 }
 
 /* TABLET 1024PX */
@@ -25,6 +35,8 @@
         gap: 48px;
 
         &__text {
+            width: calc(100% - 48px - 360px); //48px gap, 360px image
+
             .features {
                 margin-bottom: 0;
             }
@@ -52,6 +64,8 @@
         gap: 72px;
         
         &__text {
+            width: calc(100% - 72px - 506px); //72px gap, 400px image
+
             p {
                 margin-bottom: 24px;
             }

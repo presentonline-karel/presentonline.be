@@ -1,6 +1,7 @@
 const inViewport = (elem) => {
   let allElements = document.querySelectorAll(elem);
   let windowHeight = window.innerHeight;
+
   const elems = () => {
     for (let i = 0; i < allElements.length; i++) {
       //  loop through the sections
