@@ -103,6 +103,7 @@ columns:
               feature:
                 label: Feature
                 type: writer
+                inline: true
           stepButton:
             extends: fields/button
       line-b:
@@ -154,6 +155,7 @@ columns:
           feature:
             label: Feature
             type: writer
+            inline: true
       
       #buttons  
       ctaButtons:

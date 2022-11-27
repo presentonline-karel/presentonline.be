@@ -94,6 +94,7 @@ columns:
           feature:
             label: Feature
             type: writer
+            inline: true
       
       #buttons  
       ctaButtons:

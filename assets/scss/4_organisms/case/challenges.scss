@@ -7,6 +7,10 @@
         }
 
         p {
+            margin-bottom: 24px;
+        }
+
+        h3 {
             margin-bottom: 16px;
         }
 
@@ -67,7 +71,7 @@
             width: calc(100% - 72px - 506px); //72px gap, 400px image
 
             p {
-                margin-bottom: 24px;
+                margin-bottom: 32px;
             }
 
             .features {

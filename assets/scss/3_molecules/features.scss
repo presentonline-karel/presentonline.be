@@ -11,5 +11,13 @@
             line-height: 26px;
             color: $primary-600;
         }
+
+        p {
+            margin: 0 !important;
+
+            a {
+                text-decoration: underline;
+            }
+        }
     }
 }

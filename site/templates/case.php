@@ -104,8 +104,9 @@
 
             <div class="challenges__text">
                 <h2><?= $page->challengesTitle() ?></h2>
-
                 <p><?= $page->challengesParagraph() ?></p>
+
+                <h3><?= $page->outcomesTitle() ?></h3>
 
                 <!-- Outcomes -->
                 <?php if($page->outcomes()->isNotEmpty()): ?>

@@ -59,13 +59,17 @@ columns:
         label: Paragraph
         type: writer
         inline: true
+      outcomesTitle:
+        label: Subtitle
+        type: text
       outcomes:
         label: Outcomes
         type: structure
         fields:
           feature:
             label: Feature
-            type: text
+            type: writer
+            inline: true
       line-b:
         type: line
       

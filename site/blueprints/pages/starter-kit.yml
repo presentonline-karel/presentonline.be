@@ -114,6 +114,7 @@ columns:
           feature:
             label: Feature
             type: writer
+            inline: true
       line-d:
         type: line
       
@@ -163,6 +164,7 @@ columns:
               feature:
                 label: Feature
                 type: writer
+                inline: true
 
           #buttons
           includeButton:
@@ -183,8 +185,7 @@ columns:
         type: text
       priceDetails:
         label: Extra details
-        type: writer
-        inline: true
+        type: text
 
       #buttons
       priceButtons:
