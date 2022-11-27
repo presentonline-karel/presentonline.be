@@ -1,8 +1,7 @@
 title: Home
 icon: home
 
-options:
-  changeSlug: false
+
 
 columns:
 
@@ -96,6 +95,9 @@ columns:
           url:
             label: Client website
             type: url
+      clientsButtons:
+        extends: fields/buttons
+        label: Button
       line-b:
         type: line
       
@@ -142,6 +144,9 @@ columns:
             label: Detailpage
             type: pages
             image: icon
+          serviceButtons:
+            extends: fields/buttons
+            label: Button
       line-c:
         type: line
 
@@ -166,7 +171,7 @@ columns:
             type: writer
             inline: true
           reviewerPictureWebp:
-            label: Photo / logo company .png
+            label: Photo / logo company .webp
             type: files
             max: 1
           reviewerPicturePng:
@@ -197,7 +202,7 @@ columns:
         fields:
           feature:
             label: Feature
-            type: text
+            type: writer
        
       #buttons  
       ctaButtons:

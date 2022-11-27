@@ -12,7 +12,7 @@
 
         <!-- name -->
         <div class="input-group">
-            <label class="input-group__label">Naam</label>
+            <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Naam <?php } elseif($kirby->language()->code() == "en") { ?> Name <?php } ?></label>
             <input class="input contact-form__input name" type="text" name="name" placeholder="Naam" />
 
             <!--  form feedback -->
@@ -35,7 +35,7 @@
 
     <!-- subject -->
     <div class="input-group">
-        <label class="input-group__label">Onderwerp</label>
+        <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Onderwerp <?php } elseif($kirby->language()->code() == "en") { ?> Subject <?php } ?></label>
         <input class="input contact-form__input subject" type="text" name="subject" placeholder="Onderwerp" />
 
         <!--  form feedback -->
@@ -46,7 +46,7 @@
 
     <!-- message -->
     <div class="input-group">
-        <label class="input-group__label">Boodschap</label>
+        <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Boodschap <?php } elseif($kirby->language()->code() == "en") { ?> Message <?php } ?></label>
         <textarea class="input textarea contact-form__input message" type="text" name="message" placeholder="Boodschap"></textarea>
 
         <!--  form feedback -->
@@ -55,5 +55,5 @@
         <small>Error message</small>
     </div>
 
-    <button class="button button-primary" type="submit" name="submit" value="Verstuur">Verstuur <i class="anchor-first no-hover fa fa-paper-plane" aria-hidden="true"></i></button>
+    <button class="button button-primary" type="submit" name="submit" value="Verstuur"><?php if($kirby->language()->code() == "nl") { ?> Verstuur <?php } elseif($kirby->language()->code() == "en") { ?> Send <?php } ?> <i class="anchor-first no-hover fa fa-paper-plane" aria-hidden="true"></i></button>
 </form>

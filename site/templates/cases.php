@@ -41,7 +41,7 @@
                 <a class="case" href="<?= $project->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($project->challengeImgWebp()->toFile()->url()); } else { echo($project->challengeImgPng()->toFile()->url()); } ?>');">
 
                     <!-- case button -->
-                    <button class="button button-tertiary">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
+                    <button class="button button-tertiary"><?php if($kirby->language()->code() == "nl") { ?> Meer lezen <?php } elseif($kirby->language()->code() == "en") { ?> Read case <?php } ?><i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
                     <!-- case text -->
                     <div class="case__id">

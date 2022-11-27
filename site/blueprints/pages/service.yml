@@ -1,8 +1,7 @@
 title: Service
 icon: store
 
-options:
-  changeSlug: false
+
 
 columns:
 
@@ -96,7 +95,7 @@ columns:
             fields:
               feature:
                 label: Feature
-                type: text
+                type: writer
           stepButton:
             extends: fields/button
       line-b:
@@ -147,7 +146,7 @@ columns:
         fields:
           feature:
             label: Feature
-            type: text
+            type: writer
       
       #buttons  
       ctaButtons:

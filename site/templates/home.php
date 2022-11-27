@@ -96,8 +96,18 @@
                 </div>
             <?php endif; ?>
 
-            <!-- CTA -> To cases -->
-            <a class="button button-tertiary large" href="#">What we do for them<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
+
+
+            <!-- Clients buttons -->
+            <?php if($page->clientsButtons()->isNotEmpty()): ?>
+                <div class="buttons">
+
+                    <!-- button -->
+                    <?php foreach($page->clientsButtons()->toStructure() as $button): ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
         </section>
 
 

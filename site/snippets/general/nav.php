@@ -31,9 +31,9 @@
                         </li>
                     <?php endforeach; ?>
 
-                    <!-- CTA -> Home -->
+                    <!-- CTA -> Quotation -->
                     <li class="nav__link buttons">
-                        <a class="button button-primary starter-kit-cta" href="<?= $site->url() ?>/starter-kit/#contact">Get it now<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                        <a class="button button-primary starter-kit-cta" href="<?= $site->url() ?>/starter-kit/#contact"><?php if($kirby->language()->code() == "nl") { ?>Gratis offerte<?php } elseif($kirby->language()->code() == "en") { ?>Free quotation<?php } ?><i class="anchor-first no-hover fa-solid fa-arrow-down"></i></a>
                         
                         <!-- Language selector -->
                         <?php foreach ($kirby->languages() as $language) : ?>

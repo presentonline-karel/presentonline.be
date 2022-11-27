@@ -113,7 +113,7 @@ columns:
         fields:
           feature:
             label: Feature
-            type: text
+            type: writer
       line-d:
         type: line
       
@@ -162,7 +162,7 @@ columns:
             fields:
               feature:
                 label: Feature
-                type: text
+                type: writer
 
           #buttons
           includeButton:

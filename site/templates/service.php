@@ -60,7 +60,12 @@
                 <h2 class="service-features-section__title"><?= $page->stepsTitle() ?></h2>
                 <p class="service-features-section__p"><?= $page->stepsParagraph() ?></p>
 
-                <a class="button button-tertiary large mobile">3 kits<i class="anchor-first fa-solid fa-arrow-down"></i></a>
+                <!-- button -->
+                <?php if($page->headerButton()->isNotEmpty()): ?>
+                    <?php foreach($page->headerButton()->toStructure() as $button): ?>
+                        <?php snippet("components/button", ["button" => $button]) ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
 
 
 
