@@ -43,7 +43,8 @@ body {
     min-height: -webkit-fill-available;
     overflow-x: hidden !important;
     max-width: 100% !important;
-    overflow-y: scroll;
+    //overflow-y: scroll;
+    overflow: hidden;
 }
 
 .stop-scrolling {

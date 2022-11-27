@@ -50,11 +50,13 @@
             <!-- Header img -->
             <?php if ($headerImgWebp = $page->headerImgWebp()->toFile()) : ?>
                 <?php if ($headerImgPng = $page->headerImgPng()->toFile()) : ?>
-                    <picture>
-                        <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
-                        <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
-                        <img class="header-starter-kit__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" loading="lazy" />
-                    </picture>
+                    <a href="https://starter.presentonline.be" target="_blank">
+                        <picture>
+                            <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
+                            <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />
+                            <img class="header-starter-kit__content__img" src="<?= $headerImgPng->url() ?>" alt="<?= $headerImgPng->alt() ?>" loading="lazy" />
+                        </picture>
+                    </a>
                 <?php endif; ?>
             <?php endif; ?>
         </div>
@@ -220,6 +222,7 @@
                     <h3><?= $page->priceFrom() ?></h3>
 
                     <h2><?= $page->price() ?></h2>
+                    <p><?= $page->priceDetails() ?></p>
 
                     <!-- include button -->
                     <?php if($page->priceButtons()->isNotEmpty()): ?>

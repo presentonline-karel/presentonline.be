@@ -39,9 +39,6 @@ columns:
         label: Paragraph
         type: writer
         inline: true
-      redirectTitle:
-        label: Redirect title
-        type: text
       
       #buttons  
       headerButtons:

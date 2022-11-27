@@ -181,6 +181,10 @@ columns:
       price:
         label: Price
         type: text
+      priceDetails:
+        label: Extra details
+        type: writer
+        inline: true
 
       #buttons
       priceButtons:

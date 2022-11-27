@@ -51,12 +51,6 @@
                             <?php endforeach; ?>
                         </div>
                     <?php endif; ?>
-
-
-
-                    <?php /* if ($service->destinationPage()->isNotEmpty()) : ?>
-                        <a class="button button-tertiary" href="<?= $service->destinationPage()->toPage()->url() ?>">Meer info<i class="anchor-first fa fa-arrow-right" aria-hidden="true"></i></a>
-                    <?php endif; */ ?>
                 </div>
             <?php endforeach; ?>
         </div>

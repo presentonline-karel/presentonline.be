@@ -1,7 +1,8 @@
 title: Contact
 icon: email
 
-
+options:
+  changeSlug: false
 
 columns:
 

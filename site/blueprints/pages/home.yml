@@ -119,7 +119,7 @@ columns:
             width: 2/8
           title:
             width: 3/8
-          destinationPage:
+          explanation:
             width: 3/8
         fields:
           icon:
@@ -140,10 +140,6 @@ columns:
             label: Explanation
             type: writer
             inline: true
-          destinationPage:
-            label: Detailpage
-            type: pages
-            image: icon
           serviceButtons:
             extends: fields/buttons
             label: Button

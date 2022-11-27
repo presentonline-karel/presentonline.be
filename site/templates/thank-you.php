@@ -19,8 +19,6 @@
                 <h1 class="header__content__title"><?= $page->headerTitle() ?></h1>
                 <p><?= $page->headerParagraph() ?></p>
 
-                <h3><?= $page->redirectTitle() ?></h3>
-
                 <!-- Header buttons -->
                 <?php if($page->headerButtons()->isNotEmpty()): ?>
 

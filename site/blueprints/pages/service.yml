@@ -78,6 +78,13 @@ columns:
       steps:
         label: Steps
         type: structure
+        columns:
+          number:
+            width: 1/8
+          title:
+            width: 2/8
+          explanation:
+            width: 5/8
         fields:
           number:
             label: Number
@@ -171,7 +178,7 @@ columns:
       cases:
         label: Website cases
         type: pages
-        query: site.find('cases')
+        query: site.find('projecten')
         when:
           service: websiteApps
   

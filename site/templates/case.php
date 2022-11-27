@@ -17,9 +17,16 @@
             <!-- Header text -->
             <div class="header-case__content__text">
 
+                <!-- CTA -->
+                <?php if($kirby->language()->code() == "nl") {
+                    $casesPage = $pages->find("projecten");
+                } elseif($kirby->language()->code() == "en") {
+                    $casesPage = $pages->find("cases");
+                } ?>
+
                 <!-- breadcrumbs -->
                 <div class="breadcrumbs">
-                    <a class="breadcrumb" href="<?= $site->url() ?>/cases/#cases">Cases</a>
+                    <a class="breadcrumb" href="<?= $casesPage->url() ?>">Cases</a>
                     <i class="fa-solid fa-chevron-right"></i>
                     <a class="breadcrumb" href="#"><?= $page->caseTitleShort() ?></a>
                 </div>
@@ -158,8 +165,6 @@
 
 
         <!-- CTA -->
-        <?php $casesPage = $pages->find("cases"); ?>
-
         <?php if($casesPage->isNotEmpty()): ?>
             <?php if($casesPage->ctaImgWebp()->isNotEmpty() && $casesPage->ctaImgPng()->isNotEmpty()): ?>
                 <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($casesPage->ctaImgWebp()->toFile()->url()); } else { echo($casesPage->ctaImgPng()->toFile()->url()); } ?>')">
