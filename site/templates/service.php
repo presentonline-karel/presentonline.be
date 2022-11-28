@@ -185,14 +185,16 @@
                             
                             <!-- case -->
                             <?php foreach($page->cases()->toPages() as $case): ?>
-                                <?php if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
+                                <?php /* if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
                                     <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgWebp()->toFile()->url() ?>');">
                                 <?php else: ?>
                                     <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgPng()->toFile()->url() ?>');">
-                                <?php endif; ?>
+                                <?php endif; */ ?>
+
+                                <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($case->challengeImgWebp()->toFile()->url()); } else { echo($case->challengeImgPng()->toFile()->url()); } ?>');">
 
                                     <!-- case button -->
-                                    <button class="button button-tertiary">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
+                                    <button class="button button-tertiary"><?php if($kirby->language()->code() == "nl") { ?> Meer lezen <?php } elseif($kirby->language()->code() == "en") { ?> Read case <?php } ?><i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
                                     <!-- case text -->
                                     <div class="case__id">

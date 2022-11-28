@@ -140,7 +140,7 @@
                             <a class="case" href="<?= $relatedCase->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($relatedCase->challengeImgWebp()->toFile()->url()); } else { echo($relatedCase->challengeImgPng()->toFile()->url()); } ?>');">
 
                             <!-- case button -->
-                            <button class="button button-tertiary">READ CASE<i class="anchor-first fa-solid fa-arrow-right"></i></button>
+                            <button class="button button-tertiary"><?php if($kirby->language()->code() == "nl") { ?> Meer lezen <?php } elseif($kirby->language()->code() == "en") { ?> Read case <?php } ?><i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
                             <!-- case text -->
                             <div class="case__id">
@@ -170,7 +170,7 @@
             <?php if($casesPage->ctaImgWebp()->isNotEmpty() && $casesPage->ctaImgPng()->isNotEmpty()): ?>
                 <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($casesPage->ctaImgWebp()->toFile()->url()); } else { echo($casesPage->ctaImgPng()->toFile()->url()); } ?>')">
             <?php else: ?>
-                <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/cta.png')">
+                <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/presentonline-default-cta-bg.jpg')">
             <?php endif; ?>
 
                 <!-- Title -->

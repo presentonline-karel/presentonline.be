@@ -2,7 +2,7 @@
     <?php if($page->ctaImgWebp()->isNotEmpty() && $page->ctaImgPng()->isNotEmpty()): ?>
         <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($page->ctaImgWebp()->toFile()->url()); } else { echo($page->ctaImgPng()->toFile()->url()); } ?>')">
     <?php else: ?>
-        <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/cta.png')">
+        <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/presentonline-default-cta-bg.jpg')">
     <?php endif; ?>
 
     <!-- Title -->

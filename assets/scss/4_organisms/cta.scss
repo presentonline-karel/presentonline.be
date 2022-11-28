@@ -29,7 +29,7 @@
         color: $primary-600;
 
         &:hover {
-            background-color: $primary-100;
+            background-color: $primary-100 !important;
         }
     }
 }
