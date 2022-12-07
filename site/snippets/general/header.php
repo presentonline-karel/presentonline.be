@@ -42,7 +42,7 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
-        <?php if($site->url() == "https://staging.presentonline.be"): ?>
+        <?php if($site->url() == "https://staging.presentonline.be/nl" || $site->url() == "https://staging.presentonline.be/en"): ?>
             <meta name="robots" content="noindex">
         <?php endif; ?>
 
