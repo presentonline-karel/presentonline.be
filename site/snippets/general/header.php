@@ -42,6 +42,10 @@
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
 
+        <?php if($site->url() == "https://staging.presentonline.be"): ?>
+            <meta name="robots" content="noindex">
+        <?php endif; ?>
+
         <!-- STYLESHEETS -->
         <?= css("build/css/style.css") ?>
 
