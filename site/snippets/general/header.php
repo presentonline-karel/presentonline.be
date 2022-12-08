@@ -56,15 +56,23 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-
-        <!-- ANALYTICS -->
-        <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-4RD8RR47H1"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-4RD8RR47H1');
-        </script> -->
     </head>
     <body>
+        
+        <!-- COOKIES -->
+        <div class="cookie-consent-modal">
+            <div class="content-container">
+                <div class="content">
+                    <h3>
+                        Wij gebruiken cookies
+                    </h3>
+
+                    <p>Door gebruik te maken van onze website ga je akkoord met ons <span>privacybeleid</span>.</p>
+
+                    <div class="buttons flex">
+                        <button class="button button-primary cancel">Geen cookies</button>
+                        <button class="button button-primary accept">Accepteren</button>
+                    </div>
+                </div>
+            </div>
+        </div>
