@@ -21,8 +21,6 @@
 
                 <!-- Header buttons -->
                 <?php if($page->headerButtons()->isNotEmpty()): ?>
-
-                    <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>

@@ -4,8 +4,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-
-    //When you select text -> primary background color + white text
     &::selection {
         background: $primary-600;
         color: $neutrals-100;

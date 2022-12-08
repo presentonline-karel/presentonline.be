@@ -3,20 +3,24 @@ const inViewport = (elem) => {
   let windowHeight = window.innerHeight;
 
   const elems = () => {
+
+    //loop through the sections
     for (let i = 0; i < allElements.length; i++) {
-      //  loop through the sections
-      let viewportOffset = allElements[i].getBoundingClientRect(); //  returns the size of an element and its position relative to the viewport
-      let top = viewportOffset.top; //  get the offset top
+      let viewportOffset = allElements[i].getBoundingClientRect();
+      let top = viewportOffset.top;
+
       if (top < windowHeight) {
-        //  if the top offset is less than the window height
-        allElements[i].classList.add("in-viewport"); //  add the class
+
+        //if the top offset is less than the window height
+        allElements[i].classList.add("in-viewport");
       } else {
-        allElements[i].classList.remove("in-viewport"); //  remove the class
+        allElements[i].classList.remove("in-viewport");
       }
     }
   };
+
   elems();
   window.addEventListener("scroll", elems);
 };
 
-inViewport(".fade-section"); //  run the function on all section elements
+inViewport(".fade-section");

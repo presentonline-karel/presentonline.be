@@ -38,8 +38,6 @@
                 <!-- Header buttons -->
                 <?php if($page->headerButtons()->isNotEmpty()): ?>
                     <div class="buttons">
-
-                        <!-- button -->
                         <?php foreach($page->headerButtons()->toStructure() as $button): ?>
                             <?php snippet("components/button", ["button" => $button]) ?>
                         <?php endforeach; ?>
@@ -76,8 +74,6 @@
 
                 <!-- Header buttons -->
                 <?php if($page->introButtons()->isNotEmpty()): ?>
-
-                    <!-- button -->
                     <?php foreach($page->introButtons()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
@@ -108,8 +104,6 @@
             <!-- Features -->
             <?php if ($page->features()->isNotEmpty()) : ?>
                 <div class="features">
-
-                    <!-- feature -->
                     <?php foreach ($page->features()->toStructure() as $feature) : ?>
                         <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
                     <?php endforeach; ?>
@@ -136,8 +130,6 @@
                     <!-- Features -->
                     <?php if ($page->features()->isNotEmpty()) : ?>
                         <div class="features">
-
-                            <!-- feature -->
                             <?php foreach ($page->features()->toStructure() as $feature) : ?>
                                 <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
                             <?php endforeach; ?>
@@ -191,8 +183,6 @@
                             <!-- features -->
                             <?php if ($include->features()->isNotEmpty()) : ?>
                                 <div class="features">
-
-                                    <!-- feature -->
                                     <?php foreach ($include->features()->toStructure() as $feature) : ?>
                                         <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
                                     <?php endforeach; ?>
@@ -204,8 +194,6 @@
 
                         <!-- include button -->
                         <?php if($include->includeButton()->isNotEmpty()): ?>
-
-                            <!-- button -->
                             <?php foreach($include->includeButton()->toStructure() as $button): ?>
                                 <?php snippet("components/button", ["button" => $button]) ?>
                             <?php endforeach; ?>
@@ -227,8 +215,6 @@
                     <!-- include button -->
                     <?php if($page->priceButtons()->isNotEmpty()): ?>
                         <div class="buttons">
-
-                            <!-- button -->
                             <?php foreach($page->priceButtons()->toStructure() as $button): ?>
                                 <?php snippet("components/button", ["button" => $button]) ?>
                             <?php endforeach; ?>
@@ -254,11 +240,7 @@
                 <p class="neutrals-100"><?= $page->intrestSectionParagraph() ?></p>
 
                 <div class="contact__info__items">
-
-                    <!-- Telephone -->
                     <a class="info-item p" href="tel:<?= $site->telephone() ?>"><i class="icon-first fa fa-phone" aria-hidden="true"></i><?= $site->telephone() ?></a>
-
-                    <!-- Email -->
                     <a class="info-item p" href="mailto:<?= $site->email() ?>"><i class="icon-first fa fa-envelope" aria-hidden="true"></i><?= $site->email() ?></a>
                 </div>
 

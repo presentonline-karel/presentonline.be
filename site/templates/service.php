@@ -29,8 +29,6 @@
 
                 <!-- Header button -->
                 <?php if($page->headerButton()->isNotEmpty()): ?>
-
-                    <!-- button -->
                     <?php foreach($page->headerButton()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
@@ -87,8 +85,6 @@
                                     <!-- Features -->
                                     <?php if($serviceFeature->features()->isNotEmpty()): ?>
                                         <div class="features">
-
-                                            <!-- feature -->
                                             <?php foreach($serviceFeature->features()->toStructure() as $feature): ?>
                                                 <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
                                             <?php endforeach; ?>
@@ -100,8 +96,6 @@
 
                                 <!-- Step button -->
                                 <?php if($serviceFeature->stepButton()->isNotEmpty()): ?>
-
-                                    <!-- button -->
                                     <?php foreach($serviceFeature->stepButton()->toStructure() as $button): ?>
                                         <?php snippet("components/button", ["button" => $button]) ?>
                                     <?php endforeach; ?>
@@ -185,12 +179,6 @@
                             
                             <!-- case -->
                             <?php foreach($page->cases()->toPages() as $case): ?>
-                                <?php /* if(strpos( $_SERVER["HTTP_ACCEPT"], "image/webp" ) !== false ) : ?>
-                                    <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgWebp()->toFile()->url() ?>');">
-                                <?php else: ?>
-                                    <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?= $case->challengeImgPng()->toFile()->url() ?>');">
-                                <?php endif; */ ?>
-
                                 <a class="slide slide-img case" href="<?= $case->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($case->challengeImgWebp()->toFile()->url()); } else { echo($case->challengeImgPng()->toFile()->url()); } ?>');">
 
                                     <!-- case button -->
@@ -203,8 +191,6 @@
                                         <!-- case tags -->
                                         <?php if ($case->caseTags()->isNotEmpty()) : ?>
                                             <div class="tags">
-
-                                                <!-- tag -->
                                                 <?php foreach ($case->caseTags()->split() as $tag) : ?>
                                                     <span class="tag"><?= $tag ?></span>
                                                 <?php endforeach; ?>
@@ -231,6 +217,7 @@
 
 <!-- JS SCRIPTS -->
 <?= js('build/js/general/slider.js', ['defer' => true]) ?>
+<?= js('build/js/service/active-menu-item.js', ['defer' => true]) ?>
 
 
 

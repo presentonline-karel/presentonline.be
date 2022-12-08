@@ -29,8 +29,6 @@
             <!-- Hero buttons -->
             <?php if($page->heroButtons()->isNotEmpty()): ?>
                 <div class="buttons">
-
-                    <!-- button -->
                     <?php foreach($page->heroButtons()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
@@ -101,8 +99,6 @@
             <!-- Clients buttons -->
             <?php if($page->clientsButtons()->isNotEmpty()): ?>
                 <div class="buttons">
-
-                    <!-- button -->
                     <?php foreach($page->clientsButtons()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>

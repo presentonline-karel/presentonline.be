@@ -1,7 +1,6 @@
 .carousel {
     display: inline-flex;
     gap: 8px;
-    //overflow: hidden;
     overflow: scroll;
     scrollbar-width: none;
     transform: translateX(0);

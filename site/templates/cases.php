@@ -21,8 +21,6 @@
 
                 <!-- Hero buttons -->
                 <?php if($page->headerButtons()->isNotEmpty()): ?>
-
-                    <!-- button -->
                     <?php foreach($page->headerButtons()->toStructure() as $button): ?>
                         <?php snippet("components/button", ["button" => $button]) ?>
                     <?php endforeach; ?>
@@ -50,8 +48,6 @@
                         <!-- case tags -->
                         <?php if ($project->caseTags()->isNotEmpty()) : ?>
                             <div class="tags">
-
-                                <!-- tag -->
                                 <?php foreach ($project->caseTags()->split() as $tag) : ?>
                                     <span class="tag"><?= $tag ?></span>
                                 <?php endforeach; ?>

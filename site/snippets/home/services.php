@@ -44,8 +44,6 @@
                     <!-- Clients buttons -->
                     <?php if($service->serviceButtons()->isNotEmpty()): ?>
                         <div class="buttons">
-
-                            <!-- button -->
                             <?php foreach($service->serviceButtons()->toStructure() as $button): ?>
                                 <?php snippet("components/button", ["button" => $button]) ?>
                             <?php endforeach; ?>

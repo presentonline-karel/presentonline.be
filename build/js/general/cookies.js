@@ -34,7 +34,6 @@ const cookies = () => {
         "https://www.googletagmanager.com/gtag/js?id=G-4RD8RR47H1"
       );
 
-      //analyticsScriptGoogle.setAttribute("async");
       document.body.appendChild(analyticsScriptGoogle);
     }
   }, 1500);

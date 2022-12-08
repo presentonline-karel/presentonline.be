@@ -79,6 +79,23 @@ tabs:
             max: 1
             layout: cards
             width: 1/3
+          line-y:
+            type: line
+          
+
+
+          #cookies
+          cookiesHeadline:
+            label: Cookies modal
+            type: headline
+            numbered: true
+          cookiesTitle:
+            label: Title
+            type: text
+          cookiesP:
+            label: Paragraph
+            type: writer
+            inline: true
 
 
   

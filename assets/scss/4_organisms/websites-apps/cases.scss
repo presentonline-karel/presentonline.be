@@ -17,40 +17,6 @@
             &__title {
                 margin-bottom: 64px;
             }
-
-            /*.slider-container {
-                .slider {
-                    height: 337px;
-
-                    &__inner {
-                        height: 100%;
-                        gap: 24px;
-
-                        .slide {
-                            width: 426px;
-                            height: 337px;
-                        }
-                    }
-                }
-            }*/
         }
     }
-}
-
-/* DESKTOP 1440PX */
-@media only screen and (min-width: $desktop-3) {
-    /*.container-websites-apps {
-        .carousel-section {
-            .slider-container {
-                .slider {
-                    &__inner {
-                        .slide {
-                            width: 506px;
-                            height: 337px;
-                        }
-                    }
-                }
-            }
-        }
-    }*/
 }

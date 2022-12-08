@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $kirby->language()->code() ?>">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,15 +63,12 @@
         <div class="cookie-consent-modal">
             <div class="content-container">
                 <div class="content">
-                    <h3>
-                        Wij gebruiken cookies
-                    </h3>
-
-                    <p>Door gebruik te maken van onze website ga je akkoord met ons <span>privacybeleid</span>.</p>
+                    <h3><?= $site->cookiesTitle() ?></h3>
+                    <p><?= $site->cookiesP() ?></p>
 
                     <div class="buttons flex">
-                        <button class="button button-primary cancel">Geen cookies</button>
-                        <button class="button button-primary accept">Accepteren</button>
+                        <button class="button button-secondary cancel"><?php if($kirby->language()->code() == "nl") { ?> Geen cookies <?php } elseif($kirby->language()->code() == "en") { ?> No cookies <?php } ?></button>
+                        <button class="button button-primary accept"><?php if($kirby->language()->code() == "nl") { ?> Akkoord <?php } elseif($kirby->language()->code() == "en") { ?> Agree <?php } ?></button>
                     </div>
                 </div>
             </div>

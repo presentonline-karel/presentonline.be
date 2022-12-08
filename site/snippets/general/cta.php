@@ -13,8 +13,6 @@
     <!-- Features -->
     <?php if ($page->ctaFeatures()->isNotEmpty()) : ?>
         <div class="features">
-
-            <!-- feature -->
             <?php foreach ($page->ctaFeatures()->toStructure() as $feature) : ?>
                 <span class="feature"><i class="icon-first fa-solid fa-check"></i><?= $feature->feature() ?></span>
             <?php endforeach; ?>
@@ -26,8 +24,6 @@
     <!-- Cta buttons -->
     <?php if($page->ctaButtons()->isNotEmpty()): ?>
         <div class="buttons">
-
-            <!-- button -->
             <?php foreach($page->ctaButtons()->toStructure() as $button): ?>
                 <?php snippet("components/button", ["button" => $button]) ?>
             <?php endforeach; ?>

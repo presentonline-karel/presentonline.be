@@ -7,7 +7,6 @@
         width: 16px;
         height: 16px;
         visibility: hidden;
-        //float: right;
         position: absolute;
         top: 40px;
         right: 16px;
@@ -70,7 +69,6 @@
     width: calc(100vw - 32px);
     padding: 12px 24px;
     border-radius: $border-radius-small;
-    //margin-bottom: 16px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -117,7 +115,6 @@
 
 /* DESKTOP - 1280PX */
 @media screen and (min-width: $desktop-1) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 192px);
         margin-bottom: 24px;
@@ -127,7 +124,6 @@
 
 /* DESKTOP - 1600PX */
 @media screen and (min-width: $desktop-5) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 352px);
         left: 176px;
@@ -136,7 +132,6 @@
 
 /* DESKTOP - HD */
 @media screen and (min-width: $desktop-hd) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 672px);
         left: 336px;
@@ -145,7 +140,6 @@
 
 /* DESKTOP - QHD */
 @media screen and (min-width: $desktop-qhd) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 1312px);
         left: 656px;
@@ -154,7 +148,6 @@
 
 /* DESKTOP - WQHD */
 @media screen and (min-width: $desktop-wqhd) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 2192px);
         left: 1096px;
@@ -163,7 +156,6 @@
 
 /* DESKTOP - 4K */
 @media screen and (min-width: $desktop-4k) {
-    //FORM FEEDBACK AFTER SUBMIT
     .alert {
         width: calc(100vw - 2592px);
         left: 1296px;
