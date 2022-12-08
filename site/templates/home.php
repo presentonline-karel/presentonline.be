@@ -57,7 +57,7 @@
                             <a class="client" href="<?= $client->url() ?>" target="_blank">
 
                                 <!-- client logo gray -->
-                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" />
+                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" loading="lazy" />
 
                                 <!-- client logo -->
                                 <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
@@ -65,7 +65,7 @@
                                         <picture>
                                             <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
                                             <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
-                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" loading="lazy" />
                                         </picture>
                                     <?php endif; ?>
                                 <?php endif; ?>
@@ -76,7 +76,7 @@
                             <div class="client">
 
                                 <!-- client color -->
-                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" />
+                                <img class="logo-grayscale" src="<?= $client->logoGray()->toFile()->url() ?>" alt="<?= $client->logoGray()->toFile()->alt() ?>" loading="lazy" />
 
                                 <!-- client logo -->
                                 <?php if ($clientLogoWebp = $client->logoWebp()->toFile()) : ?>
@@ -84,7 +84,7 @@
                                         <picture>
                                             <source srcSet="<?= $clientLogoWebp->url() ?>" type="image/webp" />
                                             <source srcSet="<?= $clientLogoPng->url() ?>" type="image/jpg" />
-                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" />
+                                            <img class="logo-color" src="<?= $clientLogoPng->url() ?>" alt="<?= $clientLogoPng->alt() ?>" loading="lazy" />
                                         </picture>
                                     <?php endif; ?>
                                 <?php endif; ?>

@@ -1,7 +1,7 @@
         <footer class="footer section section-large fade-section">
 
             <!-- ARROW TOP -->
-            <a class="top" href="#container">
+            <a class="top" href="#container" aria-label="Link to top of page">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
 
