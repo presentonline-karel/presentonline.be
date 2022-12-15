@@ -18,7 +18,7 @@ const navFade = () => {
         lastScrollY = window.scrollY;
 
         /* add/remove box-shadow */
-        if(window.pageYOffset > 0) {
+        if(window.pageYOffset > 10) {
             nav.classList.add("nav-scrolled");
         } else {
             nav.classList.remove("nav-scrolled");
