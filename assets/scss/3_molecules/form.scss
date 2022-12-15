@@ -32,6 +32,7 @@
             &.textarea {
                 height: 200px;
                 resize: none;
+                line-height: 26px;
             }
         }
     }
@@ -66,6 +67,19 @@
 
             .input-group {
                 margin-bottom: 0px;
+            }
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .form {
+        .input-group {
+            .input {
+                &.textarea {
+                    height: 240px;
+                }
             }
         }
     }
