@@ -90,7 +90,7 @@
 
         <!-- CHALLENGES -->
         <section id="challenges" class="challenges-section section fade-section">
-            <div class="challenges challenges-section__content-container content-container-l content-container">
+            <div class="challenges content-container-l content-container">
 
                 <!-- Challenge cover -->
                 <?php if ($challengeImgWebp = $page->challengeImgWebp()->toFile()) : ?>
@@ -132,11 +132,11 @@
 
         <!-- RELATED CASES -->
         <?php if($page->relatedCases()->isNotEmpty()): ?>
-            <section id="next-case" class="next-case section section-medium fade-section">
-                <div class="naxt-case-section__content-container content-container-m content-container">
-                    <h2 class="next-case__title"><?= $page->relatedCasesTitle() ?></h2>
+            <section id="next-case" class="next-case next-cases-section section section-medium fade-section">
+                <div class="next-cases content-container-m content-container">
+                    <h2 class="next-cases__title"><?= $page->relatedCasesTitle() ?></h2>
 
-                    <div class="next-case__cases">
+                    <div class="next-cases__cases">
 
                         <!-- Related case -->
                         <?php foreach($page->relatedCases()->toPages() as $relatedCase): ?>

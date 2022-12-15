@@ -1,14 +1,19 @@
         <footer class="footer section section-large fade-section">
-            <div class="testimonials-section__content-container content-container-l content-container">
+            <div class="content-container-l content-container">
 
-                <!-- ARROW TOP -->
-                <a class="top" href="#container" aria-label="Link to top of page">
+                <!-- ARROW TOP MOBILE -->
+                <a class="top mobile" href="#container" aria-label="Link to top of page">
                     <i class="fa-solid fa-arrow-up"></i>
                 </a>
 
 
 
                 <div class="footer__blocks">
+
+                    <!-- ARROW TOP DESKTOP -->
+                    <a class="top desktop" href="#container" aria-label="Link to top of page">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </a>
 
                     <!-- INTRO -->
                     <div class="intro footer__section">

@@ -1,17 +1,19 @@
-.next-case {
+.next-cases-section {
     background-color: $neutrals-100;
 
-    &__title {
-        text-align: center;
-        margin-bottom: 32px;
-    }
-
-    &__cases {
-        .case {
-            margin-bottom: 0;
-
-            &:first-of-type {
-                margin-bottom: 16px;
+    .next-cases {
+        &__title {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+    
+        &__cases {
+            .case {
+                margin-bottom: 0;
+    
+                &:first-of-type {
+                    margin-bottom: 16px;
+                }
             }
         }
     }
@@ -19,24 +21,26 @@
 
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .next-case {
-        &__cases {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 24px;
-
-            .case {
-                margin-bottom: 0 !important;
-
-                .button {
-                    top: 24px;
-                    right: 24px;
-                }
-
-                &__id {
-                    left: 24px;
-                    bottom: 24px;
+    .next-cases-section {
+        .next-cases {
+            &__cases {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 24px;
+    
+                .case {
+                    margin-bottom: 0 !important;
+    
+                    .button {
+                        top: 24px;
+                        right: 24px;
+                    }
+    
+                    &__id {
+                        left: 24px;
+                        bottom: 24px;
+                    }
                 }
             }
         }
@@ -45,18 +49,20 @@
 
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-1) {
-    .next-case {
+    .next-cases-section {
         padding: 96px 202px;
 
-        &__title {
-            margin-bottom: 64px;
+        .next-cases {
+            &__title {
+                margin-bottom: 64px;
+            }
         }
     }
 }
 
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-3) {
-    .next-case {
+    .next-cases-section {
         padding: 128px 0px;
     }
 }

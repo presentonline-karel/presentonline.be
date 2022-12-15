@@ -1,5 +1,5 @@
 <section id="services" class="services-section section section-large fade-section">
-    <div class="testimonials-section__content-container content-container-l content-container">
+    <div class="content-container-l content-container">
         <h2><?= $page->servicesTitle() ?></h2>
 
 

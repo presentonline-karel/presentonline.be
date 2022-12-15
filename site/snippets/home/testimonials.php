@@ -1,7 +1,7 @@
 <?php $homePage = $pages->find("home"); ?>
 
 <section id="testimonials" class="testimonials-section section section-medium fade-section">
-    <div class="testimonials-section__content-container content-container-m content-container">
+    <div class="content-container-m content-container">
 
         <!-- Testimonials items -->
         <?php if ($homePage->testimonials()->isNotEmpty()) : ?>

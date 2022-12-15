@@ -5,7 +5,7 @@
         <div id="cta" class="cta section section-medium fade-section" style="background-image: linear-gradient(90deg, rgba(25, 107, 222, 0.96) 18.23%, rgba(25, 107, 222, 0.48) 100%), url('<?= $site->url() ?>/../assets/img/presentonline-default-cta-bg.jpg')">
     <?php endif; ?>
 
-        <div class="testimonials-section__content-container content-container-m content-container">
+        <div class="content-container-m content-container">
 
             <!-- Title -->
             <h3 class="cta__title"><?= $page->ctaText() ?></h3>

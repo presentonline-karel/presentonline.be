@@ -45,7 +45,7 @@
 
         <!-- CLIENTS -->
         <section id="clients" class="clients-section section section-small">
-            <div class="clients-section__content-container content-container-s content-container">
+            <div class="content-container-s content-container">
                 <h3><?= $page->clientsTitle() ?></h3>
 
                 <!-- Client items -->

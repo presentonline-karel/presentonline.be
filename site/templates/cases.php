@@ -32,8 +32,8 @@
 
     <!-- CASES -->
     <?php if($page->children()->isNotEmpty()): ?>
-        <main id="cases" class="cases section section-medium">
-            <div class="cases__content-container content-container-m content-container">
+        <main id="cases" class="cases-section section section-medium">
+            <div class="cases content-container-m content-container">
                 <?php foreach ($page->children() as $project) : ?>
 
                     <!-- Check if browerser supports webp -->

@@ -1,89 +1,94 @@
-.includes {
+.includes-section {
     background-color: $neutrals-200;
     padding: 56px 16px;
 
-    &__text {
-        h2 {
-            margin-bottom: 24px;
+    .includes {
+        &__text {
+            h2 {
+                margin-bottom: 24px;
+            }
         }
-    }
-
-    &__price {
-        text-align: center;
-        padding: 24px 0px 0px 0px;
-
-        h3 {
-            color: $primary-600;
-            margin-bottom: 16px;
-        }
-
-        h2 {
-            font-size: 36px;
-            line-height: 40px;
-            color: $neutrals-1000;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-
-        p {
-            margin-bottom: 40px;
+    
+        &__price {
+            text-align: center;
+            padding: 24px 0px 0px 0px;
+    
+            h3 {
+                color: $primary-600;
+                margin-bottom: 16px;
+            }
+    
+            h2 {
+                font-size: 36px;
+                line-height: 40px;
+                color: $neutrals-1000;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+    
+            p {
+                margin-bottom: 40px;
+            }
         }
     }
 }
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
-    .includes {
+    .includes-section {
         padding: 72px 48px;
     }
 }
 
 /* TABLET 1024PX */
 @media only screen and (min-width: $tablet-landscape) {
-    .includes {
+    .includes-section {
         background-color: $neutrals-100;
         padding: 72px 96px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 24px;
 
-        &__box {
-            > h2 {
-                margin-bottom: 16px;
+        .includes {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+
+            &__box {
+                > h2 {
+                    margin-bottom: 16px;
+                }
+
+                .desktop {
+                    display: block;
+
+                    p {
+                        margin-bottom: 24px;
+                    }
+
+                    h3 {
+                        margin-bottom: 8px;
+                    }
+                }
             }
 
-            .desktop {
-                display: block;
+            &__price {
+                position: relative;
 
-                p {
-                    margin-bottom: 24px;
-                }
+                &__content {
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                    top: 50%;
+                    left: 50%;
+                    width: 100%;
 
-                h3 {
-                    margin-bottom: 8px;
-                }
-            }
-        }
+                    h3 {
+                        margin-bottom: 24px;
+                    }
 
-        &__price {
-            position: relative;
-
-            &__content {
-                position: absolute;
-                transform: translate(-50%, -50%);
-                top: 50%;
-                left: 50%;
-                width: 100%;
-
-                h3 {
-                    margin-bottom: 24px;
-                }
-
-                .buttons {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
+                    .buttons {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 8px;
+                    }
                 }
             }
         }
@@ -92,8 +97,23 @@
 
 /* DESKTOP 1280PX */
 @media only screen and (min-width: $desktop-1) {
-    .includes {
-        padding: 96px;
-        grid-template-columns: repeat(3, 1fr);
+    .includes-section {
+        padding: 0;
+
+        .includes {
+            padding: 96px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .includes-section {
+        padding: 128px 0px;
+
+        .includes {
+            padding: 0px;
+        }
     }
 }

@@ -197,10 +197,20 @@
                 line-height: 32px;
             }
         }
+
+        &__blocks {
+            position: relative;
+        }
+
+        //new
+        .top {
+            top: 0;
+            right: 0 !important;
+        }
     }
 }
 
-/* DESKTOP 1600PX */
+/* DESKTOP 1600PX
 @media screen and (min-width: $desktop-5) {
     .footer {
         .top {
@@ -209,7 +219,7 @@
     }
 }
 
-/* DESKTOP - HD */
+/* DESKTOP - HD
 @media only screen and (min-width: $desktop-hd) {
     .footer {
         .top {
@@ -218,7 +228,7 @@
     }
 }
 
-/* DESKTOP - QHD */
+/* DESKTOP - QHD
 @media only screen and (min-width: $desktop-qhd) {
     .footer {
         .top {
@@ -227,7 +237,7 @@
     }
 }
 
-/* DESKTOP - WQHD */
+/* DESKTOP - WQHD
 @media only screen and (min-width: $desktop-wqhd) {
     .footer {
         .top {
@@ -236,11 +246,11 @@
     }
 }
 
-/* DESKTOP - 4K */
+/* DESKTOP - 4K
 @media only screen and (min-width: $desktop-4k) {
     .footer {
         .top {
             right: 1296px;
         }
     }
-}
+} */

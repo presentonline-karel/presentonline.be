@@ -34,7 +34,6 @@
     <main>
 
         <!-- ABOUT -->
-        <!-- <section id="about" class="about section section-medium flex"> -->
         <section id="about" class="about-section">
             <div class="about section flex about__content-container content-container-m content-container">
 

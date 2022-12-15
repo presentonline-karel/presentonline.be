@@ -10,9 +10,11 @@
         margin-bottom: 32px;
     }
 
-    > .button {
-        color: $primary-600;
-        margin-bottom: 32px;
+    .content-container {
+        > .button {
+            color: $primary-600;
+            margin-bottom: 32px;
+        }
     }
 }
 
@@ -43,8 +45,10 @@
             gap: 24px;
         }
 
-        > .button {
-            display: none;
+        .content-container {
+            > .button {
+                display: none;
+            }
         }
     }
 }
@@ -61,5 +65,12 @@
         .cards {
             grid-template-columns: repeat(3, 1fr);
         }
+    }
+}
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .service-features-section {
+        padding: 128px 0px;
     }
 }
