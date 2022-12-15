@@ -19,7 +19,7 @@ const formFeedback = () => {
     //Google recaptcha
     var response = grecaptcha.getResponse();
     if (response.length == 0) {
-      alert("Verifieer aub dat je geen robot bent. / Please verify that you're not a robot.)");
+      alert("Verifieer aub dat je geen robot bent. / Please verify that you're not a robot.");
       submitEvent.preventDefault();
     }
 
