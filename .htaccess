@@ -55,3 +55,26 @@ AddOutputFilterByType DEFLATE application/json
 AddOutputFilterByType DEFLATE application/javascript
 AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>
+
+# 301 redirects to new website
+Redirect 301 /about https://presentonline.be/nl/over-ons
+
+Redirect 301 /services https://presentonline.be/nl#services
+Redirect 301 /services-websites https://presentonline.be/nl/websites-apps
+Redirect 301 /services-branding https://presentonline.be/nl#services
+Redirect 301 /services-content https://presentonline.be/nl#services
+
+Redirect 301 /projects https://presentonline.be/nl/projecten
+Redirect 301 /project-details https://presentonline.be/nl/projecten
+Redirect 301 /projects-karel https://presentonline.be/nl/projecten/karrel
+Redirect 301 /projects-thebox https://presentonline.be/nl/projecten
+Redirect 301 /projects-sdauto https://presentonline.be/nl/projecten
+Redirect 301 /projects-energym https://presentonline.be/nl/projecten
+
+Redirect 301 /blog https://presentonline.be/nl
+Redirect 301 /blog-ssl https://presentonline.be/nl
+Redirect 301 /blog-cms https://presentonline.be/nl
+Redirect 301 /blog-hosting https://presentonline.be/nl
+
+Redirect 301 /conditions https://presentonline.be/nl
+Redirect 301 /loading https://presentonline.be/nl

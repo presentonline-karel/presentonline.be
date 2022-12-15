@@ -55,5 +55,8 @@
         <small>Error message</small>
     </div>
 
+    <!-- Google Recaptcha -->
+    <div class="g-recaptcha" data-sitekey="6Ldspn8jAAAAAIGikDiRJFGPfPkZtVZnrFjurXQn"></div>
+
     <button class="button button-primary" type="submit" name="submit" value="Verstuur"><?php if($kirby->language()->code() == "nl") { ?> Verstuur <?php } elseif($kirby->language()->code() == "en") { ?> Send <?php } ?> <i class="anchor-first no-hover fa fa-paper-plane" aria-hidden="true"></i></button>
 </form>

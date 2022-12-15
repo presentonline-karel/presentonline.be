@@ -35,12 +35,20 @@
             }
         }
     }
+
+    .g-recaptcha {
+        margin-bottom: 20px;
+    }
 }
 
 /* TABLET 768PX */
 @media only screen and (min-width: $tablet-portrait) {
     .form {
         .input-group {
+            margin-bottom: 24px;
+        }
+
+        .g-recaptcha {
             margin-bottom: 24px;
         }
     }
