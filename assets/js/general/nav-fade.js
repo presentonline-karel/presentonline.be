@@ -10,7 +10,9 @@ const navFade = () => {
 
         /* show/hide nav */
         if (lastScrollY < window.scrollY) {
-            nav.classList.add("nav-hidden");
+            if(window.pageYOffset > 10) {
+                nav.classList.add("nav-hidden");
+            }
         } else {
             nav.classList.remove("nav-hidden");
         }
@@ -18,7 +20,7 @@ const navFade = () => {
         lastScrollY = window.scrollY;
 
         /* add/remove box-shadow */
-        if(window.pageYOffset > 10) {
+        if(window.pageYOffset > 0) {
             nav.classList.add("nav-scrolled");
         } else {
             nav.classList.remove("nav-scrolled");
