@@ -1,0 +1,23 @@
+/* DESKTOP 1440PX */
+@media screen and (min-width: $desktop-3) {
+    .content-container {
+        margin: 0 auto;
+        max-width: 1248px;
+
+        &.r-106 {
+            padding-right: 106px;
+        }
+    }
+    
+    .content-container-s {
+        padding: 0 212px;
+    }
+
+    .content-container-m {
+        padding: 0 106px;
+    }
+
+    .content-container-l {
+        padding: 0;
+    }
+}

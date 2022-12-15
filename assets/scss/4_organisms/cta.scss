@@ -59,6 +59,8 @@
 /* DESKTOP 1440PX */
 @media only screen and (min-width: $desktop-3) {
     .cta {
+        padding: 128px 0px;
+        
         &__title {
             max-width: 718px;
             font-size: 56px;

@@ -1,6 +1,9 @@
 .about {
-    background-color: $neutrals-200;
     padding: 56px 16px;
+
+    &-section {
+        background-color: $neutrals-200;
+    }
 
     &__text {
         &__title {
@@ -144,6 +147,9 @@
 @media screen and (min-width: $desktop-3) {
     .about {
         gap: 106px;
+        padding: 128px 0;
+        max-width: 1036px;
+        margin: 0 auto;
 
         &__text {
             width: calc(100% - 424px - 106px);

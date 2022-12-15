@@ -74,3 +74,10 @@
         }
     }
 }
+
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
+    .clients-section {
+        padding: 96px 0px;
+    }
+}

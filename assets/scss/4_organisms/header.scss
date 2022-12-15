@@ -307,7 +307,8 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 202px 112px 202px;
+            //padding: 188px 202px 112px 202px;
+            padding: 188px 0px 112px 0px;
 
             p {
                 font-size: 20px;
@@ -322,7 +323,9 @@
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 308px 112px 202px;
+            padding: 188px 106px 112px 0px;
+            max-width: 1036px;
+            margin: 0 auto;
 
             &__title {
                 margin-top: 4px;
@@ -358,12 +361,12 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 282px 128px 282px;
+            //padding: 188px 282px 128px 282px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 388px 128px 282px;
+            //padding: 188px 388px 128px 282px;
         }
 
         //Service headers
@@ -386,12 +389,12 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 442px 128px 442px;
+            //padding: 188px 442px 128px 442px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 548px 128px 442px;
+            //padding: 188px 548px 128px 442px;
         }
 
         //Service headers
@@ -414,12 +417,12 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 762px 128px 762px;
+            //padding: 188px 762px 128px 762px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 868px 128px 762px;
+            //padding: 188px 868px 128px 762px;
         }
 
         //Service headers
@@ -442,12 +445,12 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 1202px 128px 1202px;
+            //padding: 188px 1202px 128px 1202px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 1308px 128px 1202px;
+            //padding: 188px 1308px 128px 1202px;
         }
 
         //Service headers
@@ -470,12 +473,12 @@
 
         //Home header
         .header-home__content {
-            padding: 188px 1402px 128px 1402px;
+            //padding: 188px 1402px 128px 1402px;
         }
 
         //Cases, About & Contact headers
         .header-about__content, .header-cases__content, .header-contact__content {
-            padding: 188px 1508px 128px 1402px;
+            //padding: 188px 1508px 128px 1402px;
         }
 
         //Service headers

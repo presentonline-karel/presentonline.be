@@ -33,29 +33,31 @@
     <!-- CASES -->
     <?php if($page->children()->isNotEmpty()): ?>
         <main id="cases" class="cases section section-medium">
-            <?php foreach ($page->children() as $project) : ?>
+            <div class="cases__content-container content-container-m content-container">
+                <?php foreach ($page->children() as $project) : ?>
 
-                <!-- Check if browerser supports webp -->
-                <a class="case" href="<?= $project->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($project->challengeImgWebp()->toFile()->url()); } else { echo($project->challengeImgPng()->toFile()->url()); } ?>');">
+                    <!-- Check if browerser supports webp -->
+                    <a class="case" href="<?= $project->url() ?>" style="background-image: linear-gradient(0deg, rgba(232, 240, 252, 0.8), rgba(232, 240, 252, 0.8)), url('<?php if(strpos( $_SERVER['HTTP_ACCEPT'], 'image/webp' ) !== false ) { echo($project->challengeImgWebp()->toFile()->url()); } else { echo($project->challengeImgPng()->toFile()->url()); } ?>');">
 
-                    <!-- case button -->
-                    <button class="button button-tertiary"><?php if($kirby->language()->code() == "nl") { ?> Meer lezen <?php } elseif($kirby->language()->code() == "en") { ?> Read case <?php } ?><i class="anchor-first fa-solid fa-arrow-right"></i></button>
+                        <!-- case button -->
+                        <button class="button button-tertiary"><?php if($kirby->language()->code() == "nl") { ?> Meer lezen <?php } elseif($kirby->language()->code() == "en") { ?> Read case <?php } ?><i class="anchor-first fa-solid fa-arrow-right"></i></button>
 
-                    <!-- case text -->
-                    <div class="case__id">
-                        <h2 class="case__id__title"><?= $project->caseTitleShort() ?></h2>
+                        <!-- case text -->
+                        <div class="case__id">
+                            <h2 class="case__id__title"><?= $project->caseTitleShort() ?></h2>
 
-                        <!-- case tags -->
-                        <?php if ($project->caseTags()->isNotEmpty()) : ?>
-                            <div class="tags">
-                                <?php foreach ($project->caseTags()->split() as $tag) : ?>
-                                    <span class="tag"><?= $tag ?></span>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?>
-                    </div>
-                </a>
-            <?php endforeach; ?>
+                            <!-- case tags -->
+                            <?php if ($project->caseTags()->isNotEmpty()) : ?>
+                                <div class="tags">
+                                    <?php foreach ($project->caseTags()->split() as $tag) : ?>
+                                        <span class="tag"><?= $tag ?></span>
+                                    <?php endforeach; ?>
+                                </div>
+                            <?php endif; ?>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            </div>
         </main>
     <?php endif; ?>
 </div>
