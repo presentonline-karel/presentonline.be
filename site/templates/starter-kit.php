@@ -48,7 +48,7 @@
             <!-- Header img -->
             <?php if ($headerImgWebp = $page->headerImgWebp()->toFile()) : ?>
                 <?php if ($headerImgPng = $page->headerImgPng()->toFile()) : ?>
-                    <a href="https://starter.presentonline.be" target="_blank">
+                    <a class="starter-kit-hyperlink" href="https://starter.presentonline.be" target="_blank">
                         <picture>
                             <source srcSet="<?= $headerImgWebp->url() ?>" type="image/webp" />
                             <source srcSet="<?= $headerImgPng->url() ?>" type="image/jpg" />

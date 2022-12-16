@@ -23,6 +23,8 @@
             gap: 40px;
 
             &__text {
+                width: calc(100% - 360px - 40px);
+
                 .button-tertiary {
                     margin-bottom: 8px;
                 }
@@ -71,47 +73,13 @@
     }
 }
 
-/* DESKTOP 1600PX */
-@media screen and (min-width: $desktop-5) {
+/* DESKTOP 1440PX */
+@media only screen and (min-width: $desktop-3) {
     .header-thank-you {
         &__content {
-            padding: 188px 176px 128px 282px;
-        }
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .header-thank-you {
-        &__content {
-            padding: 188px 336px 128px 442px;
-        }
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .header-thank-you {
-        &__content {
-            padding: 188px 656px 128px 762px;
-        }
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .header-thank-you {
-        &__content {
-            padding: 188px 1096px 128px 1202px;
-        }
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .header-thank-you {
-        &__content {
-            padding: 188px 1296px 128px 1402px;
+            padding: 188px 0px 128px 106px;
+            max-width: 1248px;
+            margin: 0 auto;
         }
     }
 }

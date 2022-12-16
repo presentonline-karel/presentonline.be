@@ -287,6 +287,13 @@
         padding: 40px 96px;
         align-items: center;
 
+        .content-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
         &-hidden {
             transform: translateY(calc(-124px));
             box-shadow: none;
@@ -445,12 +452,26 @@
 /* DESKTOP 1440PX */
 @media screen and (min-width: $desktop-3) {
     .nav {
+        padding: 40px 0;
+
+        .content-container {
+            width: 1248px;
+        }
+
+        &.nav-dynamic {
+            transform: translate(-50%, 0%);
+            left: 50%;
+        }
+
         .logo {
             width: 230px;
             height: 40px;
         }
 
         .nav-links {
+            display: inline-flex;
+            justify-content: flex-end;
+
             .link-items {
                 gap: 40px;
 
@@ -475,40 +496,5 @@
                 }
             }
         }
-    }
-}
-
-/* DESKTOP - 1600px */
-@media only screen and (min-width: $desktop-5) {
-    .nav {
-        padding: 40px 176px;
-    }
-}
-
-/* DESKTOP - HD */
-@media only screen and (min-width: $desktop-hd) {
-    .nav {
-        padding: 40px 336px;
-    }
-}
-
-/* DESKTOP - QHD */
-@media only screen and (min-width: $desktop-qhd) {
-    .nav {
-        padding: 40px 656px;
-    }
-}
-
-/* DESKTOP - WQHD */
-@media only screen and (min-width: $desktop-wqhd) {
-    .nav {
-        padding: 40px 1096px;
-    }
-}
-
-/* DESKTOP - 4K */
-@media only screen and (min-width: $desktop-4k) {
-    .nav {
-        padding: 40px 1296px;
     }
 }
