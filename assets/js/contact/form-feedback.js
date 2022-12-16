@@ -19,7 +19,9 @@ const formFeedback = () => {
     //Google recaptcha
     var response = grecaptcha.getResponse();
     if (response.length == 0) {
-      alert("Verifieer aub dat je geen robot bent. / Please verify that you're not a robot.");
+      alert(
+        "Verifieer aub dat je geen robot bent. / Please verify that you're not a robot."
+      );
       submitEvent.preventDefault();
     }
 
@@ -38,32 +40,55 @@ const formFeedback = () => {
     const subjectValue = subject.value.trim();
     const messageValue = message.value.trim();
 
+    //langCode
+    var langCode = document.documentElement.lang;
+
     //name
     if (nameValue === "") {
-      setErrorFor(name, "Vul uw naam in.");
+      if (langCode == "nl") {
+        setErrorFor(name, "Vul uw naam in.");
+      } else if (langCode == "en") {
+        setErrorFor(name, "Please enter your name.");
+      }
     } else {
       setSuccessFor(name);
     }
 
     //email
     if (emailValue === "") {
-      setErrorFor(email, "Vul uw e-mail in.");
+      if (langCode == "nl") {
+        setErrorFor(email, "Vul uw e-mail in.");
+      } else if (langCode == "en") {
+        setErrorFor(email, "Please enter your email.");
+      }
     } else if (!isEmail(emailValue)) {
-      setErrorFor(email, "Vul een geldig e-mailadres in.");
+      if (langCode == "nl") {
+        setErrorFor(email, "Vul een geldig e-mailadres in.");
+      } else if (langCode == "en") {
+        setErrorFor(email, "That is an invalid e-mail address.");
+      }
     } else {
       setSuccessFor(email);
     }
 
     //subject
     if (subjectValue === "") {
-      setErrorFor(subject, "Vul een onderwerp in.");
+      if (langCode == "nl") {
+        setErrorFor(subject, "Vul een onderwerp in.");
+      } else if (langCode == "en") {
+        setErrorFor(subject, "Please enter a subject.");
+      }
     } else {
       setSuccessFor(subject);
     }
 
     //message
     if (messageValue === "") {
-      setErrorFor(message, "Vul een boodschap in.");
+      if (langCode == "nl") {
+        setErrorFor(message, "Vul een boodschap in.");
+      } else if (langCode == "en") {
+        setErrorFor(message, "Please enter a message.");
+      }
     } else {
       setSuccessFor(message);
     }

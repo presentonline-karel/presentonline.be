@@ -14,7 +14,7 @@
             <!-- name -->
             <div class="input-group">
                 <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Naam <?php } elseif($kirby->language()->code() == "en") { ?> Name <?php } ?></label>
-                <input class="input contact-form__input name" type="text" name="name" placeholder="Naam" />
+                <input class="input contact-form__input name" type="text" name="name" placeholder="<?php if($kirby->language()->code() == "nl") { ?> Naam <?php } elseif($kirby->language()->code() == "en") { ?> Name <?php } ?>" />
 
                 <!--  form feedback -->
                 <i class="fa fa-check-circle" aria-hidden="true"></i>
@@ -37,7 +37,7 @@
         <!-- subject -->
         <div class="input-group">
             <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Onderwerp <?php } elseif($kirby->language()->code() == "en") { ?> Subject <?php } ?></label>
-            <input class="input contact-form__input subject" type="text" name="subject" placeholder="Onderwerp" />
+            <input class="input contact-form__input subject" type="text" name="subject" placeholder="<?php if($kirby->language()->code() == "nl") { ?> Onderwerp <?php } elseif($kirby->language()->code() == "en") { ?> Subject <?php } ?>" />
 
             <!--  form feedback -->
             <i class="fa fa-check-circle" aria-hidden="true"></i>
@@ -48,7 +48,7 @@
         <!-- message -->
         <div class="input-group">
             <label class="input-group__label"><?php if($kirby->language()->code() == "nl") { ?> Boodschap <?php } elseif($kirby->language()->code() == "en") { ?> Message <?php } ?></label>
-            <textarea class="input textarea contact-form__input message" type="text" name="message" placeholder="Boodschap"></textarea>
+            <textarea class="input textarea contact-form__input message" type="text" name="message" placeholder="<?php if($kirby->language()->code() == "nl") { ?> Boodschap <?php } elseif($kirby->language()->code() == "en") { ?> Message <?php } ?>"></textarea>
 
             <!--  form feedback -->
             <i class="fa fa-check-circle" aria-hidden="true"></i>
