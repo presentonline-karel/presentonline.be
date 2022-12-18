@@ -287,6 +287,7 @@
         padding: 40px 96px;
         align-items: center;
         transition: none;
+        transition: transform $transition-time-short ease-in-out;
 
         .content-container {
             display: flex;
@@ -313,7 +314,7 @@
             background: transparent;
 
             //To fix weird issue with the menu
-            padding-right: 16px;
+            //padding-right: 16px;
 
             .socials {
                 display: none;
@@ -454,13 +455,20 @@
 @media screen and (min-width: $desktop-3) {
     .nav {
         padding: 40px 0;
+        transition: top $transition-time-short ease-in-out !important;
 
         .content-container {
             width: 1248px;
         }
 
+        &-hidden {
+            //transform: translate(-50%, -124px) !important;
+            top: -124px;
+        }
+
         &.nav-dynamic {
-            transform: translate(-50%, 0%);
+            transition: none;
+            transform: translate(-50%, 0);
             left: 50%;
         }
 
