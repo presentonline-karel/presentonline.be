@@ -39,7 +39,7 @@
                             <!-- Language selector -->
                             <?php foreach ($kirby->languages() as $language) : ?>
                                 <a <?php e($kirby->language() == $language, ' class="language-button desktop active"') ?> class="language-button desktop" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
-                                    <?= html($language->name()) ?>
+                                    <?= $kirby->language()->code() ?>
                                     <i class="anchor-first fa-solid fa-earth-americas"></i>
                                 </a>
                             <?php endforeach ?>
@@ -60,7 +60,7 @@
                             <!-- Language selector -->
                             <?php foreach ($kirby->languages() as $language) : ?>
                                 <a <?php e($kirby->language() == $language, ' class="language-button desktop active"') ?> class="language-button desktop" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
-                                    <?= html($language->name()) ?>
+                                    <?= $kirby->language()->code() ?>
                                     <i class="anchor-first fa-solid fa-earth-americas"></i>
                                 </a>
                             <?php endforeach ?>
@@ -79,7 +79,7 @@
                 <?php foreach ($kirby->languages() as $language) : ?>
                     <a <?php e($kirby->language() == $language, ' class="language active"') ?> class="language" href="<?= $page->url($language->code()) ?>" hreflang="<?php echo $language->code() ?>">
                         <i class="icon-first fa-solid fa-earth-americas"></i>    
-                        <?= html($language->name()) ?>
+                        <?= $kirby->language()->code() ?>
                     </a>
                 <?php endforeach ?>
             </div>

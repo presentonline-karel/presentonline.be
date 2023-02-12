@@ -365,6 +365,7 @@
                             font-weight: 700;
                             line-height: 20px;
                             transition: all $transition-time-short;
+                            text-transform: uppercase;
 
                             &.active {
                                 display: none;
